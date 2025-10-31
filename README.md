@@ -16,13 +16,14 @@ To build the project, you need `meson` and a C compiler (like GCC or Clang) inst
 2.  **Compile the project:**
     This command compiles the source code.
     ```bash
-    meson compile -C build
+    cd build
+    ninja -C .
     ```
 
 3.  **Run the interpreter:**
     The final executable will be located in the `build` directory.
     ```bash
-    ./build/toylisp
+    ./toylisp
     ```
 
 ### *Docs still in development...*
