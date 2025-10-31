@@ -1,8 +1,12 @@
 /* Copyright (C) 2025 Salvatore Bertino */
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdarg.h>
+#include <stdint.h>
 #include <string.h>
 #include <stdbool.h>
+
+#define MAX_ERR_MSG_LEN 256
 
 /* ------------------------------ Utility functions ------------------------- */
 
@@ -42,6 +46,7 @@ typedef enum {
     TYPE_PRIMITIVE,
     TYPE_CONS,
     TYPE_STRING,
+    TYPE_ERROR,
     TYPE_CLOSURE,
 } ValueType;
 
@@ -55,6 +60,7 @@ typedef struct Value {
         double number;
         const char* atom_name;
         const char* string;
+        char* err_msg;
         unsigned int primitive_index;
         struct ConsCell* cons;
         struct Closure* closure;
@@ -72,9 +78,15 @@ typedef struct Closure {
     Value env;
 } Closure;
 
+typedef Value (*PrimitiveFunc)(Value args, Value env);
+typedef struct {
+    const char* name;
+    PrimitiveFunc func;
+    size_t arity;
+} PrimitiveEntry;
+extern PrimitiveEntry primitives[];
 
 /* ----------------- Memory Managment ----------------- */
-
 
 Value make_number(double n) {
     Value v;
@@ -99,6 +111,15 @@ Value make_cons(Value car, Value cdr) {
     v.type = TYPE_CONS;
     v.as.cons = cell;
     return v;
+}
+
+size_t list_length(Value list) {
+    size_t count = 0;
+    while (list.type == TYPE_CONS) {
+        count++;
+        list = list.as.cons->cdr;
+    }
+    return count;
 }
 
 Value make_closure(Value params, Value body, Value env) {
@@ -128,6 +149,41 @@ Value make_string(const char* s) {
     return v;
 }
 
+Value make_error(const char *format, ...) {
+    char buffer[MAX_ERR_MSG_LEN];
+
+    va_list args;
+    va_start(args, format);
+    vsnprintf(buffer, sizeof(buffer), format, args);
+    va_end(args);
+
+    char *msg = strdup(buffer);
+    if (!msg) {
+        fprintf(stderr, "FATAL: Out of memory\n");
+        exit(EXIT_FAILURE);
+    }
+
+    Value err_val;
+    err_val.type = TYPE_ERROR;
+    err_val.as.err_msg = msg;
+
+    return err_val;
+}
+
+const char* type_name(ValueType type) {
+    switch (type) {
+        case TYPE_NIL: return "nil";
+        case TYPE_NUMBER: return "number";
+        case TYPE_ATOM: return "atom";
+        case TYPE_STRING: return "string";
+        case TYPE_CONS: return "pair";
+        case TYPE_CLOSURE: return "closure";
+        case TYPE_PRIMITIVE: return "primitive";
+        case TYPE_ERROR: return "error";
+        default: return "unknown";
+    }
+}
+
 // ---------------- Variable and constants ------------------
 
 Value NIL_VALUE;
@@ -153,6 +209,7 @@ bool are_equal(Value a, Value b) {
         case TYPE_CONS:    return a.as.cons == b.as.cons;
         case TYPE_CLOSURE: return a.as.closure == b.as.closure;
         case TYPE_PRIMITIVE: return a.as.primitive_index == b.as.primitive_index;
+        case TYPE_ERROR: return strcmp(a.as.err_msg, b.as.err_msg) == 0;
     }
     return false;
 }
@@ -180,6 +237,14 @@ Value find_in_env(Value var, Value env) {
         env = cdr(env);
     }
     return ERROR_VALUE;
+}
+
+Value bind_args(Value params, Value args, Value env) {
+    if (is_nil(params)) return env;
+    if (params.type == TYPE_CONS) {
+        return bind_args(cdr(params), cdr(args), make_env_pair(car(params), car(args), env));
+    }
+    return make_env_pair(params, args, env);
 }
 
 /* ------------------- Interpreter: eval and apply ---------------- */
@@ -210,36 +275,114 @@ Value prim_cdr(Value args, Value env) {
     return cdr(car(args));
 }
 
+Value prim_len(Value list, Value env) {
+    size_t count = 0;
+    while (list.type == TYPE_CONS) {
+        count++;
+        list = list.as.cons->cdr;
+    }
+    Value result = {.type = TYPE_NUMBER, .as.number = count};
+    return result;
+}
+
+Value prim_is_num(Value args, Value env) {
+    while (!is_nil(args)) {
+        Value current_arg = car(args);
+        if (current_arg.type != TYPE_NUMBER) {
+            return NIL_VALUE;
+        }
+        args = cdr(args);
+    }
+    return TRUE_VALUE;
+}
+
 Value prim_add(Value args, Value env) {
-    double n = car(args).as.number;
-    while (is_truthy(args = cdr(args))) {
-        n += car(args).as.number;
+    double n = 0;
+    while (!is_nil(args)) {
+        Value arg = car(args);
+        if (arg.type != TYPE_NUMBER) {
+            return make_error("+: expected number, got %s", type_name(arg.type));
+        }
+        n += arg.as.number;
+        args = cdr(args);
     }
     return make_number(n);
 }
 
 Value prim_sub(Value args, Value env) {
-    double n = car(args).as.number;
-    while (is_truthy(args = cdr(args))) {
-        n -= car(args).as.number;
+    if (is_nil(args)) {
+        return make_error("-: requires at least one argument");
+    }
+    Value first = car(args);
+    if (first.type != TYPE_NUMBER) {
+        return make_error("-: expected number, got %s", type_name(first.type));
+    }
+    double n = first.as.number;
+    args = cdr(args);
+
+    if (is_nil(args)) {
+        return make_number(-n);
+    }
+
+    while (!is_nil(args)) {
+        Value arg = car(args);
+        if (arg.type != TYPE_NUMBER) {
+            return make_error("-: expected number, got %s", type_name(arg.type));
+        }
+        n -= arg.as.number;
+        args = cdr(args);
     }
     return make_number(n);
 }
 
 Value prim_mul(Value args, Value env) {
-    double n = car(args).as.number;
-    while (is_truthy(args = cdr(args))) {
-        n *= car(args).as.number;
+    double n = 1;
+    while (!is_nil(args)) {
+        Value arg = car(args);
+        if (arg.type != TYPE_NUMBER) {
+            return make_error("*: expected number, got %s", type_name(arg.type));
+        }
+        n *= arg.as.number;
+        args = cdr(args);
     }
     return make_number(n);
 }
 
 Value prim_div(Value args, Value env) {
-    double n = car(args).as.number;
-    while (is_truthy(args = cdr(args))) {
-        n /= car(args).as.number;
+    if (is_nil(args)) {
+        return make_error("/: requires at least one argument");
     }
-    return make_number(n);
+
+    Value first_arg = car(args);
+
+    if (first_arg.type != TYPE_NUMBER) {
+        return make_error("/: expected number, got %s", type_name(first_arg.type));
+    }
+
+    double result = first_arg.as.number;
+    args = cdr(args);
+
+    if (is_nil(args)) {
+        if (result == 0.0) {
+            return make_error("/: division by zero (inverse of 0)");
+        }
+        return make_number(1.0 / result);
+    }
+
+    while (!is_nil(args)) {
+        Value current_divisor = car(args);
+        if (current_divisor.type != TYPE_NUMBER) {
+            return make_error("/: expected number, got %s", type_name(current_divisor.type));
+        }
+        double divisor = current_divisor.as.number;
+        if (divisor == 0.0) {
+            return make_error("/: division by zero");
+        }
+        result /= divisor;
+        args = cdr(args);
+    }
+
+    return make_number(result);
 }
 
 Value prim_int(Value args, Value env) {
@@ -272,7 +415,45 @@ Value prim_eq_num(Value args, Value env) {
     return (car(args).as.number == car(cdr(args)).as.number) ? TRUE_VALUE : NIL_VALUE;
 }
 
+Value prim_tap(Value args, Value env) {
+    size_t arg_count = list_length(args);
+    if (arg_count < 1) {
+        return make_error("tap: requires at least 1 argument.");
+    }
+
+    Value value_to_tap = car(args);
+
+    Value rest_args = cdr(args);
+    if (!is_nil(rest_args)) {
+        Value label = car(rest_args);
+        if (label.type == TYPE_STRING || label.type == TYPE_ATOM) {
+            print_value(label);
+        }
+    }
+
+    print_value(value_to_tap);
+    printf("\n");
+
+    return value_to_tap;
+}
+
 /* ----------- Special Forms ----------- */
+
+Value prim_apply(Value args, Value env) {
+    Value func = car(args);
+    Value arg_list = car(cdr(args));
+    if (func.type == TYPE_PRIMITIVE) {
+        return primitives[func.as.primitive_index].func(arg_list, env);
+    }
+    if (func.type == TYPE_CLOSURE) {
+        Value closure_env = func.as.closure->env;
+        Value params = func.as.closure->params;
+        Value body = func.as.closure->body;
+        Value new_env = bind_args(params, arg_list, closure_env);
+        return eval_expression(body, new_env);
+    }
+    return make_error("apply: not a function");
+}
 
 Value prim_eval(Value args, Value env) {
     return eval_expression(car(eval_list(args, env)), env);
@@ -392,69 +573,57 @@ Value prim_define(Value args, Value env) {
     }
 }
 
-
-typedef Value (*PrimitiveFunc)(Value args, Value env);
-struct { const char* name; PrimitiveFunc func; } primitives[] = {
+PrimitiveEntry primitives[] = {
     /* Special Form */
-    {"quote",       prim_quote},
-    {"if",          prim_if},
-    {"cond",        prim_cond},
-    {"and",         prim_and},
-    {"or",          prim_or},
-    {"lambda",      prim_lambda},
-    {"define",      prim_define},
-    {"let*",        prim_let_star},
+    {"quote",       prim_quote,     1},
+    {"if",          prim_if,        3},
+    {"cond",        prim_cond,      SIZE_MAX},
+    {"and",         prim_and,       SIZE_MAX},
+    {"or",          prim_or,        SIZE_MAX},
+    {"lambda",      prim_lambda,    SIZE_MAX},
+    {"define",      prim_define,    2},
+    {"let*",        prim_let_star,  2},
 
     /* Manipulate lists */
-    {"cons",        prim_cons},
-    {"car",         prim_car},
-    {"cdr",         prim_cdr},
+    {"cons",        prim_cons,      2},
+    {"car",         prim_car,       1},
+    {"cdr",         prim_cdr,       1},
+    {"len",         prim_len,       1},
 
-    /* Arithmetic and Numbers */
-    {"+",           prim_add},
-    {"-",           prim_sub},
-    {"*",           prim_mul},
-    {"/",           prim_div},
-    {"int",         prim_int},
+    /* Arithmetic Ops */
+    {"+",           prim_add,       SIZE_MAX},
+    {"-",           prim_sub,       SIZE_MAX},
+    {"*",           prim_mul,       SIZE_MAX},
+    {"/",           prim_div,       SIZE_MAX},
+    {"int",         prim_int,       1},
 
-    /* Predicates */
-    {"<",           prim_lt},
-    {"=",           prim_eq_num},
-    {"eq?",         prim_eq},
-    {"not",         prim_not},
-    {"pair?",       prim_is_pair},
+    /* Predicates (?) */
+    {"<",           prim_lt,        2},
+    {"=",           prim_eq_num,    2},
+    {"eq?",         prim_eq,        2},
+    {"not",         prim_not,       1},
+    {"pair?",       prim_is_pair,   1},
+    {"number?",     prim_is_num,    SIZE_MAX},
 
-    /* Meta-functions */
-    {"eval",        prim_eval},
+    /* Meta-Functions */
+    {"apply",       prim_apply,     2},
+    {"eval",        prim_eval,      1},
 
     /* I/O */
-    {"display",     prim_display},
+    {"display",     prim_display,   1},
 
-    {NULL,          NULL}
+    /* Debugging Focused */
+    {"tap",         prim_tap,       2},
+
+    /* QOL functions */
+    // TODO:{"clear",       prim_clear,     0},
+    // TODO:{"exit",        prim_exit,      0},
+
+    /* End of list */
+    {NULL,          NULL,           0}
 };
 
-Value bind_args(Value params, Value args, Value env) {
-    if (is_nil(params)) return env;
-    if (params.type == TYPE_CONS) {
-        return bind_args(cdr(params), cdr(args), make_env_pair(car(params), car(args), env));
-    }
-    return make_env_pair(params, args, env);
-}
 
-Value apply(Value func, Value args, Value env) {
-    if (func.type == TYPE_PRIMITIVE) {
-        return primitives[func.as.primitive_index].func(args, env);
-    }
-    if (func.type == TYPE_CLOSURE) {
-        Value closure_env = func.as.closure->env;
-        Value params = func.as.closure->params;
-        Value body = func.as.closure->body;
-        Value evaluated_args = eval_list(args, env);
-        Value new_env = bind_args(params, evaluated_args, closure_env);
-        return eval_expression(body, new_env);
-    }
-    return ERROR_VALUE;
-}
 
 
 static inline bool is_special_form(const char* name) {
@@ -498,6 +667,7 @@ Value eval_expression(Value expr, Value env) {
                 return find_in_env(expr, env);
             case TYPE_CONS: {
                 Value func = eval_expression(car(expr), env);
+                if (func.type == TYPE_ERROR) return func;
                 Value args = cdr(expr);
 
                 if (func.type == TYPE_PRIMITIVE) {
@@ -512,7 +682,10 @@ Value eval_expression(Value expr, Value env) {
                     Value* tail_ptr = &evaluated_args;
                     Value p = args;
                     while (!is_nil(p)) {
-                        Value new_cell = make_cons(eval_expression(car(p), env), NIL_VALUE);
+                        Value evaluated_car = eval_expression(car(p), env);
+                        if (evaluated_car.type == TYPE_ERROR) return evaluated_car;
+
+                        Value new_cell = make_cons(evaluated_car, NIL_VALUE);
                         *tail_ptr = new_cell;
                         tail_ptr = &new_cell.as.cons->cdr;
                         p = cdr(p);
@@ -521,19 +694,34 @@ Value eval_expression(Value expr, Value env) {
 
 
                 if (func.type == TYPE_CLOSURE) {
+                    size_t expected = list_length(func.as.closure->params);
+                    size_t actual = list_length(evaluated_args);
+                    if (expected != actual) {
+                        return make_error("Arity error: function expects %zu arguments, but got %zu", expected, actual);
+                    }
+
                     env = bind_args(func.as.closure->params, evaluated_args, func.as.closure->env);
                     expr = func.as.closure->body;
                     continue;
                 }
 
                 if (func.type == TYPE_PRIMITIVE) {
-                    return primitives[func.as.primitive_index].func(evaluated_args, env);
+                    const PrimitiveEntry* prim_info = &primitives[func.as.primitive_index];
+                    if (prim_info->arity != SIZE_MAX) {
+                        size_t actual = list_length(evaluated_args);
+                        if (actual != prim_info->arity) {
+                            return make_error("Arity error for '%s': expects %zu arguments, but got %zu",
+                                              prim_info->name, prim_info->arity, actual);
+                        }
+                    }
+
+                    return prim_info->func(evaluated_args, env);
                 }
 
-                return ERROR_VALUE;
+                return make_error("Type error: cannot apply a non-function value.");
             }
             default:
-                return ERROR_VALUE;
+                return make_error("Evaluation error: unknown value type.");
         }
     }
 }
@@ -672,6 +860,7 @@ void print_value(Value v) {
         case TYPE_PRIMITIVE: printf("<primitive:%s>", primitives[v.as.primitive_index].name); break;
         case TYPE_CONS: print_list(v); break;
         case TYPE_CLOSURE: printf("<closure>"); break;
+        case TYPE_ERROR: printf("%s", v.as.err_msg); break;
         default: printf("<ERROR: unknown type>");
     }
 }
