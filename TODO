@@ -1,5 +1,8 @@
 Future implementations:
 
 [ ] Add a html/pdf documentation with doxygen
+    - Add Documentation to each function and struct
+    - Create the doxygen config file
+    - Run doxygen
 [ ] Garbage Collector (VERY IMPORTANT)
 [ ] More... functions!
