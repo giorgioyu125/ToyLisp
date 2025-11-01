@@ -25,5 +25,3 @@ To build the project, you need `meson` and a C compiler (like GCC or Clang) inst
     ```bash
     ./toylisp
     ```
-
-### *Docs still in development...*
