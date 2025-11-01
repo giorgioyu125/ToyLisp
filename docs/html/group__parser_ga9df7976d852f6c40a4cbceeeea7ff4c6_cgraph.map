@@ -1,0 +1,29 @@
+<map id="parse_list" name="parse_list">
+<area shape="rect" id="Node000001" title="Parses a list expression from the token stream." alt="" coords="5,99,83,125"/>
+<area shape="rect" id="Node000002" href="$group__value__constructors.html#gabd7855663e658ab83e6b55373e161761" title="Creates a Value of type TYPE_CONS (a list pair)." alt="" coords="312,5,401,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="60,96,91,73,130,52,172,38,216,29,297,18,297,24,217,34,174,44,132,57,93,78,63,100"/>
+<area shape="rect" id="Node000003" href="$group__parser.html#ga04119f66cc3b3e64799e56020c801b73" title="The main recursive parsing function." alt="" coords="131,91,264,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="83,117,115,118,115,124,83,123"/>
+<area shape="rect" id="Node000008" href="$group__parser.html#gadccd2aff0e2caf6d38d475daca208b1d" title="Scans the input stream to form the next complete token." alt="" coords="312,165,401,192"/>
+<area shape="poly" id="edge16_Node000001_Node000008" title=" " alt="" coords="77,123,131,143,218,161,298,171,297,176,217,166,130,148,75,128"/>
+<area shape="poly" id="edge10_Node000003_Node000001" title=" " alt="" coords="130,106,98,106,98,101,130,100"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="234,88,318,38,320,43,237,92"/>
+<area shape="poly" id="edge9_Node000003_Node000003" title=" " alt="" coords="167,90,166,81,171,72,182,66,197,64,214,66,224,73,221,77,212,71,197,69,183,71,175,76,171,82,173,90"/>
+<area shape="rect" id="Node000004" href="$group__value__constructors.html#ga9ff6885b2832accd84039908b6dacdfb" title="Creates a Value of type TYPE_ATOM." alt="" coords="456,13,546,40"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="264,91,441,41,442,46,265,96"/>
+<area shape="rect" id="Node000005" href="$group__parser.html#gaaada423750f0a0b5d2b04abe1dbffc53" title="Parses the string in current_token_buf into a number, string, or atom Value." alt="" coords="312,107,401,133"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="265,113,297,114,296,120,265,118"/>
+<area shape="poly" id="edge11_Node000003_Node000008" title=" " alt="" coords="251,131,310,156,308,161,249,136"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="375,104,400,86,448,50,456,45,458,50,451,54,403,90,379,108"/>
+<area shape="rect" id="Node000006" href="$group__value__constructors.html#ga9f4a9f6ad14d91f6922fcabf73bd908d" title="Creates a Value of type TYPE_NUMBER." alt="" coords="449,64,553,91"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="401,104,438,93,440,98,402,109"/>
+<area shape="rect" id="Node000007" href="$group__value__constructors.html#ga38b6a77dfca2706d7f685745aeae51a4" title="Creates a Value of type TYPE_STRING." alt="" coords="455,115,547,141"/>
+<area shape="poly" id="edge8_Node000005_Node000007" title=" " alt="" coords="402,120,439,122,439,127,402,125"/>
+<area shape="rect" id="Node000009" href="$group__parser.html#gadd230fdc45713632b0401e0edbb8e0c3" title="Consumes and returns the current lookahead char, then advances the stream." alt="" coords="465,165,537,192"/>
+<area shape="poly" id="edge12_Node000008_Node000009" title=" " alt="" coords="401,176,450,176,450,181,401,181"/>
+<area shape="rect" id="Node000010" href="$group__parser.html#gae9e9be3da45eff49bbeb7956c4f74b3d" title="Reads a single character from the input stream into the lookahead buffer." alt="" coords="601,191,679,217"/>
+<area shape="poly" id="edge15_Node000008_Node000010" title=" " alt="" coords="399,190,450,201,520,206,585,205,585,210,520,212,449,207,398,195"/>
+<area shape="rect" id="Node000011" href="$group__parser.html#gad3d4064bac33002fb6c7d77e50c5a3c4" title="Checks if the lookahead char matches c. A space matches any whitespace." alt="" coords="463,267,539,293"/>
+<area shape="poly" id="edge14_Node000008_Node000011" title=" " alt="" coords="377,190,451,246,466,256,463,260,448,250,374,195"/>
+<area shape="poly" id="edge13_Node000009_Node000010" title=" " alt="" coords="538,183,586,191,585,197,537,188"/>
+</map>

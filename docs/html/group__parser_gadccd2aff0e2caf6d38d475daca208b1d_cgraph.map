@@ -1,0 +1,10 @@
+<map id="scan_token" name="scan_token">
+<area shape="rect" id="Node000001" title="Scans the input stream to form the next complete token." alt="" coords="5,56,94,83"/>
+<area shape="rect" id="Node000002" href="$group__parser.html#gadd230fdc45713632b0401e0edbb8e0c3" title="Consumes and returns the current lookahead char, then advances the stream." alt="" coords="144,5,216,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,53,129,36,131,40,87,58"/>
+<area shape="rect" id="Node000003" href="$group__parser.html#gae9e9be3da45eff49bbeb7956c4f74b3d" title="Reads a single character from the input stream into the lookahead buffer." alt="" coords="266,31,344,57"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="94,62,250,47,251,52,95,68"/>
+<area shape="rect" id="Node000004" href="$group__parser.html#gad3d4064bac33002fb6c7d77e50c5a3c4" title="Checks if the lookahead char matches c. A space matches any whitespace." alt="" coords="142,107,218,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="87,81,130,98,128,103,85,86"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="217,23,251,30,250,36,215,28"/>
+</map>

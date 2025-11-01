@@ -1,0 +1,11 @@
+<map id="PrimitiveEntry" name="PrimitiveEntry">
+<area shape="rect" id="Node000001" title="Describes a single primitive function in the system." alt="" coords="5,147,109,173"/>
+<area shape="rect" id="Node000002" href="$structValue.html" title="The universal data structure for every value in the interpreter." alt="" coords="152,5,205,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,34,118,44,101,58,85,79,73,104,62,147,56,146,68,102,80,77,97,54,115,40,136,29"/>
+<area shape="rect" id="Node000003" href="$structConsCell.html" title="Represents a single &quot;cons&quot; pair, the basic building block of lists." alt="" coords="137,147,212,173"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="154,45,147,57,139,89,147,122,162,145,158,148,142,124,134,89,142,55,149,42"/>
+<area shape="rect" id="Node000004" href="$structClosure.html" title="Represents a lambda function created at runtime." alt="" coords="264,147,330,173"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="207,41,218,55,227,73,230,89,233,105,243,121,256,134,272,144,269,148,253,138,239,124,228,107,225,91,222,75,213,57,203,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="172,131,175,32,181,32,178,131"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="302,131,306,94,303,75,295,58,276,41,253,30,205,22,206,17,255,25,279,36,299,54,308,73,312,93,308,132"/>
+</map>

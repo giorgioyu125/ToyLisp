@@ -1,0 +1,129 @@
+\doxysection{Core Expression Evaluator }
+\hypertarget{group__core__evaluator}{}\label{group__core__evaluator}\index{Core Expression Evaluator@{Core Expression Evaluator}}
+
+
+The heart of the Lisp interpreter, responsible for evaluating expressions.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structValue}{Value}} \mbox{\hyperlink{group__core__evaluator_ga5e5df764fb5396458999e860cb0b9373}{eval\+\_\+expression}} (\mbox{\hyperlink{structValue}{Value}} expr, \mbox{\hyperlink{structValue}{Value}} env)
+\begin{DoxyCompactList}\small\item\em Evaluates a single Lisp expression in a given environment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structValue}{Value}} \mbox{\hyperlink{group__core__evaluator_gac9646fe9e30e6ba298571287e89d5dc2}{eval\+\_\+list}} (\mbox{\hyperlink{structValue}{Value}} list, \mbox{\hyperlink{structValue}{Value}} env)
+\begin{DoxyCompactList}\small\item\em Recursively evaluates every element in a list of expressions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The heart of the Lisp interpreter, responsible for evaluating expressions. 
+
+This group contains the mutually recursive functions {\ttfamily \doxylink{group__core__evaluator_ga5e5df764fb5396458999e860cb0b9373}{eval\+\_\+expression}} and {\ttfamily \doxylink{group__core__evaluator_gac9646fe9e30e6ba298571287e89d5dc2}{eval\+\_\+list}}, which together form the core evaluation logic. They implement the classic \textquotesingle{}eval/apply\textquotesingle{} cycle of a Lisp interpreter. {\ttfamily \doxylink{group__core__evaluator_ga5e5df764fb5396458999e860cb0b9373}{eval\+\_\+expression}} is the main entry point for evaluation, determining the type of an expression and deciding how to process it. {\ttfamily \doxylink{group__core__evaluator_gac9646fe9e30e6ba298571287e89d5dc2}{eval\+\_\+list}} is a crucial helper function used to evaluate the arguments of a function call before the function is applied.
+
+The interplay between these two functions forms a recursive dance\+:
+\begin{DoxyEnumerate}
+\item {\ttfamily \doxylink{group__core__evaluator_ga5e5df764fb5396458999e860cb0b9373}{eval\+\_\+expression}} is called on a function-\/call expression like {\ttfamily (+ 1 2)}.
+\item It identifies {\ttfamily +} as the function and {\ttfamily (1 2)} as the arguments.
+\item It calls {\ttfamily \doxylink{group__core__evaluator_gac9646fe9e30e6ba298571287e89d5dc2}{eval\+\_\+list}} on {\ttfamily (1 2)} to get a new list of evaluated results, {\ttfamily (1 2)}.
+\item It then applies the function {\ttfamily +} to the resulting arguments.
+\end{DoxyEnumerate}
+
+Both functions operate within the context of an {\ttfamily env} (environment), which is a list of frames used for lexical variable lookup. 
+
+\label{doc-func-members}
+\Hypertarget{group__core__evaluator_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{group__core__evaluator_ga5e5df764fb5396458999e860cb0b9373}\index{Core Expression Evaluator@{Core Expression Evaluator}!eval\_expression@{eval\_expression}}
+\index{eval\_expression@{eval\_expression}!Core Expression Evaluator@{Core Expression Evaluator}}
+\doxysubsubsection{\texorpdfstring{eval\_expression()}{eval\_expression()}}
+{\footnotesize\ttfamily \label{group__core__evaluator_ga5e5df764fb5396458999e860cb0b9373} 
+\mbox{\hyperlink{structValue}{Value}} eval\+\_\+expression (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structValue}{Value}}}]{expr}{, }\item[{\mbox{\hyperlink{structValue}{Value}}}]{env}{}\end{DoxyParamCaption})}
+
+
+
+Evaluates a single Lisp expression in a given environment. 
+
+This is the central {\ttfamily eval} function. It takes an expression and an environment and returns the computed value. Its behavior depends on the type of the expression\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Self-\/evaluating types\+:}} Numbers, strings, {\ttfamily nil}, closures, and errors evaluate to themselves.
+\item {\bfseries{Symbols (Atoms)\+:}} The function looks up the symbol\textquotesingle{}s value in the {\ttfamily env} (environment). If not found, it\textquotesingle{}s an error.
+\item {\bfseries{Lists (Cons Cells)\+:}} A list is treated as a function application.
+\begin{DoxyItemize}
+\item The {\ttfamily car} of the list is evaluated to get a function (either a primitive or a closure).
+\item The {\ttfamily cdr} of the list (the arguments) is passed to {\ttfamily \doxylink{group__core__evaluator_gac9646fe9e30e6ba298571287e89d5dc2}{eval\+\_\+list}} to be evaluated.
+\item The resulting function is then applied to the evaluated arguments.
+\item {\bfseries{Special Forms\+:}} If the {\ttfamily car} is a special form (like {\ttfamily quote}, {\ttfamily if}, {\ttfamily define}, {\ttfamily lambda}), this function handles it specially, as they do not follow the standard rule of evaluating all arguments first.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em expr} & The {\ttfamily \doxylink{structValue}{Value}} object representing the Lisp expression to evaluate. \\
+\hline
+{\em env} & The current evaluation environment, used for symbol lookup. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A {\ttfamily \doxylink{structValue}{Value}} object representing the result of the evaluation. This can be a computed value or an error object if evaluation fails. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group__core__evaluator_gac9646fe9e30e6ba298571287e89d5dc2}{eval\+\_\+list} 
+\end{DoxySeeAlso}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{group__core__evaluator_ga5e5df764fb5396458999e860cb0b9373_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{group__core__evaluator_ga5e5df764fb5396458999e860cb0b9373_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{group__core__evaluator_gac9646fe9e30e6ba298571287e89d5dc2}\index{Core Expression Evaluator@{Core Expression Evaluator}!eval\_list@{eval\_list}}
+\index{eval\_list@{eval\_list}!Core Expression Evaluator@{Core Expression Evaluator}}
+\doxysubsubsection{\texorpdfstring{eval\_list()}{eval\_list()}}
+{\footnotesize\ttfamily \label{group__core__evaluator_gac9646fe9e30e6ba298571287e89d5dc2} 
+\mbox{\hyperlink{structValue}{Value}} eval\+\_\+list (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structValue}{Value}}}]{list}{, }\item[{\mbox{\hyperlink{structValue}{Value}}}]{env}{}\end{DoxyParamCaption})}
+
+
+
+Recursively evaluates every element in a list of expressions. 
+
+For example, if given the list {\ttfamily ((+ 1 1) 3)}, it will return a new list {\ttfamily (2 3)}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & A {\ttfamily \doxylink{structValue}{Value}} representing a list of expressions to be evaluated. Must be a proper list (ending in {\ttfamily nil}). \\
+\hline
+{\em env} & The environment in which to evaluate each expression. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new list containing the evaluated results of the input list\textquotesingle{}s elements. If the input is {\ttfamily nil}, it returns {\ttfamily nil}. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group__core__evaluator_ga5e5df764fb5396458999e860cb0b9373}{eval\+\_\+expression} 
+\end{DoxySeeAlso}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__core__evaluator_gac9646fe9e30e6ba298571287e89d5dc2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{group__core__evaluator_gac9646fe9e30e6ba298571287e89d5dc2_icgraph}
+\end{center}
+\end{figure}

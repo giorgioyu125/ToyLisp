@@ -1,0 +1,48 @@
+\doxysection{List Utility Functions }
+\hypertarget{group__list__utilities}{}\label{group__list__utilities}\index{List Utility Functions@{List Utility Functions}}
+
+
+Functions for operating on Lisp-\/style lists.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{group__list__utilities_gab487ac56f008d882cce9f233b3b34bd7}{list\+\_\+length}} (\mbox{\hyperlink{structValue}{Value}} list)
+\begin{DoxyCompactList}\small\item\em Calculates the proper length of a Lisp list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions for operating on Lisp-\/style lists. 
+
+These helpers provide common operations for lists, which are represented as chains of {\ttfamily \doxylink{structConsCell}{Cons\+Cell}}s terminating in {\ttfamily nil}. 
+
+\label{doc-func-members}
+\Hypertarget{group__list__utilities_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{group__list__utilities_gab487ac56f008d882cce9f233b3b34bd7}\index{List Utility Functions@{List Utility Functions}!list\_length@{list\_length}}
+\index{list\_length@{list\_length}!List Utility Functions@{List Utility Functions}}
+\doxysubsubsection{\texorpdfstring{list\_length()}{list\_length()}}
+{\footnotesize\ttfamily \label{group__list__utilities_gab487ac56f008d882cce9f233b3b34bd7} 
+size\+\_\+t list\+\_\+length (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structValue}{Value}}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the proper length of a Lisp list. 
+
+A proper list is a chain of {\ttfamily cons} cells ending in {\ttfamily nil}. This function traverses the list, counting the cells. If the list is improper (does not end in {\ttfamily nil}), it counts up to the non-\/cons cdr. 
+\begin{DoxyParams}{Parameters}
+{\em list} & The list {\ttfamily \doxylink{structValue}{Value}} to measure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of {\ttfamily cons} cells in the list chain. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__list__utilities_gab487ac56f008d882cce9f233b3b34bd7_icgraph}
+\end{center}
+\end{figure}

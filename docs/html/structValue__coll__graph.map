@@ -1,0 +1,9 @@
+<map id="Value" name="Value">
+<area shape="rect" id="Node000001" title="The universal data structure for every value in the interpreter." alt="" coords="71,5,124,32"/>
+<area shape="rect" id="Node000002" href="$structConsCell.html" title="Represents a single &quot;cons&quot; pair, the basic building block of lists." alt="" coords="5,147,81,173"/>
+<area shape="poly" id="edge2_Node000002_Node000001" title=" " alt="" coords="57,31,35,41,18,58,10,74,9,88,18,122,33,145,28,148,13,124,3,88,5,72,14,54,32,37,55,26"/>
+<area shape="rect" id="Node000003" href="$structClosure.html" title="Represents a lambda function created at runtime." alt="" coords="119,147,186,173"/>
+<area shape="poly" id="edge4_Node000003_Node000001" title=" " alt="" coords="105,47,115,83,129,121,144,145,139,147,124,124,109,85,100,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="43,131,49,94,63,55,82,30,86,34,68,57,54,95,48,132"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="174,133,181,122,190,88,189,74,181,58,170,45,155,36,124,26,125,21,158,32,173,41,185,54,194,72,196,88,185,124,179,136"/>
+</map>
