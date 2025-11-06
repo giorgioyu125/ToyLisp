@@ -1,6 +1,6 @@
 project('ToyLisp',
         'c',
-        version: '0.1.1')
+        version: '0.1.2')
 
 
 add_project_arguments('-ggdb', '-O1', language: 'c')

@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ToyLisp<span id="projectnumber">&#160;0.1.1</span>
+   <div id="projectname">ToyLisp<span id="projectnumber">&#160;0.1.2</span>
    </div>
    <div id="projectbrief">A simple lisp interpreter</div>
   </td>
@@ -109,7 +109,7 @@ Functions</h2></td></tr>
 <p>The interplay between these two functions forms a recursive dance:</p><ol type="1">
 <li><span class="tt"><a class="el" href="#ga5e5df764fb5396458999e860cb0b9373" title="Evaluates a single Lisp expression in a given environment.">eval_expression</a></span> is called on a function-call expression like <span class="tt">(+ 1 2)</span>.</li>
 <li>It identifies <span class="tt">+</span> as the function and <span class="tt">(1 2)</span> as the arguments.</li>
-<li>It calls <span class="tt"><a class="el" href="#gac9646fe9e30e6ba298571287e89d5dc2" title="Recursively evaluates every element in a list of expressions.">eval_list</a></span> on <span class="tt">(1 2)</span> to get a new list of evaluated results, <span class="tt">(1 2)</span>.</li>
+<li>It calls the corrisponding primitives on <span class="tt">(1 2)</span> to get a new list of evaluated results, <span class="tt">(1 2)</span>.</li>
 <li>It then applies the function <span class="tt">+</span> to the resulting arguments.</li>
 </ol>
 <p>Both functions operate within the context of an <span class="tt">env</span> (environment), which is a list of frames used for lexical variable lookup. </p>
@@ -140,7 +140,7 @@ Functions</h2></td></tr>
 <li><b>Symbols (Atoms):</b> The function looks up the symbol's value in the <span class="tt">env</span> (environment). If not found, it's an error.</li>
 <li><b>Lists (Cons Cells):</b> A list is treated as a function application.<ul>
 <li>The <span class="tt">car</span> of the list is evaluated to get a function (either a primitive or a closure).</li>
-<li>The <span class="tt">cdr</span> of the list (the arguments) is passed to <span class="tt"><a class="el" href="#gac9646fe9e30e6ba298571287e89d5dc2" title="Recursively evaluates every element in a list of expressions.">eval_list</a></span> to be evaluated.</li>
+<li>The <span class="tt">cdr</span> of the list (the arguments) is passed to primitives functions to be treated.</li>
 <li>The resulting function is then applied to the evaluated arguments.</li>
 <li><b>Special Forms:</b> If the <span class="tt">car</span> is a special form (like <span class="tt">quote</span>, <span class="tt">if</span>, <span class="tt">define</span>, <span class="tt">lambda</span>), this function handles it specially, as they do not follow the standard rule of evaluating all arguments first.</li>
 </ul>
@@ -154,7 +154,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> object representing the result of the evaluation. This can be a computed value or an error object if evaluation fails. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#gac9646fe9e30e6ba298571287e89d5dc2" title="Recursively evaluates every element in a list of expressions.">eval_list</a> </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

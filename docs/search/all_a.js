@@ -6,5 +6,6 @@ var searchData=
   ['make_5fcons_3',['make_cons',['../group__value__constructors.html#gabd7855663e658ab83e6b55373e161761',1,'toylisp.c']]],
   ['make_5ferror_4',['make_error',['../group__value__constructors.html#gaab8a33a22b5c6738f19ab6478478fc3d',1,'toylisp.c']]],
   ['make_5fnumber_5',['make_number',['../group__value__constructors.html#ga9f4a9f6ad14d91f6922fcabf73bd908d',1,'toylisp.c']]],
-  ['make_5fstring_6',['make_string',['../group__value__constructors.html#ga38b6a77dfca2706d7f685745aeae51a4',1,'toylisp.c']]]
+  ['make_5fstring_6',['make_string',['../group__value__constructors.html#ga38b6a77dfca2706d7f685745aeae51a4',1,'toylisp.c']]],
+  ['max_5ftoken_5fsize_7',['MAX_TOKEN_SIZE',['../group__parser.html#ga060a34fe8229a960f4250e93b346144d',1,'toylisp.c']]]
 ];
