@@ -283,61 +283,6 @@ Closure* make_closure_ptr(Value params, Value body, Value env) {
 /** @} */ // End of value_constructors group
 
 
-/**
- * @addtogroup list_utilities List Utility Functions
- * @brief Functions for operating on Lisp-style lists.
- *
- * These helpers provide common operations for lists, which are represented as
- * chains of `ConsCell`s terminating in `nil`.
- * @{
- */
-
-/**
- * @brief Calculates the proper length of a Lisp list.
- * @details A proper list is a chain of `cons` cells ending in `nil`. This
- *          function traverses the list, counting the cells. If the list is
- *          improper (does not end in `nil`), it counts up to the non-cons cdr.
- * @param list The list `Value` to measure.
- * @return The number of `cons` cells in the list chain.
- */
-size_t list_length(Value list) {
-    size_t count = 0;
-    while (list.type == TYPE_CONS) {
-        count++;
-        list = list.as.cons->cdr;
-    }
-    return count;
-}
-
-/** @} */ // End of list_utilities group
-
-
-/**
- * @addtogroup type_helpers Type and Debugging Helpers
- * @brief Utility functions for introspection and debugging.
- * @{
- */
-
-/**
- * @brief Returns a human-readable string representation of a `ValueType`.
- * @param type The enum value from `ValueType`.
- * @return A constant string name for the type, or "unknown" if not found.
- */
-const char* type_name(ValueType type) {
-    switch (type) {
-        case TYPE_NIL: return "nil";
-        case TYPE_NUMBER: return "number";
-        case TYPE_ATOM: return "atom";
-        case TYPE_STRING: return "string";
-        case TYPE_CONS: return "pair";
-        case TYPE_CLOSURE: return "closure";
-        case TYPE_PRIMITIVE: return "primitive";
-        case TYPE_ERROR: return "error";
-        default: return "unknown";
-    }
-}
-
-/** @} */ // End of type_helpers group
 
 // ---------------- Variable and constants ------------------
 
@@ -435,6 +380,104 @@ Value bind_args(Value params, Value args, Value env) {
 }
 
 /* @{ ///< The end of the group: Non-yet-primitive Value operators */
+
+/**
+ * @addtogroup list_utilities List Utility Functions
+ * @brief Functions for operating on Lisp-style lists.
+ *
+ * These helpers provide common operations for lists, which are represented as
+ * chains of `ConsCell`s terminating in `nil`.
+ * @{
+ */
+
+/**
+ * @brief Calculates the proper length of a Lisp list.
+ * @details A proper list is a chain of `cons` cells ending in `nil`. This
+ *          function traverses the list, counting the cells. If the list is
+ *          improper (does not end in `nil`), it counts up to the non-cons cdr.
+ * @param list The list `Value` to measure.
+ * @return The number of `cons` cells in the list chain.
+ */
+size_t list_length(Value list) {
+    size_t count = 0;
+    while (list.type == TYPE_CONS) {
+        count++;
+        list = list.as.cons->cdr;
+    }
+    return count;
+}
+
+
+/**
+ * @brief Checks if a given Value is a proper Lisp list.
+ * @details A proper list is either the empty list (nil) or a chain of cons
+ *          cells that terminates with nil. This function robustly checks for
+ *          this condition by traversing the list structure. It also includes
+ *          Floyd's cycle-finding algorithm (the "tortoise and the hare") to
+ *          safely handle and detect circular lists, preventing infinite loops.
+ *
+ *          - `'(a b c)` is a proper list.
+ *          - `'()` is a proper list.
+ *          - `'(a . b)` (a dotted pair) is not a proper list.
+ *          - A circular list like `#1=(a . #1#)` is not a proper list.
+ *
+ * @param list The Value object to check.
+ * @return `true` if `list` is a proper list, `false` otherwise.
+ */
+bool is_proper_list(Value list) {
+    Value slow = list;
+    Value fast = list;
+
+    while (true) {
+        if (is_nil(slow)) {
+            return true;
+        }
+        if (slow.type != TYPE_CONS) {
+            return false;
+        }
+
+        slow = cdr(slow);
+        if (fast.type != TYPE_CONS || cdr(fast).type != TYPE_CONS) {
+            fast = NIL_VALUE; 
+        } else {
+            fast = cdr(cdr(fast));
+        }
+
+        if (!is_nil(fast) && are_equal(slow, fast)) {
+            return false;
+        }
+    }
+}
+
+/** @} */ // End of list_utilities group
+
+/**
+ * @addtogroup type_helpers Type and Debugging Helpers
+ * @brief Utility functions for introspection and debugging.
+ * @{
+ */
+
+/**
+ * @brief Returns a human-readable string representation of a `ValueType`.
+ * @param type The enum value from `ValueType`.
+ * @return A constant string name for the type, or "unknown" if not found.
+ */
+const char* type_name(ValueType type) {
+    switch (type) {
+        case TYPE_NIL: return "nil";
+        case TYPE_NUMBER: return "number";
+        case TYPE_ATOM: return "atom";
+        case TYPE_STRING: return "string";
+        case TYPE_CONS: return "pair";
+        case TYPE_CLOSURE: return "closure";
+        case TYPE_PRIMITIVE: return "primitive";
+        case TYPE_ERROR: return "error";
+        default: return "unknown";
+    }
+}
+
+/** @} */ // End of type_helpers group
+
 
 /* ------------------- Interpreter: eval and apply ---------------- */
 
@@ -557,12 +600,37 @@ Value prim_cons(Value args, Value env) {
     return make_cons(car(args), car(cdr(args)));
 }
 
+Value prim_list(Value args, Value env) {
+    (void)env;
+    return args;
+}
+
 Value prim_car(Value args, Value env) {
     return car(car(args));
 }
 
 Value prim_cdr(Value args, Value env) {
     return cdr(car(args));
+}
+
+Value prim_is_pair(Value args, Value env);
+
+Value prim_reverse(Value args, Value env) {
+    Value list_to_reverse = car(args);
+
+    if (!is_proper_list(list_to_reverse)) {
+        return make_error("reverse: the argument is not a proper list.");
+    }
+
+    Value current = list_to_reverse;
+    Value reversed_list = NIL_VALUE;
+
+    while (!is_nil(current)) {
+        reversed_list = make_cons(car(current), reversed_list);
+        current = cdr(current);
+    }
+
+    return reversed_list;
 }
 
 Value prim_len(Value list, Value env) {
@@ -680,7 +748,47 @@ Value prim_int(Value args, Value env) {
 }
 
 Value prim_lt(Value args, Value env) {
+    Value arg1 = car(args);
+    Value arg2 = car(cdr(args));
+
+    if (arg1.type != TYPE_NUMBER || arg2.type != TYPE_NUMBER) { 
+        return make_error(">: expects numbers as arguments"); 
+    }
+
     return (car(args).as.number < car(cdr(args)).as.number) ? TRUE_VALUE : NIL_VALUE;
+}
+
+Value prim_lte(Value args, Value env) {
+    Value arg1 = car(args);
+    Value arg2 = car(cdr(args));
+
+    if (arg1.type != TYPE_NUMBER || arg2.type != TYPE_NUMBER) { 
+        return make_error("<=: expects numbers as arguments"); 
+    }
+
+    return (car(args).as.number <= car(cdr(args)).as.number) ? TRUE_VALUE : NIL_VALUE;
+}
+
+Value prim_gte(Value args, Value env) {
+    Value arg1 = car(args);
+    Value arg2 = car(cdr(args));
+
+    if (arg1.type != TYPE_NUMBER || arg2.type != TYPE_NUMBER) { 
+        return make_error(">=: expects numbers as arguments"); 
+    }
+
+    return (car(args).as.number >= car(cdr(args)).as.number) ? TRUE_VALUE : NIL_VALUE;
+}
+
+Value prim_gt(Value args, Value env) {
+    Value arg1 = car(args);
+    Value arg2 = car(cdr(args));
+
+    if (arg1.type != TYPE_NUMBER || arg2.type != TYPE_NUMBER) { 
+        return make_error(">: expects numbers as arguments"); 
+    }
+
+    return (car(args).as.number > car(cdr(args)).as.number) ? TRUE_VALUE : NIL_VALUE;
 }
 
 Value prim_eq(Value args, Value env) {
@@ -689,6 +797,16 @@ Value prim_eq(Value args, Value env) {
 
 Value prim_is_pair(Value args, Value env) {
     return car(args).type == TYPE_CONS ? TRUE_VALUE : NIL_VALUE;
+}
+
+Value prim_is_list(Value args, Value env) {
+    Value list_to_check = car(args);
+
+    while (list_to_check.type == TYPE_CONS) {
+        list_to_check = cdr(list_to_check);
+    }
+
+    return (list_to_check.type == TYPE_NIL) ? TRUE_VALUE : NIL_VALUE;
 }
 
 Value prim_not(Value args, Value env) {
@@ -904,8 +1022,10 @@ PrimitiveEntry primitives[] = {
 
     /* Manipulate lists */
     {"cons",        prim_cons,      2},
+    {"list",        prim_list,      SIZE_MAX},
     {"car",         prim_car,       1},
     {"cdr",         prim_cdr,       1},
+    {"reverse",     prim_reverse,   1},
     {"len",         prim_len,       1},
 
     /* Arithmetic Ops */
@@ -917,10 +1037,14 @@ PrimitiveEntry primitives[] = {
 
     /* Predicates (?) */
     {"<",           prim_lt,        2},
+    {">",           prim_gt,        2},
+    {"<=",          prim_lte,       2},
+    {">=",          prim_gte,       2},
     {"=",           prim_eq_num,    2},
     {"eq?",         prim_eq,        2},
     {"not",         prim_not,       1},
     {"pair?",       prim_is_pair,   1},
+    {"list?",       prim_is_list,   1},
     {"number?",     prim_is_num,    SIZE_MAX},
 
     /* Meta-Functions */

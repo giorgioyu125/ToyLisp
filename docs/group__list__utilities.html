@@ -100,11 +100,46 @@ $(function(){initNavTree('group__list__utilities.html','',''); });
 Functions</h2></td></tr>
 <tr class="memitem:gab487ac56f008d882cce9f233b3b34bd7" id="r_gab487ac56f008d882cce9f233b3b34bd7"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab487ac56f008d882cce9f233b3b34bd7">list_length</a> (<a class="el" href="structValue.html">Value</a> list)</td></tr>
 <tr class="memdesc:gab487ac56f008d882cce9f233b3b34bd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the proper length of a Lisp list.  <br /></td></tr>
+<tr class="memitem:ga982f5434ce236363c02d08487cfbbbdb" id="r_ga982f5434ce236363c02d08487cfbbbdb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga982f5434ce236363c02d08487cfbbbdb">is_proper_list</a> (<a class="el" href="structValue.html">Value</a> list)</td></tr>
+<tr class="memdesc:ga982f5434ce236363c02d08487cfbbbdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a given <a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a> is a proper Lisp list.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <p>Functions for operating on Lisp-style lists. </p>
 <p>These helpers provide common operations for lists, which are represented as chains of <span class="tt"><a class="el" href="structConsCell.html" title="Represents a single &quot;cons&quot; pair, the basic building block of lists.">ConsCell</a></span>s terminating in <span class="tt">nil</span>. </p>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="ga982f5434ce236363c02d08487cfbbbdb" name="ga982f5434ce236363c02d08487cfbbbdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga982f5434ce236363c02d08487cfbbbdb">&#9670;&#160;</a></span>is_proper_list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_proper_list </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structValue.html">Value</a></td>          <td class="paramname"><span class="paramname"><em>list</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if a given <a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a> is a proper Lisp list. </p>
+<p>A proper list is either the empty list (nil) or a chain of cons cells that terminates with nil. This function robustly checks for this condition by traversing the list structure. It also includes Floyd's cycle-finding algorithm (the "tortoise and the hare") to safely handle and detect circular lists, preventing infinite loops.</p>
+<ul>
+<li><span class="tt">'(a b c)</span> is a proper list.</li>
+<li><span class="tt">'()</span> is a proper list.</li>
+<li><span class="tt">'(a . b)</span> (a dotted pair) is not a proper list.</li>
+<li>A circular list like <span class="tt">#1=(a . #1#)</span> is not a proper list.</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>The <a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a> object to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if <span class="tt">list</span> is a proper list, <span class="tt">false</span> otherwise. </dd></dl>
+
+</div>
+</div>
 <a id="gab487ac56f008d882cce9f233b3b34bd7" name="gab487ac56f008d882cce9f233b3b34bd7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gab487ac56f008d882cce9f233b3b34bd7">&#9670;&#160;</a></span>list_length()</h2>
 
