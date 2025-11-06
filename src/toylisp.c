@@ -1,9 +1,18 @@
 /* Copyright (C) 2025 Salvatore Bertino */
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include <stdarg.h>
 #include <stdint.h>
 #include <string.h>
+
+#if !defined(_WIN32) && !defined(_WIN64)
+    #define _POSIX_C_SOURCE 200809L
+    #include <unistd.h>
+#else
+    #include <windows.h>
+#endif
+
 #include <stdbool.h>
 
 #define MAX_ERR_MSG_LEN 256
@@ -445,7 +454,7 @@ void print_value(Value v);
  * The interplay between these two functions forms a recursive dance:
  * 1.  `eval_expression` is called on a function-call expression like `(+ 1 2)`.
  * 2.  It identifies `+` as the function and `(1 2)` as the arguments.
- * 3.  It calls `eval_list` on `(1 2)` to get a new list of evaluated results, `(1 2)`.
+ * 3.  It calls the corrisponding primitives on `(1 2)` to get a new list of evaluated results, `(1 2)`.
  * 4.  It then applies the function `+` to the resulting arguments.
  *
  * Both functions operate within the context of an `env` (environment), which is
@@ -465,7 +474,7 @@ void print_value(Value v);
  *   `env` (environment). If not found, it's an error.
  * - **Lists (Cons Cells):** A list is treated as a function application.
  *   - The `car` of the list is evaluated to get a function (either a primitive or a closure).
- *   - The `cdr` of the list (the arguments) is passed to `eval_list` to be evaluated.
+ *   - The `cdr` of the list (the arguments) is passed to primitives functions to be treated.
  *   - The resulting function is then applied to the evaluated arguments.
  *   - **Special Forms:** If the `car` is a special form (like `quote`, `if`, `define`, `lambda`),
  *     this function handles it specially, as they do not follow the standard
@@ -475,7 +484,6 @@ void print_value(Value v);
  * @param env The current evaluation environment, used for symbol lookup.
  * @return A `Value` object representing the result of the evaluation. This can
  *         be a computed value or an error object if evaluation fails.
- * @see eval_list
  */
 Value eval_expression(Value expr, Value env);
 
@@ -719,6 +727,15 @@ Value prim_tap(Value args, Value env) {
     return value_to_tap;
 }
 
+Value prim_clear(Value args, Value env) {
+    printf("\033[2J\033[H");
+    return NIL_VALUE;
+}
+
+Value prim_exit(Value args, Value env) {
+    exit(0);
+}
+
 /* ----------- Special Forms ----------- */
 
 Value prim_apply(Value args, Value env) {
@@ -743,6 +760,23 @@ Value prim_eval(Value args, Value env) {
 
 Value prim_quote(Value args, Value env) {
     return car(args);
+}
+
+Value prim_backquote(Value args, Value env) {
+    Value expr = car(args);
+
+    if (expr.type != TYPE_CONS) {
+        return expr;
+    }
+
+    if (car(expr).type == TYPE_ATOM && strcmp(car(expr).as.atom_name, "comma") == 0) {
+        return eval_expression(car(cdr(expr)), env);
+    }
+
+    Value processed_car = prim_backquote(make_cons(car(expr), NIL_VALUE), env);
+    Value processed_cdr = prim_backquote(make_cons(cdr(expr), NIL_VALUE), env);
+
+    return make_cons(processed_car, processed_cdr);
 }
 
 Value prim_or(Value args, Value env) {
@@ -859,6 +893,7 @@ Value prim_define(Value args, Value env) {
 PrimitiveEntry primitives[] = {
     /* Special Form */
     {"quote",       prim_quote,     1},
+    {"backquote",   prim_backquote, 1},
     {"if",          prim_if,        3},
     {"cond",        prim_cond,      SIZE_MAX},
     {"and",         prim_and,       SIZE_MAX},
@@ -899,8 +934,8 @@ PrimitiveEntry primitives[] = {
     {"tap",         prim_tap,       2},
 
     /* QOL functions */
-    // TODO:{"clear",       prim_clear,     0},
-    // TODO:{"exit",        prim_exit,      0},
+    {"clear",       prim_clear,     0},
+    {"exit",        prim_exit,      0},
 
     /* End of list */
     {NULL,          NULL,           0}
@@ -911,27 +946,37 @@ static inline bool is_special_form(const char* name) {
     if (!name) return false;
 
     switch (name[0]) {
-        case 'q':
-            return name[1] == 'u' && strcmp(name, "quote") == 0;
-        case 'i':
-            return name[1] == 'f' && name[2] == '\0';
-        case 'c':
-            return name[1] == 'o' && strcmp(name, "cond") == 0;
-        case 'o':
-            return name[1] == 'r' && name[2] == '\0';
         case 'a':
             return name[1] == 'n' && name[2] == 'd' && name[3] == '\0';
+
+        case 'b':
+            return strcmp(name, "backquote") == 0;
+
+        case 'c':
+            return name[1] == 'o' && strcmp(name, "cond") == 0;
+
         case 'd':
             return name[1] == 'e' && strcmp(name, "define") == 0;
+
+        case 'i':
+            return name[1] == 'f' && name[2] == '\0';
+
         case 'l':
             switch (name[1]) {
-                case 'a':
+                case 'a': // lambda
                     return strcmp(name, "lambda") == 0;
-                case 'e':
+                case 'e': // let*
                     return name[2] == 't' && name[3] == '*' && name[4] == '\0';
                 default:
                     return false;
             }
+
+        case 'o':
+            return name[1] == 'r' && name[2] == '\0';
+
+        case 'q':
+            return name[1] == 'u' && strcmp(name, "quote") == 0;
+
         default:
             return false;
     }
@@ -1018,55 +1063,61 @@ Value eval_expression(Value expr, Value env) {
  * @{
  */
 
-/// @brief The current input stream being parsed.
-static FILE* current_input_stream;
+/// @brief Max size of the current_token_buf buffer.
+#define MAX_TOKEN_SIZE 500
 /// @brief Buffer to hold the currently scanned token string.
-static char current_token_buf[400];
+static char current_token_buf[MAX_TOKEN_SIZE];
 /// @brief The next character to be processed from the input stream (lookahead).
 static char lookahead_char = ' ';
 
 /// @brief Reads a single character from the input stream into the lookahead buffer.
-void read_char() { lookahead_char = fgetc(current_input_stream); }
+void read_char(FILE* stream) { lookahead_char = fgetc(stream); }
 /// @brief Checks if the lookahead char matches `c`. A space matches any whitespace.
 bool is_seeing(char c) { return c == ' ' ? (lookahead_char > 0 && lookahead_char <= c) : (lookahead_char == c); }
 /// @brief Consumes and returns the current lookahead char, then advances the stream.
-char get_char() { char c = lookahead_char; read_char(); return c; }
+char get_char(FILE* stream) { char c = lookahead_char; read_char(stream); return c; }
 
 /**
  * @brief Scans the input stream to form the next complete token.
  * @details Skips leading whitespace, then reads characters into `current_token_buf`
  *          until a delimiter is found. It handles strings, parentheses, and atoms.
  */
-void scan_token() {
+void scan_token(FILE* stream) {
     int i = 0;
-    while (is_seeing(' ')) read_char();
+    while (is_seeing(' ')) read_char(stream);
     if (lookahead_char == EOF) { current_token_buf[0] = '\0'; return; }
 
     if (lookahead_char == '"') {
-        current_token_buf[i++] = get_char();
+        current_token_buf[i++] = get_char(stream);
         while (lookahead_char != '"' && lookahead_char != EOF) {
-            if (lookahead_char == '\\') { // Handle escaped chars
-                current_token_buf[i++] = get_char();
+            if (lookahead_char == '\\') {
+                current_token_buf[i++] = get_char(stream);
             }
             if (i < (sizeof(current_token_buf) - 1)) {
-                current_token_buf[i++] = get_char();
-            } else { get_char(); } // Buffer full, discard char but keep scanning
+                current_token_buf[i++] = get_char(stream);
+            } else { get_char(stream); }
         }
         if (lookahead_char == '"') {
-            current_token_buf[i++] = get_char();
+            current_token_buf[i++] = get_char(stream);
         }
-    } else if (is_seeing('(') || is_seeing(')') || is_seeing('\'')) {
-        current_token_buf[i++] = get_char();
+    } else if (is_seeing('(') || is_seeing(')') || is_seeing('\'')
+               || is_seeing(',') || is_seeing('`')) {
+        current_token_buf[i++] = get_char(stream);
     } else {
         do {
-            current_token_buf[i++] = get_char();
-        } while (i < (sizeof(current_token_buf) - 1) && !is_seeing('(') && !is_seeing(')') && !is_seeing(' '));
+            current_token_buf[i++] = get_char(stream);
+            if (i > (sizeof(current_token_buf) - 1)) {
+                fprintf(stderr, "Lexer Error: '%s...' exceeds maximum length of %d.",
+                        current_token_buf, MAX_TOKEN_SIZE);
+                break;
+            }
+        } while (!is_seeing('(') && !is_seeing(')') && !is_seeing(' '));
     }
     current_token_buf[i] = '\0';
 }
 
 // Forward declaration for mutual recursion.
-Value parse_from_current_token();
+Value parse_from_current_token(FILE* stream);
 
 /// @brief Parses the string in `current_token_buf` into a number, string, or atom Value.
 Value parse_atom() {
@@ -1088,12 +1139,12 @@ Value parse_atom() {
  * @details Recursively calls `parse_from_current_token` for each element and
  *          handles dotted-pair notation (e.g., `(a . b)`).
  */
-Value parse_list() {
+Value parse_list(FILE* stream) {
     Value head = NIL_VALUE;
     Value* p_link = &head;
 
     while (true) {
-        scan_token();
+        scan_token(stream);
 
         if (current_token_buf[0] == '\0') {
             fprintf(stderr, "Parser Error: unclosed list\n");
@@ -1104,9 +1155,9 @@ Value parse_list() {
         }
 
         if (strcmp(current_token_buf, ".") == 0) { // Dotted pair
-            scan_token();
-            *p_link = parse_from_current_token();
-            scan_token();
+            scan_token(stream);
+            *p_link = parse_from_current_token(stream);
+            scan_token(stream);
             if (current_token_buf[0] != ')') {
                  fprintf(stderr, "Parser Error: expected ')' after dot\n");
                  return ERROR_VALUE;
@@ -1114,7 +1165,7 @@ Value parse_list() {
             break;
         }
 
-        *p_link = make_cons(parse_from_current_token(), NIL_VALUE);
+        *p_link = make_cons(parse_from_current_token(stream), NIL_VALUE);
         p_link = &(*p_link).as.cons->cdr;
     }
     return head;
@@ -1125,25 +1176,39 @@ Value parse_list() {
  * @details Dispatches to the appropriate parsing function (`parse_list` or `parse_atom`)
  *          based on the token currently in the buffer. Handles `'` as a shorthand for `quote`.
  */
-Value parse_from_current_token() {
-    if (current_token_buf[0] == '(') {
-        return parse_list();
+Value parse_from_current_token(FILE* stream) {
+    switch (current_token_buf[0]) {
+        case '(':
+            return parse_list(stream);
+
+        case '\'':
+            scan_token(stream);
+            return make_cons(make_atom("quote"), 
+                             make_cons(parse_from_current_token(stream), NIL_VALUE));
+
+        case ',':
+            scan_token(stream);
+            return make_cons(make_atom("comma"),
+                             make_cons(parse_from_current_token(stream), NIL_VALUE));
+
+        case '`':
+            scan_token(stream);
+            return make_cons(make_atom("backquote"),
+                             make_cons(parse_from_current_token(stream), NIL_VALUE));
+
+        case ')':
+            fprintf(stderr, "Parser Error: unexpected ')'\n");
+            return ERROR_VALUE;
+
+        default:
+            return parse_atom();
     }
-    if (current_token_buf[0] == '\'') {
-        scan_token();
-        return make_cons(make_atom("quote"), make_cons(parse_from_current_token(), NIL_VALUE));
-    }
-    if (current_token_buf[0] == ')') {
-        fprintf(stderr, "Parser Error: unexpected ')'\n");
-        return ERROR_VALUE;
-    }
-    return parse_atom();
 }
 
 /// @brief Top-level function to parse a single complete S-expression from the stream.
-Value parse_expression() {
-    scan_token();
-    return parse_from_current_token();
+Value parse_expression(FILE* stream) {
+    scan_token(stream);
+    return parse_from_current_token(stream);
 }
 
 /** @} */ // End of parser group
@@ -1198,7 +1263,6 @@ void print_value(Value v) {
 
 /* @brief just... the main! */
 int main(int argc, char* argv[]) {
-
     NIL_VALUE.type = TYPE_NIL;
     TRUE_VALUE = make_atom("#t");
     ERROR_VALUE = make_atom("ERR");
@@ -1215,11 +1279,10 @@ int main(int argc, char* argv[]) {
     if (argc == 1) {
         // ========== REPL MODE (Read-Eval-Print Loop) ==========
         printf("ToyLisp");
-        current_input_stream = stdin;
 
         while (true) {
             printf("\n> ");
-            Value expr = parse_expression();
+            Value expr = parse_expression(stdin);
             if (current_token_buf[0] == '\0') {
                 printf("\nGoodbye!\n");
                 break;
@@ -1236,10 +1299,13 @@ int main(int argc, char* argv[]) {
             return 1;
         }
 
-        current_input_stream = source_file;
+#ifdef _POSIX_VERSION
+        struct timespec start_time;
+        clock_gettime(CLOCK_MONOTONIC, &start_time);
+#endif
 
         while (true) {
-            Value expr = parse_expression();
+            Value expr = parse_expression(source_file);
 
             if (current_token_buf[0] == '\0') {
                 break;
@@ -1253,6 +1319,16 @@ int main(int argc, char* argv[]) {
             print_value(result);
             printf("\n");
         }
+
+#ifdef _POSIX_VERSION
+        struct timespec end_time;
+        clock_gettime(CLOCK_MONOTONIC, &end_time);
+
+        double seconds_spent = (end_time.tv_sec - start_time.tv_sec) +
+                               (end_time.tv_nsec - start_time.tv_nsec) / 1.0e9;
+
+        printf("Execution time: %.9f seconds\n", seconds_spent);
+#endif
 
         fclose(source_file);
     } else {
