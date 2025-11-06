@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "ToyLisp", "index.html", [
+    [ "Building the Project", "index.html#autotoc_md1", null ],
     [ "Topics", "topics.html", "topics" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],

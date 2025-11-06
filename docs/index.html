@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ToyLisp: Main Page</title>
+<title>ToyLisp: ToyLisp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -88,10 +88,28 @@ $(function(){initNavTree('index.html','',''); });
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">ToyLisp Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">ToyLisp </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="anchor" id="md_README"></a></p>
+<p>A simple C implemention into a single file of less than 1000 loc of a lisp interpreter that supports both REPL and file execution.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
+Building the Project</h1>
+<p>To build the project, you need <span class="tt">meson</span> and a C compiler (like GCC or Clang) installed.</p>
+<ol type="1">
+<li><b>Setup the build directory:</b> This command configures the project and prepares the build environment. <span class="tt">bash
+    meson setup build
+    </span></li>
+<li><b>Compile the project:</b> This command compiles the source code. <span class="tt">bash
+    cd build
+    ninja -C .
+    </span></li>
+<li><b>Run the interpreter:</b> The final executable will be located in the <span class="tt">build</span> directory. <span class="tt">bash
+    ./toylisp
+    </span> </li>
+</ol>
+</div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -5,7 +5,8 @@ var indexSectionsWithContent =
   2: "egilmprst",
   3: "abcefnpst",
   4: "t",
-  5: "acdefhloprstuv"
+  5: "acdefhloprstuv",
+  6: "bpt"
 };
 
 var indexSectionNames =
@@ -15,7 +16,8 @@ var indexSectionNames =
   2: "functions",
   3: "variables",
   4: "enumvalues",
-  5: "groups"
+  5: "groups",
+  6: "pages"
 };
 
 var indexSectionLabels =
@@ -25,6 +27,7 @@ var indexSectionLabels =
   2: "Functions",
   3: "Variables",
   4: "Enumerator",
-  5: "Modules"
+  5: "Modules",
+  6: "Pages"
 };
 
