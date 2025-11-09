@@ -1,7 +1,6 @@
 # ToyLisp
 
-A simple C implemention into a single file of less than 1000 loc of a lisp interpreter
-that supports both REPL and file execution.
+A simple C implemention into a of a lisp interpreter that supports both REPL and file execution.
 
 ## Building the Project
 
@@ -25,3 +24,9 @@ To build the project, you need `meson` and a C compiler (like GCC or Clang) inst
     ```bash
     ./toylisp
     ```
+
+## Contributions
+
+If you wanna contribute to the project write me a personal mail to request the collaboration.
+(Please dont spam, or do strange things ok?!)
+Personal mail address: sabert148@gmail.com
