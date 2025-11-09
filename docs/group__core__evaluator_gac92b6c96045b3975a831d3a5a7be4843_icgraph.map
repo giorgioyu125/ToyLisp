@@ -1,0 +1,7 @@
+<map id="eval_expression" name="eval_expression">
+<area shape="rect" id="Node000001" title="Evaluates a single Lisp expression in a given environment." alt="" coords="123,29,238,56"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="204,16,196,10,180,8,166,10,159,14,157,20,160,28,156,30,151,21,154,11,164,5,180,3,198,5,207,12"/>
+<area shape="rect" id="Node000002" href="$group__core__evaluator.html#gac73aee08818a5eb01f0d71ba1291c314" title="Recursively evaluates every element in a list of expressions." alt="" coords="5,29,75,56"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="107,45,75,45,75,40,107,40"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="63,16,55,10,40,8,26,10,18,14,16,20,20,28,15,30,11,21,14,11,24,5,40,3,57,5,66,12"/>
+</map>

@@ -1,0 +1,27 @@
+<map id="arena_strdup" name="arena_strdup">
+<area shape="rect" id="Node000001" title="Duplicates a string into the arena." alt="" coords="662,85,758,112"/>
+<area shape="rect" id="Node000002" href="$group__value__constructors.html#ga3f01b34fda4a498bb58353076297f904" title="Creates a Value of type TYPE_ATOM." alt="" coords="523,85,612,112"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="646,101,613,101,613,96,646,96"/>
+<area shape="rect" id="Node000007" href="$group__value__constructors.html#ga4bfa92d1baa0a598b48587524e0ab392" title="Creates a Value of type TYPE_ERROR with a formatted message." alt="" coords="524,148,611,175"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="665,121,601,150,599,145,663,116"/>
+<area shape="rect" id="Node000010" href="$group__value__constructors.html#ga86414e13068fdebe957e1444cf3bd45e" title="Creates a Value of type TYPE_STRING." alt="" coords="521,35,614,61"/>
+<area shape="poly" id="edge14_Node000001_Node000010" title=" " alt="" coords="655,82,606,64,608,59,657,77"/>
+<area shape="rect" id="Node000003" href="$group__parser.html#gab44ed7c4f63e2ecefe687b4c38d436a2" title="Parses the string in current_token_buf into a number, string, or atom Value." alt="" coords="371,35,460,61"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="510,82,457,64,459,59,512,77"/>
+<area shape="rect" id="Node000004" href="$group__parser.html#ga34b7e5578bd23df76c6c0e8cde2cce56" title="The main recursive parsing function." alt="" coords="177,48,310,91"/>
+<area shape="poly" id="edge8_Node000002_Node000004" title=" " alt="" coords="507,96,310,78,311,73,507,91"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="356,58,311,64,310,58,355,53"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="271,35,260,29,243,27,227,29,218,33,214,39,215,47,210,48,209,38,214,29,226,23,243,21,262,24,273,30"/>
+<area shape="rect" id="Node000005" href="$group__parser.html#ga96e89ce14c76411e95f85b3698efbc1c" title="Top&#45;level function to parse a single complete S&#45;expression from the stream." alt="" coords="5,5,129,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="161,48,115,35,117,30,162,43"/>
+<area shape="rect" id="Node000006" href="$group__parser.html#ga8a7f8b2d75c03f46abf130c218c4262f" title="Parses a list expression from the token stream." alt="" coords="28,56,106,83"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="161,81,106,80,106,74,161,76"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="121,58,176,58,176,63,121,64"/>
+<area shape="rect" id="Node000008" href="$group__core__evaluator.html#gac92b6c96045b3975a831d3a5a7be4843" title="Evaluates a single Lisp expression in a given environment." alt="" coords="358,160,473,187"/>
+<area shape="poly" id="edge10_Node000007_Node000008" title=" " alt="" coords="509,169,474,171,474,166,509,163"/>
+<area shape="poly" id="edge11_Node000008_Node000008" title=" " alt="" coords="441,147,432,141,416,139,400,141,392,145,390,151,394,158,389,161,385,151,388,142,398,136,416,133,434,136,444,143"/>
+<area shape="rect" id="Node000009" href="$group__core__evaluator.html#gac73aee08818a5eb01f0d71ba1291c314" title="Recursively evaluates every element in a list of expressions." alt="" coords="209,160,278,187"/>
+<area shape="poly" id="edge12_Node000008_Node000009" title=" " alt="" coords="342,176,278,176,278,171,342,171"/>
+<area shape="poly" id="edge13_Node000009_Node000009" title=" " alt="" coords="272,147,262,141,243,139,226,141,216,145,214,151,218,158,214,161,208,151,212,142,224,136,243,133,264,136,275,142"/>
+<area shape="poly" id="edge15_Node000010_Node000003" title=" " alt="" coords="506,51,461,51,461,45,506,45"/>
+</map>

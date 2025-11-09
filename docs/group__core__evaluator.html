@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ToyLisp<span id="projectnumber">&#160;0.1.2</span>
+   <div id="projectname">ToyLisp<span id="projectnumber">&#160;0.2.0</span>
    </div>
    <div id="projectbrief">A simple lisp interpreter</div>
   </td>
@@ -98,24 +98,24 @@ $(function(){initNavTree('group__core__evaluator.html','',''); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga5e5df764fb5396458999e860cb0b9373" id="r_ga5e5df764fb5396458999e860cb0b9373"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5e5df764fb5396458999e860cb0b9373">eval_expression</a> (<a class="el" href="structValue.html">Value</a> expr, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memdesc:ga5e5df764fb5396458999e860cb0b9373"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates a single Lisp expression in a given environment.  <br /></td></tr>
-<tr class="memitem:gac9646fe9e30e6ba298571287e89d5dc2" id="r_gac9646fe9e30e6ba298571287e89d5dc2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac9646fe9e30e6ba298571287e89d5dc2">eval_list</a> (<a class="el" href="structValue.html">Value</a> list, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memdesc:gac9646fe9e30e6ba298571287e89d5dc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursively evaluates every element in a list of expressions.  <br /></td></tr>
+<tr class="memitem:gac92b6c96045b3975a831d3a5a7be4843" id="r_gac92b6c96045b3975a831d3a5a7be4843"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac92b6c96045b3975a831d3a5a7be4843">eval_expression</a> (<a class="el" href="structValue.html">Value</a> expr, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memdesc:gac92b6c96045b3975a831d3a5a7be4843"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates a single Lisp expression in a given environment.  <br /></td></tr>
+<tr class="memitem:gac73aee08818a5eb01f0d71ba1291c314" id="r_gac73aee08818a5eb01f0d71ba1291c314"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac73aee08818a5eb01f0d71ba1291c314">eval_list</a> (<a class="el" href="structValue.html">Value</a> list, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memdesc:gac73aee08818a5eb01f0d71ba1291c314"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursively evaluates every element in a list of expressions.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <p>The heart of the Lisp interpreter, responsible for evaluating expressions. </p>
-<p>This group contains the mutually recursive functions <span class="tt"><a class="el" href="#ga5e5df764fb5396458999e860cb0b9373" title="Evaluates a single Lisp expression in a given environment.">eval_expression</a></span> and <span class="tt"><a class="el" href="#gac9646fe9e30e6ba298571287e89d5dc2" title="Recursively evaluates every element in a list of expressions.">eval_list</a></span>, which together form the core evaluation logic. They implement the classic 'eval/apply' cycle of a Lisp interpreter. <span class="tt"><a class="el" href="#ga5e5df764fb5396458999e860cb0b9373" title="Evaluates a single Lisp expression in a given environment.">eval_expression</a></span> is the main entry point for evaluation, determining the type of an expression and deciding how to process it. <span class="tt"><a class="el" href="#gac9646fe9e30e6ba298571287e89d5dc2" title="Recursively evaluates every element in a list of expressions.">eval_list</a></span> is a crucial helper function used to evaluate the arguments of a function call before the function is applied.</p>
+<p>This group contains the mutually recursive functions <span class="tt"><a class="el" href="#gac92b6c96045b3975a831d3a5a7be4843" title="Evaluates a single Lisp expression in a given environment.">eval_expression</a></span> and <span class="tt"><a class="el" href="#gac73aee08818a5eb01f0d71ba1291c314" title="Recursively evaluates every element in a list of expressions.">eval_list</a></span>, which together form the core evaluation logic. They implement the classic 'eval/apply' cycle of a Lisp interpreter. <span class="tt"><a class="el" href="#gac92b6c96045b3975a831d3a5a7be4843" title="Evaluates a single Lisp expression in a given environment.">eval_expression</a></span> is the main entry point for evaluation, determining the type of an expression and deciding how to process it. <span class="tt"><a class="el" href="#gac73aee08818a5eb01f0d71ba1291c314" title="Recursively evaluates every element in a list of expressions.">eval_list</a></span> is a crucial helper function used to evaluate the arguments of a function call before the function is applied.</p>
 <p>The interplay between these two functions forms a recursive dance:</p><ol type="1">
-<li><span class="tt"><a class="el" href="#ga5e5df764fb5396458999e860cb0b9373" title="Evaluates a single Lisp expression in a given environment.">eval_expression</a></span> is called on a function-call expression like <span class="tt">(+ 1 2)</span>.</li>
+<li><span class="tt"><a class="el" href="#gac92b6c96045b3975a831d3a5a7be4843" title="Evaluates a single Lisp expression in a given environment.">eval_expression</a></span> is called on a function-call expression like <span class="tt">(+ 1 2)</span>.</li>
 <li>It identifies <span class="tt">+</span> as the function and <span class="tt">(1 2)</span> as the arguments.</li>
 <li>It calls the corrisponding primitives on <span class="tt">(1 2)</span> to get a new list of evaluated results, <span class="tt">(1 2)</span>.</li>
 <li>It then applies the function <span class="tt">+</span> to the resulting arguments.</li>
 </ol>
 <p>Both functions operate within the context of an <span class="tt">env</span> (environment), which is a list of frames used for lexical variable lookup. </p>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="ga5e5df764fb5396458999e860cb0b9373" name="ga5e5df764fb5396458999e860cb0b9373"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5e5df764fb5396458999e860cb0b9373">&#9670;&#160;</a></span>eval_expression()</h2>
+<a id="gac92b6c96045b3975a831d3a5a7be4843" name="gac92b6c96045b3975a831d3a5a7be4843"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac92b6c96045b3975a831d3a5a7be4843">&#9670;&#160;</a></span>eval_expression()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -128,7 +128,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structValue.html">Value</a></td>          <td class="paramname"><span class="paramname"><em>env</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="structValue.html">Value</a></td>          <td class="paramname"><span class="paramname"><em>env</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structContext.html">Context</a> *</td>          <td class="paramname"><span class="paramname"><em>context</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -157,26 +162,31 @@ Functions</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="group__core__evaluator_ga5e5df764fb5396458999e860cb0b9373_cgraph.png" border="0" usemap="#agroup__core__evaluator_ga5e5df764fb5396458999e860cb0b9373_cgraph" loading="lazy" alt=""/></div>
-<map name="agroup__core__evaluator_ga5e5df764fb5396458999e860cb0b9373_cgraph" id="agroup__core__evaluator_ga5e5df764fb5396458999e860cb0b9373_cgraph">
+<div class="center"><img src="group__core__evaluator_gac92b6c96045b3975a831d3a5a7be4843_cgraph.png" border="0" usemap="#agroup__core__evaluator_gac92b6c96045b3975a831d3a5a7be4843_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__core__evaluator_gac92b6c96045b3975a831d3a5a7be4843_cgraph" id="agroup__core__evaluator_gac92b6c96045b3975a831d3a5a7be4843_cgraph">
 <area shape="rect" title="Evaluates a single Lisp expression in a given environment." alt="" coords="5,56,121,83"/>
-<area shape="poly" title=" " alt="" coords="37,57,32,47,35,38,46,32,63,29,81,32,91,39,88,43,79,37,63,35,48,37,40,41,38,47,42,54"/>
-<area shape="rect" href="group__list__utilities.html#gab487ac56f008d882cce9f233b3b34bd7" title="Calculates the proper length of a Lisp list." alt="" coords="173,5,253,32"/>
-<area shape="poly" title=" " alt="" coords="104,53,157,35,159,40,106,58"/>
-<area shape="rect" href="group__value__constructors.html#gabd7855663e658ab83e6b55373e161761" title="Creates a Value of type TYPE_CONS (a list pair)." alt="" coords="169,56,257,83"/>
-<area shape="poly" title=" " alt="" coords="121,67,153,67,153,72,121,72"/>
-<area shape="rect" href="group__value__constructors.html#gaab8a33a22b5c6738f19ab6478478fc3d" title="Creates a Value of type TYPE_ERROR with a formatted message." alt="" coords="170,107,256,133"/>
-<area shape="poly" title=" " alt="" coords="106,81,158,99,156,104,104,86"/>
+<area shape="poly" title=" " alt="" coords="37,57,32,47,36,38,46,32,63,29,81,32,91,39,88,43,79,37,63,35,48,37,40,41,38,47,42,54"/>
+<area shape="rect" href="group__list__utilities.html#gab487ac56f008d882cce9f233b3b34bd7" title="Calculates the proper length of a Lisp list." alt="" coords="172,5,252,32"/>
+<area shape="poly" title=" " alt="" coords="104,53,156,35,158,40,106,58"/>
+<area shape="rect" href="group__value__constructors.html#gabe632b0fee2d6973f5cea25bfd28def0" title="Creates a Value of type TYPE_CONS (a list pair)." alt="" coords="307,56,395,83"/>
+<area shape="poly" title=" " alt="" coords="121,67,292,67,292,72,121,72"/>
+<area shape="rect" href="group__value__constructors.html#ga4bfa92d1baa0a598b48587524e0ab392" title="Creates a Value of type TYPE_ERROR with a formatted message." alt="" coords="169,107,255,133"/>
+<area shape="poly" title=" " alt="" coords="106,81,157,99,155,104,104,86"/>
+<area shape="rect" href="group__arena.html#ga494c8cea4f0fa116e2559b9dfc080600" title="Allocates a block of memory from the arena." alt="" coords="447,81,535,108"/>
+<area shape="poly" title=" " alt="" coords="396,75,433,81,432,87,395,80"/>
+<area shape="rect" href="group__arena.html#ga80e56a0ed80fb9e01b0fb7604f5687f9" title="Duplicates a string into the arena." alt="" coords="303,107,399,133"/>
+<area shape="poly" title=" " alt="" coords="256,117,288,117,288,123,256,123"/>
+<area shape="poly" title=" " alt="" coords="399,109,432,103,433,108,400,114"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="group__core__evaluator_ga5e5df764fb5396458999e860cb0b9373_icgraph.png" border="0" usemap="#agroup__core__evaluator_ga5e5df764fb5396458999e860cb0b9373_icgraph" loading="lazy" alt=""/></div>
-<map name="agroup__core__evaluator_ga5e5df764fb5396458999e860cb0b9373_icgraph" id="agroup__core__evaluator_ga5e5df764fb5396458999e860cb0b9373_icgraph">
+<div class="center"><img src="group__core__evaluator_gac92b6c96045b3975a831d3a5a7be4843_icgraph.png" border="0" usemap="#agroup__core__evaluator_gac92b6c96045b3975a831d3a5a7be4843_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__core__evaluator_gac92b6c96045b3975a831d3a5a7be4843_icgraph" id="agroup__core__evaluator_gac92b6c96045b3975a831d3a5a7be4843_icgraph">
 <area shape="rect" title="Evaluates a single Lisp expression in a given environment." alt="" coords="123,29,238,56"/>
 <area shape="poly" title=" " alt="" coords="204,16,196,10,180,8,166,10,159,14,157,20,160,28,156,30,151,21,154,11,164,5,180,3,198,5,207,12"/>
-<area shape="rect" href="group__core__evaluator.html#gac9646fe9e30e6ba298571287e89d5dc2" title="Recursively evaluates every element in a list of expressions." alt="" coords="5,29,75,56"/>
+<area shape="rect" href="group__core__evaluator.html#gac73aee08818a5eb01f0d71ba1291c314" title="Recursively evaluates every element in a list of expressions." alt="" coords="5,29,75,56"/>
 <area shape="poly" title=" " alt="" coords="107,45,75,45,75,40,107,40"/>
 <area shape="poly" title=" " alt="" coords="63,16,55,10,40,8,26,10,18,14,16,20,20,28,15,30,11,21,14,11,24,5,40,3,57,5,66,12"/>
 </map>
@@ -184,8 +194,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="gac9646fe9e30e6ba298571287e89d5dc2" name="gac9646fe9e30e6ba298571287e89d5dc2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac9646fe9e30e6ba298571287e89d5dc2">&#9670;&#160;</a></span>eval_list()</h2>
+<a id="gac73aee08818a5eb01f0d71ba1291c314" name="gac73aee08818a5eb01f0d71ba1291c314"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac73aee08818a5eb01f0d71ba1291c314">&#9670;&#160;</a></span>eval_list()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -198,7 +208,12 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structValue.html">Value</a></td>          <td class="paramname"><span class="paramname"><em>env</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="structValue.html">Value</a></td>          <td class="paramname"><span class="paramname"><em>env</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structContext.html">Context</a> *</td>          <td class="paramname"><span class="paramname"><em>context</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -213,31 +228,36 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A new list containing the evaluated results of the input list's elements. If the input is <span class="tt">nil</span>, it returns <span class="tt">nil</span>. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#ga5e5df764fb5396458999e860cb0b9373" title="Evaluates a single Lisp expression in a given environment.">eval_expression</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#gac92b6c96045b3975a831d3a5a7be4843" title="Evaluates a single Lisp expression in a given environment.">eval_expression</a> </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="group__core__evaluator_gac9646fe9e30e6ba298571287e89d5dc2_cgraph.png" border="0" usemap="#agroup__core__evaluator_gac9646fe9e30e6ba298571287e89d5dc2_cgraph" loading="lazy" alt=""/></div>
-<map name="agroup__core__evaluator_gac9646fe9e30e6ba298571287e89d5dc2_cgraph" id="agroup__core__evaluator_gac9646fe9e30e6ba298571287e89d5dc2_cgraph">
+<div class="center"><img src="group__core__evaluator_gac73aee08818a5eb01f0d71ba1291c314_cgraph.png" border="0" usemap="#agroup__core__evaluator_gac73aee08818a5eb01f0d71ba1291c314_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__core__evaluator_gac73aee08818a5eb01f0d71ba1291c314_cgraph" id="agroup__core__evaluator_gac73aee08818a5eb01f0d71ba1291c314_cgraph">
 <area shape="rect" title="Recursively evaluates every element in a list of expressions." alt="" coords="5,81,75,108"/>
 <area shape="poly" title=" " alt="" coords="15,82,11,73,14,63,24,57,40,55,57,57,66,64,63,68,55,62,40,60,26,62,18,66,16,72,20,80"/>
-<area shape="rect" href="group__core__evaluator.html#ga5e5df764fb5396458999e860cb0b9373" title="Evaluates a single Lisp expression in a given environment." alt="" coords="123,56,238,83"/>
+<area shape="rect" href="group__core__evaluator.html#gac92b6c96045b3975a831d3a5a7be4843" title="Evaluates a single Lisp expression in a given environment." alt="" coords="123,56,238,83"/>
 <area shape="poly" title=" " alt="" coords="75,86,107,80,108,85,75,91"/>
-<area shape="rect" href="group__value__constructors.html#gabd7855663e658ab83e6b55373e161761" title="Creates a Value of type TYPE_CONS (a list pair)." alt="" coords="286,107,374,133"/>
+<area shape="rect" href="group__value__constructors.html#gabe632b0fee2d6973f5cea25bfd28def0" title="Creates a Value of type TYPE_CONS (a list pair)." alt="" coords="286,107,374,133"/>
 <area shape="poly" title=" " alt="" coords="75,95,271,112,270,118,75,100"/>
 <area shape="poly" title=" " alt="" coords="156,57,151,47,154,38,164,32,180,29,198,32,207,39,204,43,196,37,180,35,166,37,159,41,157,47,160,54"/>
-<area shape="rect" href="group__list__utilities.html#gab487ac56f008d882cce9f233b3b34bd7" title="Calculates the proper length of a Lisp list." alt="" coords="290,5,370,32"/>
-<area shape="poly" title=" " alt="" coords="221,53,274,35,276,40,223,58"/>
+<area shape="rect" href="group__list__utilities.html#gab487ac56f008d882cce9f233b3b34bd7" title="Calculates the proper length of a Lisp list." alt="" coords="290,56,370,83"/>
+<area shape="poly" title=" " alt="" coords="239,67,274,67,274,72,239,72"/>
 <area shape="poly" title=" " alt="" coords="223,81,275,99,273,104,221,86"/>
-<area shape="rect" href="group__value__constructors.html#gaab8a33a22b5c6738f19ab6478478fc3d" title="Creates a Value of type TYPE_ERROR with a formatted message." alt="" coords="287,56,373,83"/>
-<area shape="poly" title=" " alt="" coords="239,67,271,67,271,72,239,72"/>
+<area shape="rect" href="group__value__constructors.html#ga4bfa92d1baa0a598b48587524e0ab392" title="Creates a Value of type TYPE_ERROR with a formatted message." alt="" coords="287,5,373,32"/>
+<area shape="poly" title=" " alt="" coords="221,53,273,35,275,40,223,58"/>
+<area shape="rect" href="group__arena.html#ga494c8cea4f0fa116e2559b9dfc080600" title="Allocates a block of memory from the arena." alt="" coords="567,56,654,83"/>
+<area shape="poly" title=" " alt="" coords="374,109,551,77,552,82,375,115"/>
+<area shape="rect" href="group__arena.html#ga80e56a0ed80fb9e01b0fb7604f5687f9" title="Duplicates a string into the arena." alt="" coords="422,19,519,45"/>
+<area shape="poly" title=" " alt="" coords="374,20,407,23,407,29,374,25"/>
+<area shape="poly" title=" " alt="" coords="520,42,552,51,551,56,518,47"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="group__core__evaluator_gac9646fe9e30e6ba298571287e89d5dc2_icgraph.png" border="0" usemap="#agroup__core__evaluator_gac9646fe9e30e6ba298571287e89d5dc2_icgraph" loading="lazy" alt=""/></div>
-<map name="agroup__core__evaluator_gac9646fe9e30e6ba298571287e89d5dc2_icgraph" id="agroup__core__evaluator_gac9646fe9e30e6ba298571287e89d5dc2_icgraph">
+<div class="center"><img src="group__core__evaluator_gac73aee08818a5eb01f0d71ba1291c314_icgraph.png" border="0" usemap="#agroup__core__evaluator_gac73aee08818a5eb01f0d71ba1291c314_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__core__evaluator_gac73aee08818a5eb01f0d71ba1291c314_icgraph" id="agroup__core__evaluator_gac73aee08818a5eb01f0d71ba1291c314_icgraph">
 <area shape="rect" title="Recursively evaluates every element in a list of expressions." alt="" coords="5,29,75,56"/>
 <area shape="poly" title=" " alt="" coords="50,15,46,10,40,8,34,10,31,14,32,29,26,29,26,12,31,5,40,3,49,5,54,12"/>
 </map>

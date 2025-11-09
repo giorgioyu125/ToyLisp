@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ToyLisp<span id="projectnumber">&#160;0.1.2</span>
+   <div id="projectname">ToyLisp<span id="projectnumber">&#160;0.2.0</span>
    </div>
    <div id="projectbrief">A simple lisp interpreter</div>
   </td>
@@ -124,23 +124,23 @@ char&#160;</td><td class="memItemRight" valign="bottom"><b>get_char</b> (FILE *s
 <tr class="memdesc:ga18863dbf58015a6eeebdf1c9b6ba2b82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consumes and returns the current lookahead char, then advances the stream. <br /></td></tr>
 <tr class="memitem:gab638045be5bc3c34f405d4b1dbaed981" id="r_gab638045be5bc3c34f405d4b1dbaed981"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab638045be5bc3c34f405d4b1dbaed981">scan_token</a> (FILE *stream)</td></tr>
 <tr class="memdesc:gab638045be5bc3c34f405d4b1dbaed981"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scans the input stream to form the next complete token.  <br /></td></tr>
-<tr class="memitem:gada6dce343f19aba713681f7139bd0ef7" id="r_gada6dce343f19aba713681f7139bd0ef7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gada6dce343f19aba713681f7139bd0ef7">parse_from_current_token</a> (FILE *stream)</td></tr>
-<tr class="memdesc:gada6dce343f19aba713681f7139bd0ef7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The main recursive parsing function.  <br /></td></tr>
-<tr class="memitem:gaaada423750f0a0b5d2b04abe1dbffc53" id="r_gaaada423750f0a0b5d2b04abe1dbffc53"><td class="memItemLeft" align="right" valign="top"><a id="gaaada423750f0a0b5d2b04abe1dbffc53" name="gaaada423750f0a0b5d2b04abe1dbffc53"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>parse_atom</b> ()</td></tr>
-<tr class="memdesc:gaaada423750f0a0b5d2b04abe1dbffc53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the string in <span class="tt">current_token_buf</span> into a number, string, or atom <a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a>. <br /></td></tr>
-<tr class="memitem:gaba403084bf38b5e4842f1b95c3078973" id="r_gaba403084bf38b5e4842f1b95c3078973"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaba403084bf38b5e4842f1b95c3078973">parse_list</a> (FILE *stream)</td></tr>
-<tr class="memdesc:gaba403084bf38b5e4842f1b95c3078973"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a list expression from the token stream.  <br /></td></tr>
-<tr class="memitem:ga30551ac5d316783abc8ab5110c878e28" id="r_ga30551ac5d316783abc8ab5110c878e28"><td class="memItemLeft" align="right" valign="top"><a id="ga30551ac5d316783abc8ab5110c878e28" name="ga30551ac5d316783abc8ab5110c878e28"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>parse_expression</b> (FILE *stream)</td></tr>
-<tr class="memdesc:ga30551ac5d316783abc8ab5110c878e28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Top-level function to parse a single complete S-expression from the stream. <br /></td></tr>
+<tr class="memitem:ga34b7e5578bd23df76c6c0e8cde2cce56" id="r_ga34b7e5578bd23df76c6c0e8cde2cce56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga34b7e5578bd23df76c6c0e8cde2cce56">parse_from_current_token</a> (FILE *stream, <a class="el" href="structArena.html">Arena</a> **arena)</td></tr>
+<tr class="memdesc:ga34b7e5578bd23df76c6c0e8cde2cce56"><td class="mdescLeft">&#160;</td><td class="mdescRight">The main recursive parsing function.  <br /></td></tr>
+<tr class="memitem:gab44ed7c4f63e2ecefe687b4c38d436a2" id="r_gab44ed7c4f63e2ecefe687b4c38d436a2"><td class="memItemLeft" align="right" valign="top"><a id="gab44ed7c4f63e2ecefe687b4c38d436a2" name="gab44ed7c4f63e2ecefe687b4c38d436a2"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>parse_atom</b> (<a class="el" href="structArena.html">Arena</a> **arena)</td></tr>
+<tr class="memdesc:gab44ed7c4f63e2ecefe687b4c38d436a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the string in <span class="tt">current_token_buf</span> into a number, string, or atom <a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a>. <br /></td></tr>
+<tr class="memitem:ga8a7f8b2d75c03f46abf130c218c4262f" id="r_ga8a7f8b2d75c03f46abf130c218c4262f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8a7f8b2d75c03f46abf130c218c4262f">parse_list</a> (FILE *stream, <a class="el" href="structArena.html">Arena</a> **arena)</td></tr>
+<tr class="memdesc:ga8a7f8b2d75c03f46abf130c218c4262f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a list expression from the token stream.  <br /></td></tr>
+<tr class="memitem:ga96e89ce14c76411e95f85b3698efbc1c" id="r_ga96e89ce14c76411e95f85b3698efbc1c"><td class="memItemLeft" align="right" valign="top"><a id="ga96e89ce14c76411e95f85b3698efbc1c" name="ga96e89ce14c76411e95f85b3698efbc1c"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>parse_expression</b> (FILE *stream, <a class="el" href="structArena.html">Arena</a> **arena)</td></tr>
+<tr class="memdesc:ga96e89ce14c76411e95f85b3698efbc1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Top-level function to parse a single complete S-expression from the stream. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <p>Functions for parsing Lisp S-expressions from a text stream. </p>
 <p>This is a simple recursive descent parser that tokenizes the input and builds <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> objects representing the abstract syntax tree. </p>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="gada6dce343f19aba713681f7139bd0ef7" name="gada6dce343f19aba713681f7139bd0ef7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gada6dce343f19aba713681f7139bd0ef7">&#9670;&#160;</a></span>parse_from_current_token()</h2>
+<a id="ga34b7e5578bd23df76c6c0e8cde2cce56" name="ga34b7e5578bd23df76c6c0e8cde2cce56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga34b7e5578bd23df76c6c0e8cde2cce56">&#9670;&#160;</a></span>parse_from_current_token()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -148,58 +148,68 @@ char&#160;</td><td class="memItemRight" valign="bottom"><b>get_char</b> (FILE *s
         <tr>
           <td class="memname"><a class="el" href="structValue.html">Value</a> parse_from_current_token </td>
           <td>(</td>
-          <td class="paramtype">FILE *</td>          <td class="paramname"><span class="paramname"><em>stream</em></span></td><td>)</td>
+          <td class="paramtype">FILE *</td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="structArena.html">Arena</a> **</td>          <td class="paramname"><span class="paramname"><em>arena</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>The main recursive parsing function. </p>
-<p>Dispatches to the appropriate parsing function (<span class="tt"><a class="el" href="#gaba403084bf38b5e4842f1b95c3078973" title="Parses a list expression from the token stream.">parse_list</a></span> or <span class="tt"><a class="el" href="#gaaada423750f0a0b5d2b04abe1dbffc53" title="Parses the string in current_token_buf into a number, string, or atom Value.">parse_atom</a></span>) based on the token currently in the buffer. Handles <span class="tt">'</span> as a shorthand for <span class="tt">quote</span>. </p>
+<p>Dispatches to the appropriate parsing function (<span class="tt"><a class="el" href="#ga8a7f8b2d75c03f46abf130c218c4262f" title="Parses a list expression from the token stream.">parse_list</a></span> or <span class="tt"><a class="el" href="#gab44ed7c4f63e2ecefe687b4c38d436a2" title="Parses the string in current_token_buf into a number, string, or atom Value.">parse_atom</a></span>) based on the token currently in the buffer. Handles <span class="tt">'</span> as a shorthand for <span class="tt">quote</span>. </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="group__parser_gada6dce343f19aba713681f7139bd0ef7_cgraph.png" border="0" usemap="#agroup__parser_gada6dce343f19aba713681f7139bd0ef7_cgraph" loading="lazy" alt=""/></div>
-<map name="agroup__parser_gada6dce343f19aba713681f7139bd0ef7_cgraph" id="agroup__parser_gada6dce343f19aba713681f7139bd0ef7_cgraph">
+<div class="center"><img src="group__parser_ga34b7e5578bd23df76c6c0e8cde2cce56_cgraph.png" border="0" usemap="#agroup__parser_ga34b7e5578bd23df76c6c0e8cde2cce56_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__parser_ga34b7e5578bd23df76c6c0e8cde2cce56_cgraph" id="agroup__parser_ga34b7e5578bd23df76c6c0e8cde2cce56_cgraph">
 <area shape="rect" title="The main recursive parsing function." alt="" coords="5,124,139,167"/>
 <area shape="poly" title=" " alt="" coords="41,124,40,114,45,105,56,99,72,97,89,100,100,106,97,111,88,105,72,103,57,104,49,109,45,115,46,123"/>
-<area shape="rect" href="group__value__constructors.html#ga9ff6885b2832accd84039908b6dacdfb" title="Creates a Value of type TYPE_ATOM." alt="" coords="331,5,420,32"/>
+<area shape="rect" href="group__value__constructors.html#ga3f01b34fda4a498bb58353076297f904" title="Creates a Value of type TYPE_ATOM." alt="" coords="331,5,420,32"/>
 <area shape="poly" title=" " alt="" coords="89,122,130,80,156,59,186,42,218,30,251,22,315,15,316,20,252,27,219,35,188,46,159,63,133,84,93,125"/>
-<area shape="rect" href="group__value__constructors.html#gabd7855663e658ab83e6b55373e161761" title="Creates a Value of type TYPE_CONS (a list pair)." alt="" coords="332,157,420,184"/>
+<area shape="rect" href="group__value__constructors.html#gabe632b0fee2d6973f5cea25bfd28def0" title="Creates a Value of type TYPE_CONS (a list pair)." alt="" coords="332,157,420,184"/>
 <area shape="poly" title=" " alt="" coords="139,138,206,138,276,143,317,151,316,156,276,148,205,143,139,144"/>
-<area shape="rect" href="group__parser.html#gaaada423750f0a0b5d2b04abe1dbffc53" title="Parses the string in current_token_buf into a number, string, or atom Value." alt="" coords="187,56,276,83"/>
+<area shape="rect" href="group__parser.html#gab44ed7c4f63e2ecefe687b4c38d436a2" title="Parses the string in current_token_buf into a number, string, or atom Value." alt="" coords="187,56,276,83"/>
 <area shape="poly" title=" " alt="" coords="117,121,187,87,189,92,120,126"/>
-<area shape="rect" href="group__parser.html#gaba403084bf38b5e4842f1b95c3078973" title="Parses a list expression from the token stream." alt="" coords="193,157,270,184"/>
+<area shape="rect" href="group__parser.html#ga8a7f8b2d75c03f46abf130c218c4262f" title="Parses a list expression from the token stream." alt="" coords="193,157,270,184"/>
 <area shape="poly" title=" " alt="" coords="140,162,178,168,177,173,139,168"/>
 <area shape="rect" href="group__parser.html#gab638045be5bc3c34f405d4b1dbaed981" title="Scans the input stream to form the next complete token." alt="" coords="332,208,420,235"/>
 <area shape="poly" title=" " alt="" coords="116,165,187,193,254,208,316,215,316,220,253,213,186,199,114,170"/>
+<area shape="rect" href="group__arena.html#ga80e56a0ed80fb9e01b0fb7604f5687f9" title="Duplicates a string into the arena." alt="" coords="475,81,572,108"/>
+<area shape="poly" title=" " alt="" coords="406,30,429,42,484,71,482,76,426,46,404,35"/>
+<area shape="rect" href="group__arena.html#ga494c8cea4f0fa116e2559b9dfc080600" title="Allocates a block of memory from the arena." alt="" coords="620,107,707,133"/>
+<area shape="poly" title=" " alt="" coords="573,101,605,107,604,112,572,106"/>
+<area shape="poly" title=" " alt="" coords="420,160,604,128,605,133,421,166"/>
 <area shape="poly" title=" " alt="" coords="271,53,320,35,322,40,273,58"/>
 <area shape="rect" href="group__value__constructors.html#ga9f4a9f6ad14d91f6922fcabf73bd908d" title="Creates a Value of type TYPE_NUMBER." alt="" coords="324,56,427,83"/>
 <area shape="poly" title=" " alt="" coords="276,67,308,67,308,72,276,72"/>
-<area shape="rect" href="group__value__constructors.html#ga38b6a77dfca2706d7f685745aeae51a4" title="Creates a Value of type TYPE_STRING." alt="" coords="330,107,422,133"/>
+<area shape="rect" href="group__value__constructors.html#ga86414e13068fdebe957e1444cf3bd45e" title="Creates a Value of type TYPE_STRING." alt="" coords="330,107,422,133"/>
 <area shape="poly" title=" " alt="" coords="273,81,322,99,320,104,271,86"/>
+<area shape="poly" title=" " alt="" coords="422,109,460,103,461,108,423,115"/>
 <area shape="poly" title=" " alt="" coords="192,159,154,152,155,147,193,154"/>
 <area shape="poly" title=" " alt="" coords="271,168,316,168,316,173,271,173"/>
 <area shape="poly" title=" " alt="" coords="272,182,322,200,320,205,270,187"/>
-<area shape="rect" href="group__parser.html#ga18863dbf58015a6eeebdf1c9b6ba2b82" title="Consumes and returns the current lookahead char, then advances the stream." alt="" coords="478,157,549,184"/>
-<area shape="poly" title=" " alt="" coords="413,205,462,187,464,192,415,210"/>
-<area shape="rect" href="group__parser.html#ga50ac0075193d1b4e2c52671a9067e80e" title="Reads a single character from the input stream into the lookahead buffer." alt="" coords="600,183,678,209"/>
-<area shape="poly" title=" " alt="" coords="420,214,584,199,584,204,420,220"/>
-<area shape="rect" href="group__parser.html#gad3d4064bac33002fb6c7d77e50c5a3c4" title="Checks if the lookahead char matches c. A space matches any whitespace." alt="" coords="475,259,552,285"/>
-<area shape="poly" title=" " alt="" coords="415,233,462,250,460,255,413,238"/>
-<area shape="poly" title=" " alt="" coords="550,175,585,182,584,188,549,180"/>
+<area shape="rect" href="group__parser.html#ga18863dbf58015a6eeebdf1c9b6ba2b82" title="Consumes and returns the current lookahead char, then advances the stream." alt="" coords="488,284,559,311"/>
+<area shape="poly" title=" " alt="" coords="405,233,483,274,481,279,402,238"/>
+<area shape="rect" href="group__parser.html#ga50ac0075193d1b4e2c52671a9067e80e" title="Reads a single character from the input stream into the lookahead buffer." alt="" coords="624,233,702,260"/>
+<area shape="poly" title=" " alt="" coords="420,215,491,213,572,219,610,227,609,232,571,224,491,219,420,221"/>
+<area shape="rect" href="group__parser.html#gad3d4064bac33002fb6c7d77e50c5a3c4" title="Checks if the lookahead char matches c. A space matches any whitespace." alt="" coords="485,233,562,260"/>
+<area shape="poly" title=" " alt="" coords="421,226,470,235,469,240,420,231"/>
+<area shape="poly" title=" " alt="" coords="559,282,609,263,611,268,561,287"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="group__parser_gada6dce343f19aba713681f7139bd0ef7_icgraph.png" border="0" usemap="#agroup__parser_gada6dce343f19aba713681f7139bd0ef7_icgraph" loading="lazy" alt=""/></div>
-<map name="agroup__parser_gada6dce343f19aba713681f7139bd0ef7_icgraph" id="agroup__parser_gada6dce343f19aba713681f7139bd0ef7_icgraph">
+<div class="center"><img src="group__parser_ga34b7e5578bd23df76c6c0e8cde2cce56_icgraph.png" border="0" usemap="#agroup__parser_ga34b7e5578bd23df76c6c0e8cde2cce56_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__parser_ga34b7e5578bd23df76c6c0e8cde2cce56_icgraph" id="agroup__parser_ga34b7e5578bd23df76c6c0e8cde2cce56_icgraph">
 <area shape="rect" title="The main recursive parsing function." alt="" coords="177,48,310,91"/>
 <area shape="poly" title=" " alt="" coords="271,35,261,29,243,27,227,29,217,33,213,39,214,47,209,48,208,38,214,29,226,23,243,21,263,24,274,30"/>
-<area shape="rect" href="group__parser.html#ga30551ac5d316783abc8ab5110c878e28" title="Top&#45;level function to parse a single complete S&#45;expression from the stream." alt="" coords="5,5,129,32"/>
+<area shape="rect" href="group__parser.html#ga96e89ce14c76411e95f85b3698efbc1c" title="Top&#45;level function to parse a single complete S&#45;expression from the stream." alt="" coords="5,5,129,32"/>
 <area shape="poly" title=" " alt="" coords="161,48,115,35,117,30,162,43"/>
-<area shape="rect" href="group__parser.html#gaba403084bf38b5e4842f1b95c3078973" title="Parses a list expression from the token stream." alt="" coords="28,56,106,83"/>
+<area shape="rect" href="group__parser.html#ga8a7f8b2d75c03f46abf130c218c4262f" title="Parses a list expression from the token stream." alt="" coords="28,56,106,83"/>
 <area shape="poly" title=" " alt="" coords="161,81,106,80,106,74,161,76"/>
 <area shape="poly" title=" " alt="" coords="121,58,176,58,176,63,121,64"/>
 </map>
@@ -207,8 +217,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="gaba403084bf38b5e4842f1b95c3078973" name="gaba403084bf38b5e4842f1b95c3078973"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaba403084bf38b5e4842f1b95c3078973">&#9670;&#160;</a></span>parse_list()</h2>
+<a id="ga8a7f8b2d75c03f46abf130c218c4262f" name="ga8a7f8b2d75c03f46abf130c218c4262f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8a7f8b2d75c03f46abf130c218c4262f">&#9670;&#160;</a></span>parse_list()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -216,59 +226,69 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname"><a class="el" href="structValue.html">Value</a> parse_list </td>
           <td>(</td>
-          <td class="paramtype">FILE *</td>          <td class="paramname"><span class="paramname"><em>stream</em></span></td><td>)</td>
+          <td class="paramtype">FILE *</td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="structArena.html">Arena</a> **</td>          <td class="paramname"><span class="paramname"><em>arena</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Parses a list expression from the token stream. </p>
-<p>Recursively calls <span class="tt"><a class="el" href="#gada6dce343f19aba713681f7139bd0ef7" title="The main recursive parsing function.">parse_from_current_token</a></span> for each element and handles dotted-pair notation (e.g., <span class="tt">(a . b)</span>). </p>
+<p>Recursively calls <span class="tt"><a class="el" href="#ga34b7e5578bd23df76c6c0e8cde2cce56" title="The main recursive parsing function.">parse_from_current_token</a></span> for each element and handles dotted-pair notation (e.g., <span class="tt">(a . b)</span>). </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="group__parser_gaba403084bf38b5e4842f1b95c3078973_cgraph.png" border="0" usemap="#agroup__parser_gaba403084bf38b5e4842f1b95c3078973_cgraph" loading="lazy" alt=""/></div>
-<map name="agroup__parser_gaba403084bf38b5e4842f1b95c3078973_cgraph" id="agroup__parser_gaba403084bf38b5e4842f1b95c3078973_cgraph">
-<area shape="rect" title="Parses a list expression from the token stream." alt="" coords="5,99,83,125"/>
-<area shape="rect" href="group__value__constructors.html#gabd7855663e658ab83e6b55373e161761" title="Creates a Value of type TYPE_CONS (a list pair)." alt="" coords="312,5,401,32"/>
-<area shape="poly" title=" " alt="" coords="60,96,91,73,130,52,172,38,216,29,297,18,297,24,217,34,174,44,132,57,93,78,63,100"/>
-<area shape="rect" href="group__parser.html#gada6dce343f19aba713681f7139bd0ef7" title="The main recursive parsing function." alt="" coords="131,91,264,133"/>
-<area shape="poly" title=" " alt="" coords="83,117,115,118,115,124,83,123"/>
-<area shape="rect" href="group__parser.html#gab638045be5bc3c34f405d4b1dbaed981" title="Scans the input stream to form the next complete token." alt="" coords="312,165,401,192"/>
-<area shape="poly" title=" " alt="" coords="77,123,131,143,218,161,298,171,297,176,217,166,130,148,75,128"/>
-<area shape="poly" title=" " alt="" coords="130,106,98,106,98,101,130,100"/>
-<area shape="poly" title=" " alt="" coords="234,88,318,38,320,43,237,92"/>
-<area shape="poly" title=" " alt="" coords="167,90,166,81,171,72,182,66,197,64,214,66,224,73,221,77,212,71,197,69,183,71,175,76,171,82,173,90"/>
-<area shape="rect" href="group__value__constructors.html#ga9ff6885b2832accd84039908b6dacdfb" title="Creates a Value of type TYPE_ATOM." alt="" coords="456,13,546,40"/>
-<area shape="poly" title=" " alt="" coords="264,91,441,41,442,46,265,96"/>
-<area shape="rect" href="group__parser.html#gaaada423750f0a0b5d2b04abe1dbffc53" title="Parses the string in current_token_buf into a number, string, or atom Value." alt="" coords="312,107,401,133"/>
-<area shape="poly" title=" " alt="" coords="265,113,297,114,296,120,265,118"/>
-<area shape="poly" title=" " alt="" coords="251,131,310,156,308,161,249,136"/>
-<area shape="poly" title=" " alt="" coords="375,104,400,86,448,50,456,45,458,50,451,54,403,90,379,108"/>
-<area shape="rect" href="group__value__constructors.html#ga9f4a9f6ad14d91f6922fcabf73bd908d" title="Creates a Value of type TYPE_NUMBER." alt="" coords="449,64,553,91"/>
-<area shape="poly" title=" " alt="" coords="401,104,438,93,440,98,402,109"/>
-<area shape="rect" href="group__value__constructors.html#ga38b6a77dfca2706d7f685745aeae51a4" title="Creates a Value of type TYPE_STRING." alt="" coords="455,115,547,141"/>
-<area shape="poly" title=" " alt="" coords="402,120,439,122,439,127,402,125"/>
-<area shape="rect" href="group__parser.html#ga18863dbf58015a6eeebdf1c9b6ba2b82" title="Consumes and returns the current lookahead char, then advances the stream." alt="" coords="465,165,537,192"/>
-<area shape="poly" title=" " alt="" coords="401,176,450,176,450,181,401,181"/>
-<area shape="rect" href="group__parser.html#ga50ac0075193d1b4e2c52671a9067e80e" title="Reads a single character from the input stream into the lookahead buffer." alt="" coords="601,191,679,217"/>
-<area shape="poly" title=" " alt="" coords="399,190,450,201,520,206,585,205,585,210,520,212,449,207,398,195"/>
-<area shape="rect" href="group__parser.html#gad3d4064bac33002fb6c7d77e50c5a3c4" title="Checks if the lookahead char matches c. A space matches any whitespace." alt="" coords="463,267,539,293"/>
-<area shape="poly" title=" " alt="" coords="377,190,451,246,466,256,463,260,448,250,374,195"/>
-<area shape="poly" title=" " alt="" coords="538,183,586,191,585,197,537,188"/>
+<div class="center"><img src="group__parser_ga8a7f8b2d75c03f46abf130c218c4262f_cgraph.png" border="0" usemap="#agroup__parser_ga8a7f8b2d75c03f46abf130c218c4262f_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__parser_ga8a7f8b2d75c03f46abf130c218c4262f_cgraph" id="agroup__parser_ga8a7f8b2d75c03f46abf130c218c4262f_cgraph">
+<area shape="rect" title="Parses a list expression from the token stream." alt="" coords="5,103,83,129"/>
+<area shape="rect" href="group__value__constructors.html#gabe632b0fee2d6973f5cea25bfd28def0" title="Creates a Value of type TYPE_CONS (a list pair)." alt="" coords="312,5,401,32"/>
+<area shape="poly" title=" " alt="" coords="60,100,91,77,130,56,172,42,216,31,297,20,297,25,217,37,174,47,132,61,94,82,63,105"/>
+<area shape="rect" href="group__parser.html#ga34b7e5578bd23df76c6c0e8cde2cce56" title="The main recursive parsing function." alt="" coords="131,95,264,137"/>
+<area shape="poly" title=" " alt="" coords="83,121,115,122,115,128,83,127"/>
+<area shape="rect" href="group__parser.html#gab638045be5bc3c34f405d4b1dbaed981" title="Scans the input stream to form the next complete token." alt="" coords="312,208,401,235"/>
+<area shape="poly" title=" " alt="" coords="81,127,132,147,298,201,296,206,130,152,79,132"/>
+<area shape="rect" href="group__arena.html#ga494c8cea4f0fa116e2559b9dfc080600" title="Allocates a block of memory from the arena." alt="" coords="745,31,832,57"/>
+<area shape="poly" title=" " alt="" coords="401,19,730,38,730,43,401,24"/>
+<area shape="poly" title=" " alt="" coords="130,110,98,110,98,105,130,104"/>
+<area shape="poly" title=" " alt="" coords="232,92,319,38,321,43,235,96"/>
+<area shape="poly" title=" " alt="" coords="167,94,166,85,171,76,182,70,197,68,214,70,224,77,221,81,212,75,197,73,183,75,175,80,171,86,173,94"/>
+<area shape="rect" href="group__value__constructors.html#ga3f01b34fda4a498bb58353076297f904" title="Creates a Value of type TYPE_ATOM." alt="" coords="456,56,546,83"/>
+<area shape="poly" title=" " alt="" coords="264,100,312,92,440,74,441,79,312,97,265,106"/>
+<area shape="rect" href="group__parser.html#gab44ed7c4f63e2ecefe687b4c38d436a2" title="Parses the string in current_token_buf into a number, string, or atom Value." alt="" coords="312,107,401,133"/>
+<area shape="poly" title=" " alt="" coords="265,115,297,116,296,121,265,120"/>
+<area shape="poly" title=" " alt="" coords="233,136,324,197,321,201,230,140"/>
+<area shape="rect" href="group__arena.html#ga80e56a0ed80fb9e01b0fb7604f5687f9" title="Duplicates a string into the arena." alt="" coords="601,56,697,83"/>
+<area shape="poly" title=" " alt="" coords="546,67,585,67,585,72,546,72"/>
+<area shape="poly" title=" " alt="" coords="697,58,729,52,730,57,698,63"/>
+<area shape="poly" title=" " alt="" coords="396,104,446,86,448,91,398,109"/>
+<area shape="rect" href="group__value__constructors.html#ga9f4a9f6ad14d91f6922fcabf73bd908d" title="Creates a Value of type TYPE_NUMBER." alt="" coords="449,107,553,133"/>
+<area shape="poly" title=" " alt="" coords="402,117,434,117,434,123,402,123"/>
+<area shape="rect" href="group__value__constructors.html#ga86414e13068fdebe957e1444cf3bd45e" title="Creates a Value of type TYPE_STRING." alt="" coords="455,157,547,184"/>
+<area shape="poly" title=" " alt="" coords="398,131,448,149,446,154,396,136"/>
+<area shape="poly" title=" " alt="" coords="531,155,551,143,619,91,622,95,554,148,533,159"/>
+<area shape="rect" href="group__parser.html#ga18863dbf58015a6eeebdf1c9b6ba2b82" title="Consumes and returns the current lookahead char, then advances the stream." alt="" coords="465,208,537,235"/>
+<area shape="poly" title=" " alt="" coords="401,219,450,219,450,224,401,224"/>
+<area shape="rect" href="group__parser.html#ga50ac0075193d1b4e2c52671a9067e80e" title="Reads a single character from the input stream into the lookahead buffer." alt="" coords="610,233,688,260"/>
+<area shape="poly" title=" " alt="" coords="399,233,450,244,525,249,594,248,594,253,525,255,449,249,398,238"/>
+<area shape="rect" href="group__parser.html#gad3d4064bac33002fb6c7d77e50c5a3c4" title="Checks if the lookahead char matches c. A space matches any whitespace." alt="" coords="463,309,539,336"/>
+<area shape="poly" title=" " alt="" coords="377,233,451,288,466,298,463,303,448,293,374,237"/>
+<area shape="poly" title=" " alt="" coords="538,225,595,235,594,240,537,230"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="group__parser_gaba403084bf38b5e4842f1b95c3078973_icgraph.png" border="0" usemap="#agroup__parser_gaba403084bf38b5e4842f1b95c3078973_icgraph" loading="lazy" alt=""/></div>
-<map name="agroup__parser_gaba403084bf38b5e4842f1b95c3078973_icgraph" id="agroup__parser_gaba403084bf38b5e4842f1b95c3078973_icgraph">
+<div class="center"><img src="group__parser_ga8a7f8b2d75c03f46abf130c218c4262f_icgraph.png" border="0" usemap="#agroup__parser_ga8a7f8b2d75c03f46abf130c218c4262f_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__parser_ga8a7f8b2d75c03f46abf130c218c4262f_icgraph" id="agroup__parser_ga8a7f8b2d75c03f46abf130c218c4262f_icgraph">
 <area shape="rect" title="Parses a list expression from the token stream." alt="" coords="358,37,435,64"/>
-<area shape="rect" href="group__parser.html#gada6dce343f19aba713681f7139bd0ef7" title="The main recursive parsing function." alt="" coords="177,29,310,72"/>
+<area shape="rect" href="group__parser.html#ga34b7e5578bd23df76c6c0e8cde2cce56" title="The main recursive parsing function." alt="" coords="177,29,310,72"/>
 <area shape="poly" title=" " alt="" coords="343,62,311,62,311,57,343,57"/>
 <area shape="poly" title=" " alt="" coords="326,39,358,40,358,45,326,44"/>
 <area shape="poly" title=" " alt="" coords="267,16,258,10,243,8,229,10,221,14,217,20,219,28,213,29,212,19,217,11,228,5,243,3,260,5,270,11"/>
-<area shape="rect" href="group__parser.html#ga30551ac5d316783abc8ab5110c878e28" title="Top&#45;level function to parse a single complete S&#45;expression from the stream." alt="" coords="5,37,129,64"/>
+<area shape="rect" href="group__parser.html#ga96e89ce14c76411e95f85b3698efbc1c" title="Top&#45;level function to parse a single complete S&#45;expression from the stream." alt="" coords="5,37,129,64"/>
 <area shape="poly" title=" " alt="" coords="161,53,129,53,129,48,161,48"/>
 </map>
 </div>
@@ -313,11 +333,11 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="group__parser_gab638045be5bc3c34f405d4b1dbaed981_icgraph.png" border="0" usemap="#agroup__parser_gab638045be5bc3c34f405d4b1dbaed981_icgraph" loading="lazy" alt=""/></div>
 <map name="agroup__parser_gab638045be5bc3c34f405d4b1dbaed981_icgraph" id="agroup__parser_gab638045be5bc3c34f405d4b1dbaed981_icgraph">
 <area shape="rect" title="Scans the input stream to form the next complete token." alt="" coords="358,72,446,99"/>
-<area shape="rect" href="group__parser.html#ga30551ac5d316783abc8ab5110c878e28" title="Top&#45;level function to parse a single complete S&#45;expression from the stream." alt="" coords="5,5,129,32"/>
+<area shape="rect" href="group__parser.html#ga96e89ce14c76411e95f85b3698efbc1c" title="Top&#45;level function to parse a single complete S&#45;expression from the stream." alt="" coords="5,5,129,32"/>
 <area shape="poly" title=" " alt="" coords="371,65,342,45,309,31,263,20,216,15,129,15,129,10,216,9,264,15,311,25,345,41,374,60"/>
-<area shape="rect" href="group__parser.html#gada6dce343f19aba713681f7139bd0ef7" title="The main recursive parsing function." alt="" coords="177,64,310,107"/>
+<area shape="rect" href="group__parser.html#ga34b7e5578bd23df76c6c0e8cde2cce56" title="The main recursive parsing function." alt="" coords="177,64,310,107"/>
 <area shape="poly" title=" " alt="" coords="342,88,310,88,310,83,342,83"/>
-<area shape="rect" href="group__parser.html#gaba403084bf38b5e4842f1b95c3078973" title="Parses a list expression from the token stream." alt="" coords="28,72,106,99"/>
+<area shape="rect" href="group__parser.html#ga8a7f8b2d75c03f46abf130c218c4262f" title="Parses a list expression from the token stream." alt="" coords="28,72,106,99"/>
 <area shape="poly" title=" " alt="" coords="358,107,311,121,243,129,176,121,138,113,103,102,105,97,139,108,177,116,243,123,309,116,357,102"/>
 <area shape="poly" title=" " alt="" coords="170,61,104,35,106,30,172,56"/>
 <area shape="poly" title=" " alt="" coords="268,51,259,45,243,43,229,44,220,49,216,55,218,63,212,64,211,54,216,45,227,39,243,37,261,40,271,46"/>

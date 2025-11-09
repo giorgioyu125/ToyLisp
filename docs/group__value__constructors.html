@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ToyLisp<span id="projectnumber">&#160;0.1.2</span>
+   <div id="projectname">ToyLisp<span id="projectnumber">&#160;0.2.0</span>
    </div>
    <div id="projectbrief">A simple lisp interpreter</div>
   </td>
@@ -99,26 +99,30 @@ $(function(){initNavTree('group__value__constructors.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga9f4a9f6ad14d91f6922fcabf73bd908d" id="r_ga9f4a9f6ad14d91f6922fcabf73bd908d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9f4a9f6ad14d91f6922fcabf73bd908d">make_number</a> (double n)</td></tr>
-<tr class="memdesc:ga9f4a9f6ad14d91f6922fcabf73bd908d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> of type <span class="tt"><a class="el" href="group__core__primitives.html#gad9971b6ef33e02ba2c75d19c1d2518a1a23633c59862fb4d180b9b35e9f61ca18" title="A double-precision floating-point number. *‍/.">TYPE_NUMBER</a></span>.  <br /></td></tr>
-<tr class="memitem:ga9ff6885b2832accd84039908b6dacdfb" id="r_ga9ff6885b2832accd84039908b6dacdfb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9ff6885b2832accd84039908b6dacdfb">make_atom</a> (const char *name)</td></tr>
-<tr class="memdesc:ga9ff6885b2832accd84039908b6dacdfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> of type <span class="tt"><a class="el" href="group__core__primitives.html#gad9971b6ef33e02ba2c75d19c1d2518a1a8c85cb127913ae77b377f5fca47a65e3" title="A symbol/atom, represented by its name. *‍/.">TYPE_ATOM</a></span>.  <br /></td></tr>
-<tr class="memitem:gabd7855663e658ab83e6b55373e161761" id="r_gabd7855663e658ab83e6b55373e161761"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gabd7855663e658ab83e6b55373e161761">make_cons</a> (<a class="el" href="structValue.html">Value</a> car, <a class="el" href="structValue.html">Value</a> cdr)</td></tr>
-<tr class="memdesc:gabd7855663e658ab83e6b55373e161761"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> of type <span class="tt"><a class="el" href="group__core__primitives.html#gad9971b6ef33e02ba2c75d19c1d2518a1a335dbac5b1c8b66560a5e7a64ca90b29" title="A cons cell, the basic building block for lists. *‍/.">TYPE_CONS</a></span> (a list pair).  <br /></td></tr>
-<tr class="memitem:ga38b6a77dfca2706d7f685745aeae51a4" id="r_ga38b6a77dfca2706d7f685745aeae51a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga38b6a77dfca2706d7f685745aeae51a4">make_string</a> (const char *s)</td></tr>
-<tr class="memdesc:ga38b6a77dfca2706d7f685745aeae51a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> of type <span class="tt"><a class="el" href="group__core__primitives.html#gad9971b6ef33e02ba2c75d19c1d2518a1addb4be6b1cc25112defabef75f73427a" title="A character string. *‍/.">TYPE_STRING</a></span>.  <br /></td></tr>
-<tr class="memitem:gaab8a33a22b5c6738f19ab6478478fc3d" id="r_gaab8a33a22b5c6738f19ab6478478fc3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaab8a33a22b5c6738f19ab6478478fc3d">make_error</a> (const char *format,...)</td></tr>
-<tr class="memdesc:gaab8a33a22b5c6738f19ab6478478fc3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> of type <span class="tt"><a class="el" href="group__core__primitives.html#gad9971b6ef33e02ba2c75d19c1d2518a1a0fcbfe955a9a4a5db228de5969bbb428" title="An error object, containing a message. *‍/.">TYPE_ERROR</a></span> with a formatted message.  <br /></td></tr>
-<tr class="memitem:ga2cb81d63401cdef478e2e95de5450180" id="r_ga2cb81d63401cdef478e2e95de5450180"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2cb81d63401cdef478e2e95de5450180">make_closure</a> (<a class="el" href="structValue.html">Value</a> params, <a class="el" href="structValue.html">Value</a> body, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memdesc:ga2cb81d63401cdef478e2e95de5450180"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> of type <span class="tt"><a class="el" href="group__core__primitives.html#gad9971b6ef33e02ba2c75d19c1d2518a1a4412cd030390348a68aa2e8b1d4adf17" title="A user-defined function (lambda), with its environment. *‍/.">TYPE_CLOSURE</a></span>.  <br /></td></tr>
-<tr class="memitem:gaafad9af671338c87c8e0b4643172a9c5" id="r_gaafad9af671338c87c8e0b4643172a9c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structClosure.html">Closure</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaafad9af671338c87c8e0b4643172a9c5">make_closure_ptr</a> (<a class="el" href="structValue.html">Value</a> params, <a class="el" href="structValue.html">Value</a> body, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memdesc:gaafad9af671338c87c8e0b4643172a9c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and allocates a raw <span class="tt"><a class="el" href="structClosure.html" title="Represents a lambda function created at runtime.">Closure</a></span> struct pointer.  <br /></td></tr>
+<tr class="memdesc:ga9f4a9f6ad14d91f6922fcabf73bd908d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> of type <span class="tt"><a class="el" href="group__core__primitives.html#gad9971b6ef33e02ba2c75d19c1d2518a1a23633c59862fb4d180b9b35e9f61ca18" title="A double-precision floating-point number.">TYPE_NUMBER</a></span>.  <br /></td></tr>
+<tr class="memitem:ga3f01b34fda4a498bb58353076297f904" id="r_ga3f01b34fda4a498bb58353076297f904"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3f01b34fda4a498bb58353076297f904">make_atom</a> (const char *name, <a class="el" href="structArena.html">Arena</a> **arena)</td></tr>
+<tr class="memdesc:ga3f01b34fda4a498bb58353076297f904"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> of type <span class="tt"><a class="el" href="group__core__primitives.html#gad9971b6ef33e02ba2c75d19c1d2518a1a8c85cb127913ae77b377f5fca47a65e3" title="A symbol/atom, represented by its name.">TYPE_ATOM</a></span>.  <br /></td></tr>
+<tr class="memitem:gabe632b0fee2d6973f5cea25bfd28def0" id="r_gabe632b0fee2d6973f5cea25bfd28def0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gabe632b0fee2d6973f5cea25bfd28def0">make_cons</a> (<a class="el" href="structValue.html">Value</a> car, <a class="el" href="structValue.html">Value</a> cdr, <a class="el" href="structArena.html">Arena</a> **arena)</td></tr>
+<tr class="memdesc:gabe632b0fee2d6973f5cea25bfd28def0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> of type <span class="tt"><a class="el" href="group__core__primitives.html#gad9971b6ef33e02ba2c75d19c1d2518a1a335dbac5b1c8b66560a5e7a64ca90b29" title="A cons cell, the basic building block for lists.">TYPE_CONS</a></span> (a list pair).  <br /></td></tr>
+<tr class="memitem:ga86414e13068fdebe957e1444cf3bd45e" id="r_ga86414e13068fdebe957e1444cf3bd45e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga86414e13068fdebe957e1444cf3bd45e">make_string</a> (const char *s, <a class="el" href="structArena.html">Arena</a> **arena)</td></tr>
+<tr class="memdesc:ga86414e13068fdebe957e1444cf3bd45e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> of type <span class="tt"><a class="el" href="group__core__primitives.html#gad9971b6ef33e02ba2c75d19c1d2518a1addb4be6b1cc25112defabef75f73427a" title="A character string.">TYPE_STRING</a></span>.  <br /></td></tr>
+<tr class="memitem:ga4bfa92d1baa0a598b48587524e0ab392" id="r_ga4bfa92d1baa0a598b48587524e0ab392"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4bfa92d1baa0a598b48587524e0ab392">make_error</a> (<a class="el" href="structArena.html">Arena</a> **arena, const char *format,...)</td></tr>
+<tr class="memdesc:ga4bfa92d1baa0a598b48587524e0ab392"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> of type <span class="tt"><a class="el" href="group__core__primitives.html#gad9971b6ef33e02ba2c75d19c1d2518a1a0fcbfe955a9a4a5db228de5969bbb428" title="An error object, containing a message.">TYPE_ERROR</a></span> with a formatted message.  <br /></td></tr>
+<tr class="memitem:ga56b1cea30d98236c9dbbecef01b814fe" id="r_ga56b1cea30d98236c9dbbecef01b814fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga56b1cea30d98236c9dbbecef01b814fe">make_closure</a> (<a class="el" href="structValue.html">Value</a> params, <a class="el" href="structValue.html">Value</a> body, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structArena.html">Arena</a> **arena)</td></tr>
+<tr class="memdesc:ga56b1cea30d98236c9dbbecef01b814fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> of type <span class="tt"><a class="el" href="group__core__primitives.html#gad9971b6ef33e02ba2c75d19c1d2518a1a4412cd030390348a68aa2e8b1d4adf17" title="A user-defined function (lambda), with its environment.">TYPE_CLOSURE</a></span>.  <br /></td></tr>
+<tr class="memitem:ga172f8b614c16d7f29a55701f9e3f535d" id="r_ga172f8b614c16d7f29a55701f9e3f535d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structClosure.html">Closure</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga172f8b614c16d7f29a55701f9e3f535d">make_closure_ptr</a> (<a class="el" href="structValue.html">Value</a> params, <a class="el" href="structValue.html">Value</a> body, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structArena.html">Arena</a> **arena)</td></tr>
+<tr class="memdesc:ga172f8b614c16d7f29a55701f9e3f535d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and allocates a raw <span class="tt"><a class="el" href="structClosure.html" title="Represents a lambda function created at runtime.">Closure</a></span> struct pointer.  <br /></td></tr>
+<tr class="memitem:ga7e2c2e70f225b9dd96cff95b0166a76b" id="r_ga7e2c2e70f225b9dd96cff95b0166a76b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga7e2c2e70f225b9dd96cff95b0166a76b">make_macro</a> (<a class="el" href="structValue.html">Value</a> params, <a class="el" href="structValue.html">Value</a> body, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structArena.html">Arena</a> **arena)</td></tr>
+<tr class="memdesc:ga7e2c2e70f225b9dd96cff95b0166a76b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> of type <span class="tt"><a class="el" href="group__core__primitives.html#gad9971b6ef33e02ba2c75d19c1d2518a1a6133c676d32daf9907bae02bef3351b4" title="A user-define macro.">TYPE_MACRO</a></span>.  <br /></td></tr>
+<tr class="memitem:ga0d057406365078f8dcb5cbbc9dc04619" id="r_ga0d057406365078f8dcb5cbbc9dc04619"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structMacro.html">Macro</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0d057406365078f8dcb5cbbc9dc04619">make_macro_ptr</a> (<a class="el" href="structValue.html">Value</a> params, <a class="el" href="structValue.html">Value</a> body, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structArena.html">Arena</a> **arena)</td></tr>
+<tr class="memdesc:ga0d057406365078f8dcb5cbbc9dc04619"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and allocates a raw <span class="tt"><a class="el" href="structMacro.html">Macro</a></span> struct pointer.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <p>A set of factory functions for creating <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> objects. </p>
 <p>These functions encapsulate the logic for allocating memory (where necessary) and correctly setting the type tag and data for various <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> types. They are the primary way to create new values within the interpreter. </p>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="ga9ff6885b2832accd84039908b6dacdfb" name="ga9ff6885b2832accd84039908b6dacdfb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9ff6885b2832accd84039908b6dacdfb">&#9670;&#160;</a></span>make_atom()</h2>
+<a id="ga3f01b34fda4a498bb58353076297f904" name="ga3f01b34fda4a498bb58353076297f904"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3f01b34fda4a498bb58353076297f904">&#9670;&#160;</a></span>make_atom()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -126,35 +130,52 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="structValue.html">Value</a> make_atom </td>
           <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="structArena.html">Arena</a> **</td>          <td class="paramname"><span class="paramname"><em>arena</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates a <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> of type <span class="tt"><a class="el" href="group__core__primitives.html#gad9971b6ef33e02ba2c75d19c1d2518a1a8c85cb127913ae77b377f5fca47a65e3" title="A symbol/atom, represented by its name. *‍/.">TYPE_ATOM</a></span>. </p>
+<p>Creates a <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> of type <span class="tt"><a class="el" href="group__core__primitives.html#gad9971b6ef33e02ba2c75d19c1d2518a1a8c85cb127913ae77b377f5fca47a65e3" title="A symbol/atom, represented by its name.">TYPE_ATOM</a></span>. </p>
 <p>Allocates memory and copies the provided name. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>The symbol name to be used for the atom (will be copied). </td></tr>
+    <tr><td class="paramname">arena</td><td>The arena used for the allocation. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A new <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> object representing the atom. </dd></dl>
 <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__value__constructors_ga3f01b34fda4a498bb58353076297f904_cgraph.png" border="0" usemap="#agroup__value__constructors_ga3f01b34fda4a498bb58353076297f904_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__value__constructors_ga3f01b34fda4a498bb58353076297f904_cgraph" id="agroup__value__constructors_ga3f01b34fda4a498bb58353076297f904_cgraph">
+<area shape="rect" title="Creates a Value of type TYPE_ATOM." alt="" coords="5,5,95,32"/>
+<area shape="rect" href="group__arena.html#ga80e56a0ed80fb9e01b0fb7604f5687f9" title="Duplicates a string into the arena." alt="" coords="143,5,239,32"/>
+<area shape="poly" title=" " alt="" coords="95,16,127,16,127,21,95,21"/>
+<area shape="rect" href="group__arena.html#ga494c8cea4f0fa116e2559b9dfc080600" title="Allocates a block of memory from the arena." alt="" coords="287,5,374,32"/>
+<area shape="poly" title=" " alt="" coords="239,16,271,16,271,21,239,21"/>
+</map>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="group__value__constructors_ga9ff6885b2832accd84039908b6dacdfb_icgraph.png" border="0" usemap="#agroup__value__constructors_ga9ff6885b2832accd84039908b6dacdfb_icgraph" loading="lazy" alt=""/></div>
-<map name="agroup__value__constructors_ga9ff6885b2832accd84039908b6dacdfb_icgraph" id="agroup__value__constructors_ga9ff6885b2832accd84039908b6dacdfb_icgraph">
+<div class="center"><img src="group__value__constructors_ga3f01b34fda4a498bb58353076297f904_icgraph.png" border="0" usemap="#agroup__value__constructors_ga3f01b34fda4a498bb58353076297f904_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__value__constructors_ga3f01b34fda4a498bb58353076297f904_icgraph" id="agroup__value__constructors_ga3f01b34fda4a498bb58353076297f904_icgraph">
 <area shape="rect" title="Creates a Value of type TYPE_ATOM." alt="" coords="495,56,585,83"/>
-<area shape="rect" href="group__parser.html#gaaada423750f0a0b5d2b04abe1dbffc53" title="Parses the string in current_token_buf into a number, string, or atom Value." alt="" coords="358,31,447,57"/>
+<area shape="rect" href="group__parser.html#gab44ed7c4f63e2ecefe687b4c38d436a2" title="Parses the string in current_token_buf into a number, string, or atom Value." alt="" coords="358,31,447,57"/>
 <area shape="poly" title=" " alt="" coords="480,61,447,55,448,50,481,56"/>
-<area shape="rect" href="group__parser.html#gada6dce343f19aba713681f7139bd0ef7" title="The main recursive parsing function." alt="" coords="177,48,310,91"/>
+<area shape="rect" href="group__parser.html#ga34b7e5578bd23df76c6c0e8cde2cce56" title="The main recursive parsing function." alt="" coords="177,48,310,91"/>
 <area shape="poly" title=" " alt="" coords="480,72,311,72,311,67,480,67"/>
 <area shape="poly" title=" " alt="" coords="343,56,311,61,310,56,342,51"/>
 <area shape="poly" title=" " alt="" coords="268,35,259,29,243,27,229,28,220,33,216,39,218,47,212,48,211,38,216,29,227,23,243,21,261,24,271,30"/>
-<area shape="rect" href="group__parser.html#ga30551ac5d316783abc8ab5110c878e28" title="Top&#45;level function to parse a single complete S&#45;expression from the stream." alt="" coords="5,5,129,32"/>
+<area shape="rect" href="group__parser.html#ga96e89ce14c76411e95f85b3698efbc1c" title="Top&#45;level function to parse a single complete S&#45;expression from the stream." alt="" coords="5,5,129,32"/>
 <area shape="poly" title=" " alt="" coords="161,48,115,35,117,30,162,43"/>
-<area shape="rect" href="group__parser.html#gaba403084bf38b5e4842f1b95c3078973" title="Parses a list expression from the token stream." alt="" coords="28,56,106,83"/>
+<area shape="rect" href="group__parser.html#ga8a7f8b2d75c03f46abf130c218c4262f" title="Parses a list expression from the token stream." alt="" coords="28,56,106,83"/>
 <area shape="poly" title=" " alt="" coords="161,81,106,80,106,74,161,76"/>
 <area shape="poly" title=" " alt="" coords="121,58,176,58,176,63,121,64"/>
 </map>
@@ -162,8 +183,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ga2cb81d63401cdef478e2e95de5450180" name="ga2cb81d63401cdef478e2e95de5450180"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2cb81d63401cdef478e2e95de5450180">&#9670;&#160;</a></span>make_closure()</h2>
+<a id="ga56b1cea30d98236c9dbbecef01b814fe" name="ga56b1cea30d98236c9dbbecef01b814fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga56b1cea30d98236c9dbbecef01b814fe">&#9670;&#160;</a></span>make_closure()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -181,26 +202,42 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structValue.html">Value</a></td>          <td class="paramname"><span class="paramname"><em>env</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="structValue.html">Value</a></td>          <td class="paramname"><span class="paramname"><em>env</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structArena.html">Arena</a> **</td>          <td class="paramname"><span class="paramname"><em>arena</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates a <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> of type <span class="tt"><a class="el" href="group__core__primitives.html#gad9971b6ef33e02ba2c75d19c1d2518a1a4412cd030390348a68aa2e8b1d4adf17" title="A user-defined function (lambda), with its environment. *‍/.">TYPE_CLOSURE</a></span>. </p>
+<p>Creates a <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> of type <span class="tt"><a class="el" href="group__core__primitives.html#gad9971b6ef33e02ba2c75d19c1d2518a1a4412cd030390348a68aa2e8b1d4adf17" title="A user-defined function (lambda), with its environment.">TYPE_CLOSURE</a></span>. </p>
 <p>Allocates a <span class="tt"><a class="el" href="structClosure.html" title="Represents a lambda function created at runtime.">Closure</a></span> struct to hold the function's components. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">params</td><td>A list of atoms representing the function's formal parameters. </td></tr>
     <tr><td class="paramname">body</td><td>A list of expressions representing the function's body. </td></tr>
     <tr><td class="paramname">env</td><td>The captured lexical environment. </td></tr>
+    <tr><td class="paramname">arena</td><td>The arena used for the allocation. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A new <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> object representing the closure. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__value__constructors_ga56b1cea30d98236c9dbbecef01b814fe_cgraph.png" border="0" usemap="#agroup__value__constructors_ga56b1cea30d98236c9dbbecef01b814fe_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__value__constructors_ga56b1cea30d98236c9dbbecef01b814fe_cgraph" id="agroup__value__constructors_ga56b1cea30d98236c9dbbecef01b814fe_cgraph">
+<area shape="rect" title="Creates a Value of type TYPE_CLOSURE." alt="" coords="5,5,108,32"/>
+<area shape="rect" href="group__arena.html#ga494c8cea4f0fa116e2559b9dfc080600" title="Allocates a block of memory from the arena." alt="" coords="156,5,243,32"/>
+<area shape="poly" title=" " alt="" coords="108,16,140,16,140,21,108,21"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="gaafad9af671338c87c8e0b4643172a9c5" name="gaafad9af671338c87c8e0b4643172a9c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaafad9af671338c87c8e0b4643172a9c5">&#9670;&#160;</a></span>make_closure_ptr()</h2>
+<a id="ga172f8b614c16d7f29a55701f9e3f535d" name="ga172f8b614c16d7f29a55701f9e3f535d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga172f8b614c16d7f29a55701f9e3f535d">&#9670;&#160;</a></span>make_closure_ptr()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -218,7 +255,12 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structValue.html">Value</a></td>          <td class="paramname"><span class="paramname"><em>env</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="structValue.html">Value</a></td>          <td class="paramname"><span class="paramname"><em>env</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structArena.html">Arena</a> **</td>          <td class="paramname"><span class="paramname"><em>arena</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -229,15 +271,26 @@ Here is the caller graph for this function:</div>
     <tr><td class="paramname">params</td><td>A list of atoms representing the function's formal parameters. </td></tr>
     <tr><td class="paramname">body</td><td>A list of expressions representing the function's body. </td></tr>
     <tr><td class="paramname">env</td><td>The captured lexical environment. </td></tr>
+    <tr><td class="paramname">arena</td><td>The arena used for the allocation. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to the newly allocated <span class="tt"><a class="el" href="structClosure.html" title="Represents a lambda function created at runtime.">Closure</a></span>, not a <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> object. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__value__constructors_ga172f8b614c16d7f29a55701f9e3f535d_cgraph.png" border="0" usemap="#agroup__value__constructors_ga172f8b614c16d7f29a55701f9e3f535d_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__value__constructors_ga172f8b614c16d7f29a55701f9e3f535d_cgraph" id="agroup__value__constructors_ga172f8b614c16d7f29a55701f9e3f535d_cgraph">
+<area shape="rect" title="Creates and allocates a raw Closure struct pointer." alt="" coords="5,5,130,32"/>
+<area shape="rect" href="group__arena.html#ga494c8cea4f0fa116e2559b9dfc080600" title="Allocates a block of memory from the arena." alt="" coords="178,5,265,32"/>
+<area shape="poly" title=" " alt="" coords="130,16,162,16,162,21,130,21"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="gabd7855663e658ab83e6b55373e161761" name="gabd7855663e658ab83e6b55373e161761"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabd7855663e658ab83e6b55373e161761">&#9670;&#160;</a></span>make_cons()</h2>
+<a id="gabe632b0fee2d6973f5cea25bfd28def0" name="gabe632b0fee2d6973f5cea25bfd28def0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabe632b0fee2d6973f5cea25bfd28def0">&#9670;&#160;</a></span>make_cons()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -250,39 +303,55 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structValue.html">Value</a></td>          <td class="paramname"><span class="paramname"><em>cdr</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="structValue.html">Value</a></td>          <td class="paramname"><span class="paramname"><em>cdr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structArena.html">Arena</a> **</td>          <td class="paramname"><span class="paramname"><em>arena</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates a <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> of type <span class="tt"><a class="el" href="group__core__primitives.html#gad9971b6ef33e02ba2c75d19c1d2518a1a335dbac5b1c8b66560a5e7a64ca90b29" title="A cons cell, the basic building block for lists. *‍/.">TYPE_CONS</a></span> (a list pair). </p>
+<p>Creates a <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> of type <span class="tt"><a class="el" href="group__core__primitives.html#gad9971b6ef33e02ba2c75d19c1d2518a1a335dbac5b1c8b66560a5e7a64ca90b29" title="A cons cell, the basic building block for lists.">TYPE_CONS</a></span> (a list pair). </p>
 <p>Allocates a new <span class="tt"><a class="el" href="structConsCell.html" title="Represents a single &quot;cons&quot; pair, the basic building block of lists.">ConsCell</a></span> to hold the car and cdr values. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">car</td><td>The first element of the pair (the value). </td></tr>
     <tr><td class="paramname">cdr</td><td>The second element of the pair (the rest of the list). </td></tr>
+    <tr><td class="paramname">arena</td><td>The arena used for the allocation. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A new <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> object pointing to the cons cell. </dd></dl>
 <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__value__constructors_gabe632b0fee2d6973f5cea25bfd28def0_cgraph.png" border="0" usemap="#agroup__value__constructors_gabe632b0fee2d6973f5cea25bfd28def0_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__value__constructors_gabe632b0fee2d6973f5cea25bfd28def0_cgraph" id="agroup__value__constructors_gabe632b0fee2d6973f5cea25bfd28def0_cgraph">
+<area shape="rect" title="Creates a Value of type TYPE_CONS (a list pair)." alt="" coords="5,5,94,32"/>
+<area shape="rect" href="group__arena.html#ga494c8cea4f0fa116e2559b9dfc080600" title="Allocates a block of memory from the arena." alt="" coords="142,5,229,32"/>
+<area shape="poly" title=" " alt="" coords="94,16,126,16,126,21,94,21"/>
+</map>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="group__value__constructors_gabd7855663e658ab83e6b55373e161761_icgraph.png" border="0" usemap="#agroup__value__constructors_gabd7855663e658ab83e6b55373e161761_icgraph" loading="lazy" alt=""/></div>
-<map name="agroup__value__constructors_gabd7855663e658ab83e6b55373e161761_icgraph" id="agroup__value__constructors_gabd7855663e658ab83e6b55373e161761_icgraph">
+<div class="center"><img src="group__value__constructors_gabe632b0fee2d6973f5cea25bfd28def0_icgraph.png" border="0" usemap="#agroup__value__constructors_gabe632b0fee2d6973f5cea25bfd28def0_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__value__constructors_gabe632b0fee2d6973f5cea25bfd28def0_icgraph" id="agroup__value__constructors_gabe632b0fee2d6973f5cea25bfd28def0_icgraph">
 <area shape="rect" title="Creates a Value of type TYPE_CONS (a list pair)." alt="" coords="358,121,446,148"/>
-<area shape="rect" href="group__core__evaluator.html#ga5e5df764fb5396458999e860cb0b9373" title="Evaluates a single Lisp expression in a given environment." alt="" coords="186,29,301,56"/>
+<area shape="rect" href="group__core__evaluator.html#gac92b6c96045b3975a831d3a5a7be4843" title="Evaluates a single Lisp expression in a given environment." alt="" coords="186,29,301,56"/>
 <area shape="poly" title=" " alt="" coords="368,115,309,77,274,59,276,54,311,72,371,110"/>
-<area shape="rect" href="group__core__evaluator.html#gac9646fe9e30e6ba298571287e89d5dc2" title="Recursively evaluates every element in a list of expressions." alt="" coords="32,63,102,89"/>
+<area shape="rect" href="group__core__evaluator.html#gac73aee08818a5eb01f0d71ba1291c314" title="Recursively evaluates every element in a list of expressions." alt="" coords="32,63,102,89"/>
 <area shape="poly" title=" " alt="" coords="342,127,102,85,103,79,343,122"/>
-<area shape="rect" href="group__parser.html#gada6dce343f19aba713681f7139bd0ef7" title="The main recursive parsing function." alt="" coords="177,155,310,197"/>
+<area shape="rect" href="group__parser.html#ga34b7e5578bd23df76c6c0e8cde2cce56" title="The main recursive parsing function." alt="" coords="177,155,310,197"/>
 <area shape="poly" title=" " alt="" coords="344,153,311,161,310,156,342,147"/>
-<area shape="rect" href="group__parser.html#gaba403084bf38b5e4842f1b95c3078973" title="Parses a list expression from the token stream." alt="" coords="28,180,106,207"/>
+<area shape="rect" href="group__parser.html#ga8a7f8b2d75c03f46abf130c218c4262f" title="Parses a list expression from the token stream." alt="" coords="28,180,106,207"/>
 <area shape="poly" title=" " alt="" coords="381,162,350,190,311,212,256,223,200,224,148,217,105,208,107,202,149,212,201,219,256,218,309,207,347,185,378,158"/>
 <area shape="poly" title=" " alt="" coords="270,16,261,10,243,8,227,10,218,15,216,20,220,28,216,30,211,21,214,11,225,5,243,3,263,5,273,12"/>
 <area shape="poly" title=" " alt="" coords="171,59,102,72,101,67,170,54"/>
 <area shape="poly" title=" " alt="" coords="97,50,87,44,67,41,49,43,39,48,37,53,41,61,37,64,31,54,35,44,47,38,67,36,88,39,100,45"/>
 <area shape="poly" title=" " alt="" coords="268,141,259,135,243,133,229,135,220,140,216,146,218,154,212,154,211,145,216,136,227,130,243,128,261,130,271,137"/>
-<area shape="rect" href="group__parser.html#ga30551ac5d316783abc8ab5110c878e28" title="Top&#45;level function to parse a single complete S&#45;expression from the stream." alt="" coords="5,129,129,156"/>
+<area shape="rect" href="group__parser.html#ga96e89ce14c76411e95f85b3698efbc1c" title="Top&#45;level function to parse a single complete S&#45;expression from the stream." alt="" coords="5,129,129,156"/>
 <area shape="poly" title=" " alt="" coords="161,163,128,157,129,152,162,158"/>
 <area shape="poly" title=" " alt="" coords="162,196,106,200,106,194,161,190"/>
 <area shape="poly" title=" " alt="" coords="120,177,176,171,177,176,121,182"/>
@@ -291,8 +360,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="gaab8a33a22b5c6738f19ab6478478fc3d" name="gaab8a33a22b5c6738f19ab6478478fc3d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaab8a33a22b5c6738f19ab6478478fc3d">&#9670;&#160;</a></span>make_error()</h2>
+<a id="ga4bfa92d1baa0a598b48587524e0ab392" name="ga4bfa92d1baa0a598b48587524e0ab392"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4bfa92d1baa0a598b48587524e0ab392">&#9670;&#160;</a></span>make_error()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -300,6 +369,11 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname"><a class="el" href="structValue.html">Value</a> make_error </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="structArena.html">Arena</a> **</td>          <td class="paramname"><span class="paramname"><em>arena</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
         </tr>
         <tr>
@@ -310,9 +384,10 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Creates a <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> of type <span class="tt"><a class="el" href="group__core__primitives.html#gad9971b6ef33e02ba2c75d19c1d2518a1a0fcbfe955a9a4a5db228de5969bbb428" title="An error object, containing a message. *‍/.">TYPE_ERROR</a></span> with a formatted message. </p>
+<p>Creates a <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> of type <span class="tt"><a class="el" href="group__core__primitives.html#gad9971b6ef33e02ba2c75d19c1d2518a1a0fcbfe955a9a4a5db228de5969bbb428" title="An error object, containing a message.">TYPE_ERROR</a></span> with a formatted message. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">arena</td><td>The arena used for the allocation. </td></tr>
     <tr><td class="paramname">format</td><td>The printf-style format string for the error message. </td></tr>
     <tr><td class="paramname">...</td><td>The variable arguments for the format string. </td></tr>
   </table>
@@ -320,17 +395,135 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A new <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> object representing the error. </dd></dl>
 <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__value__constructors_ga4bfa92d1baa0a598b48587524e0ab392_cgraph.png" border="0" usemap="#agroup__value__constructors_ga4bfa92d1baa0a598b48587524e0ab392_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__value__constructors_ga4bfa92d1baa0a598b48587524e0ab392_cgraph" id="agroup__value__constructors_ga4bfa92d1baa0a598b48587524e0ab392_cgraph">
+<area shape="rect" title="Creates a Value of type TYPE_ERROR with a formatted message." alt="" coords="5,5,92,32"/>
+<area shape="rect" href="group__arena.html#ga80e56a0ed80fb9e01b0fb7604f5687f9" title="Duplicates a string into the arena." alt="" coords="140,5,236,32"/>
+<area shape="poly" title=" " alt="" coords="92,16,124,16,124,21,92,21"/>
+<area shape="rect" href="group__arena.html#ga494c8cea4f0fa116e2559b9dfc080600" title="Allocates a block of memory from the arena." alt="" coords="284,5,371,32"/>
+<area shape="poly" title=" " alt="" coords="236,16,268,16,268,21,236,21"/>
+</map>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="group__value__constructors_gaab8a33a22b5c6738f19ab6478478fc3d_icgraph.png" border="0" usemap="#agroup__value__constructors_gaab8a33a22b5c6738f19ab6478478fc3d_icgraph" loading="lazy" alt=""/></div>
-<map name="agroup__value__constructors_gaab8a33a22b5c6738f19ab6478478fc3d_icgraph" id="agroup__value__constructors_gaab8a33a22b5c6738f19ab6478478fc3d_icgraph">
+<div class="center"><img src="group__value__constructors_ga4bfa92d1baa0a598b48587524e0ab392_icgraph.png" border="0" usemap="#agroup__value__constructors_ga4bfa92d1baa0a598b48587524e0ab392_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__value__constructors_ga4bfa92d1baa0a598b48587524e0ab392_icgraph" id="agroup__value__constructors_ga4bfa92d1baa0a598b48587524e0ab392_icgraph">
 <area shape="rect" title="Creates a Value of type TYPE_ERROR with a formatted message." alt="" coords="286,29,372,56"/>
-<area shape="rect" href="group__core__evaluator.html#ga5e5df764fb5396458999e860cb0b9373" title="Evaluates a single Lisp expression in a given environment." alt="" coords="123,29,238,56"/>
+<area shape="rect" href="group__core__evaluator.html#gac92b6c96045b3975a831d3a5a7be4843" title="Evaluates a single Lisp expression in a given environment." alt="" coords="123,29,238,56"/>
 <area shape="poly" title=" " alt="" coords="271,45,239,45,239,40,271,40"/>
 <area shape="poly" title=" " alt="" coords="204,16,196,10,180,8,166,10,159,14,157,20,160,28,156,30,151,21,154,11,164,5,180,3,198,5,207,12"/>
-<area shape="rect" href="group__core__evaluator.html#gac9646fe9e30e6ba298571287e89d5dc2" title="Recursively evaluates every element in a list of expressions." alt="" coords="5,29,75,56"/>
+<area shape="rect" href="group__core__evaluator.html#gac73aee08818a5eb01f0d71ba1291c314" title="Recursively evaluates every element in a list of expressions." alt="" coords="5,29,75,56"/>
 <area shape="poly" title=" " alt="" coords="107,45,75,45,75,40,107,40"/>
 <area shape="poly" title=" " alt="" coords="63,16,55,10,40,8,26,10,18,14,16,20,20,28,15,30,11,21,14,11,24,5,40,3,57,5,66,12"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga7e2c2e70f225b9dd96cff95b0166a76b" name="ga7e2c2e70f225b9dd96cff95b0166a76b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7e2c2e70f225b9dd96cff95b0166a76b">&#9670;&#160;</a></span>make_macro()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structValue.html">Value</a> make_macro </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structValue.html">Value</a></td>          <td class="paramname"><span class="paramname"><em>params</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structValue.html">Value</a></td>          <td class="paramname"><span class="paramname"><em>body</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structValue.html">Value</a></td>          <td class="paramname"><span class="paramname"><em>env</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structArena.html">Arena</a> **</td>          <td class="paramname"><span class="paramname"><em>arena</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> of type <span class="tt"><a class="el" href="group__core__primitives.html#gad9971b6ef33e02ba2c75d19c1d2518a1a6133c676d32daf9907bae02bef3351b4" title="A user-define macro.">TYPE_MACRO</a></span>. </p>
+<p>Allocates a <span class="tt"><a class="el" href="structMacro.html">Macro</a></span> struct to hold the macro's components and wraps it in a <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span>. This is the primary constructor for macros in the system. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">params</td><td>A list of atoms representing the macro's formal parameters. </td></tr>
+    <tr><td class="paramname">body</td><td>A list of expressions (unquoted template) representing the macro's expansion code. </td></tr>
+    <tr><td class="paramname">env</td><td>The captured lexical environment at macro definition time. </td></tr>
+    <tr><td class="paramname">arena</td><td>The arena used for the allocation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> object representing the macro. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__value__constructors_ga7e2c2e70f225b9dd96cff95b0166a76b_cgraph.png" border="0" usemap="#agroup__value__constructors_ga7e2c2e70f225b9dd96cff95b0166a76b_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__value__constructors_ga7e2c2e70f225b9dd96cff95b0166a76b_cgraph" id="agroup__value__constructors_ga7e2c2e70f225b9dd96cff95b0166a76b_cgraph">
+<area shape="rect" title="Creates a Value of type TYPE_MACRO." alt="" coords="5,5,102,32"/>
+<area shape="rect" href="group__arena.html#ga494c8cea4f0fa116e2559b9dfc080600" title="Allocates a block of memory from the arena." alt="" coords="150,5,237,32"/>
+<area shape="poly" title=" " alt="" coords="102,16,134,16,134,21,102,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga0d057406365078f8dcb5cbbc9dc04619" name="ga0d057406365078f8dcb5cbbc9dc04619"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0d057406365078f8dcb5cbbc9dc04619">&#9670;&#160;</a></span>make_macro_ptr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structMacro.html">Macro</a> * make_macro_ptr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structValue.html">Value</a></td>          <td class="paramname"><span class="paramname"><em>params</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structValue.html">Value</a></td>          <td class="paramname"><span class="paramname"><em>body</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structValue.html">Value</a></td>          <td class="paramname"><span class="paramname"><em>env</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structArena.html">Arena</a> **</td>          <td class="paramname"><span class="paramname"><em>arena</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates and allocates a raw <span class="tt"><a class="el" href="structMacro.html">Macro</a></span> struct pointer. </p>
+<p>This is a helper for internal use, returning a pointer rather than a <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span>. Used when manual control over wrapping is needed. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">params</td><td>A list of atoms representing the macro's formal parameters. </td></tr>
+    <tr><td class="paramname">body</td><td>A list of expressions representing the macro's expansion template. </td></tr>
+    <tr><td class="paramname">env</td><td>The captured lexical environment at macro definition time. </td></tr>
+    <tr><td class="paramname">arena</td><td>The arena used for the allocation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the newly allocated <span class="tt"><a class="el" href="structMacro.html">Macro</a></span>, not a <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> object. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__value__constructors_ga0d057406365078f8dcb5cbbc9dc04619_cgraph.png" border="0" usemap="#agroup__value__constructors_ga0d057406365078f8dcb5cbbc9dc04619_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__value__constructors_ga0d057406365078f8dcb5cbbc9dc04619_cgraph" id="agroup__value__constructors_ga0d057406365078f8dcb5cbbc9dc04619_cgraph">
+<area shape="rect" title="Creates and allocates a raw Macro struct pointer." alt="" coords="5,5,124,32"/>
+<area shape="rect" href="group__arena.html#ga494c8cea4f0fa116e2559b9dfc080600" title="Allocates a block of memory from the arena." alt="" coords="172,5,259,32"/>
+<area shape="poly" title=" " alt="" coords="124,16,156,16,156,21,124,21"/>
 </map>
 </div>
 
@@ -351,7 +544,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Creates a <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> of type <span class="tt"><a class="el" href="group__core__primitives.html#gad9971b6ef33e02ba2c75d19c1d2518a1a23633c59862fb4d180b9b35e9f61ca18" title="A double-precision floating-point number. *‍/.">TYPE_NUMBER</a></span>. </p>
+<p>Creates a <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> of type <span class="tt"><a class="el" href="group__core__primitives.html#gad9971b6ef33e02ba2c75d19c1d2518a1a23633c59862fb4d180b9b35e9f61ca18" title="A double-precision floating-point number.">TYPE_NUMBER</a></span>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">n</td><td>The double-precision floating-point number. </td></tr>
@@ -365,14 +558,14 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="group__value__constructors_ga9f4a9f6ad14d91f6922fcabf73bd908d_icgraph.png" border="0" usemap="#agroup__value__constructors_ga9f4a9f6ad14d91f6922fcabf73bd908d_icgraph" loading="lazy" alt=""/></div>
 <map name="agroup__value__constructors_ga9f4a9f6ad14d91f6922fcabf73bd908d_icgraph" id="agroup__value__constructors_ga9f4a9f6ad14d91f6922fcabf73bd908d_icgraph">
 <area shape="rect" title="Creates a Value of type TYPE_NUMBER." alt="" coords="495,56,599,83"/>
-<area shape="rect" href="group__parser.html#gaaada423750f0a0b5d2b04abe1dbffc53" title="Parses the string in current_token_buf into a number, string, or atom Value." alt="" coords="358,56,447,83"/>
+<area shape="rect" href="group__parser.html#gab44ed7c4f63e2ecefe687b4c38d436a2" title="Parses the string in current_token_buf into a number, string, or atom Value." alt="" coords="358,56,447,83"/>
 <area shape="poly" title=" " alt="" coords="480,72,448,72,448,67,480,67"/>
-<area shape="rect" href="group__parser.html#gada6dce343f19aba713681f7139bd0ef7" title="The main recursive parsing function." alt="" coords="177,48,310,91"/>
+<area shape="rect" href="group__parser.html#ga34b7e5578bd23df76c6c0e8cde2cce56" title="The main recursive parsing function." alt="" coords="177,48,310,91"/>
 <area shape="poly" title=" " alt="" coords="343,72,310,72,310,67,343,67"/>
 <area shape="poly" title=" " alt="" coords="268,35,259,29,243,27,229,28,220,33,216,39,218,47,212,48,211,38,216,29,227,23,243,21,261,24,271,30"/>
-<area shape="rect" href="group__parser.html#ga30551ac5d316783abc8ab5110c878e28" title="Top&#45;level function to parse a single complete S&#45;expression from the stream." alt="" coords="5,5,129,32"/>
+<area shape="rect" href="group__parser.html#ga96e89ce14c76411e95f85b3698efbc1c" title="Top&#45;level function to parse a single complete S&#45;expression from the stream." alt="" coords="5,5,129,32"/>
 <area shape="poly" title=" " alt="" coords="161,48,115,35,117,30,162,43"/>
-<area shape="rect" href="group__parser.html#gaba403084bf38b5e4842f1b95c3078973" title="Parses a list expression from the token stream." alt="" coords="28,56,106,83"/>
+<area shape="rect" href="group__parser.html#ga8a7f8b2d75c03f46abf130c218c4262f" title="Parses a list expression from the token stream." alt="" coords="28,56,106,83"/>
 <area shape="poly" title=" " alt="" coords="161,81,106,80,106,74,161,76"/>
 <area shape="poly" title=" " alt="" coords="121,58,176,58,176,63,121,64"/>
 </map>
@@ -380,8 +573,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ga38b6a77dfca2706d7f685745aeae51a4" name="ga38b6a77dfca2706d7f685745aeae51a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga38b6a77dfca2706d7f685745aeae51a4">&#9670;&#160;</a></span>make_string()</h2>
+<a id="ga86414e13068fdebe957e1444cf3bd45e" name="ga86414e13068fdebe957e1444cf3bd45e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga86414e13068fdebe957e1444cf3bd45e">&#9670;&#160;</a></span>make_string()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -389,34 +582,51 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname"><a class="el" href="structValue.html">Value</a> make_string </td>
           <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="structArena.html">Arena</a> **</td>          <td class="paramname"><span class="paramname"><em>arena</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates a <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> of type <span class="tt"><a class="el" href="group__core__primitives.html#gad9971b6ef33e02ba2c75d19c1d2518a1addb4be6b1cc25112defabef75f73427a" title="A character string. *‍/.">TYPE_STRING</a></span>. </p>
+<p>Creates a <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> of type <span class="tt"><a class="el" href="group__core__primitives.html#gad9971b6ef33e02ba2c75d19c1d2518a1addb4be6b1cc25112defabef75f73427a" title="A character string.">TYPE_STRING</a></span>. </p>
 <p>Allocates memory and copies the provided C string. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">s</td><td>The character string to wrap (will be copied). </td></tr>
+    <tr><td class="paramname">arena</td><td>The arena used for the allocation. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A new <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a></span> object representing the string. </dd></dl>
 <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__value__constructors_ga86414e13068fdebe957e1444cf3bd45e_cgraph.png" border="0" usemap="#agroup__value__constructors_ga86414e13068fdebe957e1444cf3bd45e_cgraph" loading="lazy" alt=""/></div>
+<map name="agroup__value__constructors_ga86414e13068fdebe957e1444cf3bd45e_cgraph" id="agroup__value__constructors_ga86414e13068fdebe957e1444cf3bd45e_cgraph">
+<area shape="rect" title="Creates a Value of type TYPE_STRING." alt="" coords="5,5,98,32"/>
+<area shape="rect" href="group__arena.html#ga80e56a0ed80fb9e01b0fb7604f5687f9" title="Duplicates a string into the arena." alt="" coords="146,5,242,32"/>
+<area shape="poly" title=" " alt="" coords="98,16,130,16,130,21,98,21"/>
+<area shape="rect" href="group__arena.html#ga494c8cea4f0fa116e2559b9dfc080600" title="Allocates a block of memory from the arena." alt="" coords="290,5,377,32"/>
+<area shape="poly" title=" " alt="" coords="242,16,274,16,274,21,242,21"/>
+</map>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="group__value__constructors_ga38b6a77dfca2706d7f685745aeae51a4_icgraph.png" border="0" usemap="#agroup__value__constructors_ga38b6a77dfca2706d7f685745aeae51a4_icgraph" loading="lazy" alt=""/></div>
-<map name="agroup__value__constructors_ga38b6a77dfca2706d7f685745aeae51a4_icgraph" id="agroup__value__constructors_ga38b6a77dfca2706d7f685745aeae51a4_icgraph">
+<div class="center"><img src="group__value__constructors_ga86414e13068fdebe957e1444cf3bd45e_icgraph.png" border="0" usemap="#agroup__value__constructors_ga86414e13068fdebe957e1444cf3bd45e_icgraph" loading="lazy" alt=""/></div>
+<map name="agroup__value__constructors_ga86414e13068fdebe957e1444cf3bd45e_icgraph" id="agroup__value__constructors_ga86414e13068fdebe957e1444cf3bd45e_icgraph">
 <area shape="rect" title="Creates a Value of type TYPE_STRING." alt="" coords="495,56,588,83"/>
-<area shape="rect" href="group__parser.html#gaaada423750f0a0b5d2b04abe1dbffc53" title="Parses the string in current_token_buf into a number, string, or atom Value." alt="" coords="358,56,447,83"/>
+<area shape="rect" href="group__parser.html#gab44ed7c4f63e2ecefe687b4c38d436a2" title="Parses the string in current_token_buf into a number, string, or atom Value." alt="" coords="358,56,447,83"/>
 <area shape="poly" title=" " alt="" coords="479,72,448,72,448,67,479,67"/>
-<area shape="rect" href="group__parser.html#gada6dce343f19aba713681f7139bd0ef7" title="The main recursive parsing function." alt="" coords="177,48,310,91"/>
+<area shape="rect" href="group__parser.html#ga34b7e5578bd23df76c6c0e8cde2cce56" title="The main recursive parsing function." alt="" coords="177,48,310,91"/>
 <area shape="poly" title=" " alt="" coords="343,72,310,72,310,67,343,67"/>
 <area shape="poly" title=" " alt="" coords="268,35,259,29,243,27,229,28,220,33,216,39,218,47,212,48,211,38,216,29,227,23,243,21,261,24,271,30"/>
-<area shape="rect" href="group__parser.html#ga30551ac5d316783abc8ab5110c878e28" title="Top&#45;level function to parse a single complete S&#45;expression from the stream." alt="" coords="5,5,129,32"/>
+<area shape="rect" href="group__parser.html#ga96e89ce14c76411e95f85b3698efbc1c" title="Top&#45;level function to parse a single complete S&#45;expression from the stream." alt="" coords="5,5,129,32"/>
 <area shape="poly" title=" " alt="" coords="161,48,115,35,117,30,162,43"/>
-<area shape="rect" href="group__parser.html#gaba403084bf38b5e4842f1b95c3078973" title="Parses a list expression from the token stream." alt="" coords="28,56,106,83"/>
+<area shape="rect" href="group__parser.html#ga8a7f8b2d75c03f46abf130c218c4262f" title="Parses a list expression from the token stream." alt="" coords="28,56,106,83"/>
 <area shape="poly" title=" " alt="" coords="161,81,106,80,106,74,161,76"/>
 <area shape="poly" title=" " alt="" coords="121,58,176,58,176,63,121,64"/>
 </map>

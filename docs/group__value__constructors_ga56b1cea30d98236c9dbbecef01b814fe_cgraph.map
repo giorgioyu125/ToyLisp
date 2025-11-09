@@ -1,0 +1,5 @@
+<map id="make_closure" name="make_closure">
+<area shape="rect" id="Node000001" title="Creates a Value of type TYPE_CLOSURE." alt="" coords="5,5,108,32"/>
+<area shape="rect" id="Node000002" href="$group__arena.html#ga494c8cea4f0fa116e2559b9dfc080600" title="Allocates a block of memory from the arena." alt="" coords="156,5,243,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,16,140,16,140,21,108,21"/>
+</map>

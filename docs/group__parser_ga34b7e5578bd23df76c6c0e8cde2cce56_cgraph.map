@@ -1,0 +1,35 @@
+<map id="parse_from_current_token" name="parse_from_current_token">
+<area shape="rect" id="Node000001" title="The main recursive parsing function." alt="" coords="5,124,139,167"/>
+<area shape="poly" id="edge11_Node000001_Node000001" title=" " alt="" coords="41,124,40,114,45,105,56,99,72,97,89,100,100,106,97,111,88,105,72,103,57,104,49,109,45,115,46,123"/>
+<area shape="rect" id="Node000002" href="$group__value__constructors.html#ga3f01b34fda4a498bb58353076297f904" title="Creates a Value of type TYPE_ATOM." alt="" coords="331,5,420,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,122,130,80,156,59,186,42,218,30,251,22,315,15,316,20,252,27,219,35,188,46,159,63,133,84,93,125"/>
+<area shape="rect" id="Node000005" href="$group__value__constructors.html#gabe632b0fee2d6973f5cea25bfd28def0" title="Creates a Value of type TYPE_CONS (a list pair)." alt="" coords="332,157,420,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="139,138,206,138,276,143,317,151,316,156,276,148,205,143,139,144"/>
+<area shape="rect" id="Node000006" href="$group__parser.html#gab44ed7c4f63e2ecefe687b4c38d436a2" title="Parses the string in current_token_buf into a number, string, or atom Value." alt="" coords="187,56,276,83"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="117,121,187,87,189,92,120,126"/>
+<area shape="rect" id="Node000009" href="$group__parser.html#ga8a7f8b2d75c03f46abf130c218c4262f" title="Parses a list expression from the token stream." alt="" coords="193,157,270,184"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="140,162,178,168,177,173,139,168"/>
+<area shape="rect" id="Node000010" href="$group__parser.html#gab638045be5bc3c34f405d4b1dbaed981" title="Scans the input stream to form the next complete token." alt="" coords="332,208,420,235"/>
+<area shape="poly" id="edge20_Node000001_Node000010" title=" " alt="" coords="116,165,187,193,254,208,316,215,316,220,253,213,186,199,114,170"/>
+<area shape="rect" id="Node000003" href="$group__arena.html#ga80e56a0ed80fb9e01b0fb7604f5687f9" title="Duplicates a string into the arena." alt="" coords="475,81,572,108"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="406,30,429,42,484,71,482,76,426,46,404,35"/>
+<area shape="rect" id="Node000004" href="$group__arena.html#ga494c8cea4f0fa116e2559b9dfc080600" title="Allocates a block of memory from the arena." alt="" coords="620,107,707,133"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="573,101,605,107,604,112,572,106"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="420,160,604,128,605,133,421,166"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="271,53,320,35,322,40,273,58"/>
+<area shape="rect" id="Node000007" href="$group__value__constructors.html#ga9f4a9f6ad14d91f6922fcabf73bd908d" title="Creates a Value of type TYPE_NUMBER." alt="" coords="324,56,427,83"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="276,67,308,67,308,72,276,72"/>
+<area shape="rect" id="Node000008" href="$group__value__constructors.html#ga86414e13068fdebe957e1444cf3bd45e" title="Creates a Value of type TYPE_STRING." alt="" coords="330,107,422,133"/>
+<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="273,81,322,99,320,104,271,86"/>
+<area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="422,109,460,103,461,108,423,115"/>
+<area shape="poly" id="edge14_Node000009_Node000001" title=" " alt="" coords="192,159,154,152,155,147,193,154"/>
+<area shape="poly" id="edge13_Node000009_Node000005" title=" " alt="" coords="271,168,316,168,316,173,271,173"/>
+<area shape="poly" id="edge15_Node000009_Node000010" title=" " alt="" coords="272,182,322,200,320,205,270,187"/>
+<area shape="rect" id="Node000011" href="$group__parser.html#ga18863dbf58015a6eeebdf1c9b6ba2b82" title="Consumes and returns the current lookahead char, then advances the stream." alt="" coords="488,284,559,311"/>
+<area shape="poly" id="edge16_Node000010_Node000011" title=" " alt="" coords="405,233,483,274,481,279,402,238"/>
+<area shape="rect" id="Node000012" href="$group__parser.html#ga50ac0075193d1b4e2c52671a9067e80e" title="Reads a single character from the input stream into the lookahead buffer." alt="" coords="624,233,702,260"/>
+<area shape="poly" id="edge19_Node000010_Node000012" title=" " alt="" coords="420,215,491,213,572,219,610,227,609,232,571,224,491,219,420,221"/>
+<area shape="rect" id="Node000013" href="$group__parser.html#gad3d4064bac33002fb6c7d77e50c5a3c4" title="Checks if the lookahead char matches c. A space matches any whitespace." alt="" coords="485,233,562,260"/>
+<area shape="poly" id="edge18_Node000010_Node000013" title=" " alt="" coords="421,226,470,235,469,240,420,231"/>
+<area shape="poly" id="edge17_Node000011_Node000012" title=" " alt="" coords="559,282,609,263,611,268,561,287"/>
+</map>

@@ -1,9 +1,12 @@
 <map id="Closure" name="Closure">
-<area shape="rect" id="Node000001" title="Represents a lambda function created at runtime." alt="" coords="25,5,91,32"/>
-<area shape="rect" id="Node000002" href="$structValue.html" title="The universal data structure for every value in the interpreter." alt="" coords="31,147,85,173"/>
-<area shape="poly" id="edge4_Node000002_Node000001" title=" " alt="" coords="26,44,17,57,10,75,8,89,10,104,17,121,26,134,38,144,34,148,22,138,12,124,5,105,3,89,5,73,12,55,22,41"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,131,67,122,71,89,67,57,61,33,66,32,73,55,76,89,73,123,71,132"/>
-<area shape="rect" id="Node000003" href="$structConsCell.html" title="Represents a single &quot;cons&quot; pair, the basic building block of lists." alt="" coords="20,267,96,293"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="36,187,29,198,24,220,29,242,45,265,41,268,24,244,19,220,24,196,31,184"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="55,251,55,174,61,174,61,251"/>
+<area shape="rect" id="Node000001" title="Represents a lambda function created at runtime." alt="" coords="64,5,131,32"/>
+<area shape="rect" id="Node000002" href="$structValue.html" title="The universal data structure for every value in the interpreter." alt="" coords="71,147,124,173"/>
+<area shape="poly" id="edge4_Node000002_Node000001" title=" " alt="" coords="66,44,56,57,50,75,47,89,50,104,56,121,65,134,77,144,74,148,61,138,52,124,44,105,42,89,44,73,52,55,61,41"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,131,107,122,110,89,107,57,100,33,105,32,112,55,116,89,112,123,110,132"/>
+<area shape="rect" id="Node000003" href="$structConsCell.html" title="Represents a single &quot;cons&quot; pair, the basic building block of lists." alt="" coords="6,288,82,315"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="57,172,35,182,18,199,10,215,8,229,18,263,33,287,29,289,13,265,3,230,5,214,13,196,32,178,55,167"/>
+<area shape="rect" id="Node000004" href="$structMacro.html" title=" " alt="" coords="122,288,179,315"/>
+<area shape="poly" id="edge6_Node000004_Node000002" title=" " alt="" coords="105,188,115,224,129,263,143,287,139,289,124,265,110,226,100,189"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="43,272,49,235,63,196,82,172,86,175,68,199,55,237,49,273"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="174,275,180,263,190,229,189,215,181,199,169,187,155,178,124,167,125,162,157,173,173,183,185,196,194,214,196,230,185,265,178,277"/>
 </map>

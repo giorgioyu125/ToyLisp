@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ToyLisp<span id="projectnumber">&#160;0.1.2</span>
+   <div id="projectname">ToyLisp<span id="projectnumber">&#160;0.2.0</span>
    </div>
    <div id="projectbrief">A simple lisp interpreter</div>
   </td>
@@ -115,112 +115,188 @@ Topics</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga5a1f6b9f8c834da4b26a39d1b00dcd70" id="r_ga5a1f6b9f8c834da4b26a39d1b00dcd70"><td class="memItemLeft" align="right" valign="top"><a id="ga5a1f6b9f8c834da4b26a39d1b00dcd70" name="ga5a1f6b9f8c834da4b26a39d1b00dcd70"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_cons</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:ga05a00ab8ed439a7bf91ac145747c628b" id="r_ga05a00ab8ed439a7bf91ac145747c628b"><td class="memItemLeft" align="right" valign="top"><a id="ga05a00ab8ed439a7bf91ac145747c628b" name="ga05a00ab8ed439a7bf91ac145747c628b"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_list</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:ga1142ec726c8a300653539d3a9efa8407" id="r_ga1142ec726c8a300653539d3a9efa8407"><td class="memItemLeft" align="right" valign="top"><a id="ga1142ec726c8a300653539d3a9efa8407" name="ga1142ec726c8a300653539d3a9efa8407"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_car</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:ga5e9a099e62da775c271f281e1ab07dee" id="r_ga5e9a099e62da775c271f281e1ab07dee"><td class="memItemLeft" align="right" valign="top"><a id="ga5e9a099e62da775c271f281e1ab07dee" name="ga5e9a099e62da775c271f281e1ab07dee"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_cdr</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:ga4f7758304364779e6b089ab63572817c" id="r_ga4f7758304364779e6b089ab63572817c"><td class="memItemLeft" align="right" valign="top"><a id="ga4f7758304364779e6b089ab63572817c" name="ga4f7758304364779e6b089ab63572817c"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_is_pair</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:ga37e5f7c8a1a76069af2648b9f9109960" id="r_ga37e5f7c8a1a76069af2648b9f9109960"><td class="memItemLeft" align="right" valign="top"><a id="ga37e5f7c8a1a76069af2648b9f9109960" name="ga37e5f7c8a1a76069af2648b9f9109960"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_reverse</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:ga43cedb375ff29b3fb11407ffede6b9f4" id="r_ga43cedb375ff29b3fb11407ffede6b9f4"><td class="memItemLeft" align="right" valign="top"><a id="ga43cedb375ff29b3fb11407ffede6b9f4" name="ga43cedb375ff29b3fb11407ffede6b9f4"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_len</b> (<a class="el" href="structValue.html">Value</a> list, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:gabbfbc6c28641c1cfad185ac5ee555c8d" id="r_gabbfbc6c28641c1cfad185ac5ee555c8d"><td class="memItemLeft" align="right" valign="top"><a id="gabbfbc6c28641c1cfad185ac5ee555c8d" name="gabbfbc6c28641c1cfad185ac5ee555c8d"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_is_num</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:gaaa4ad18fc38a9eba994501f78dd18349" id="r_gaaa4ad18fc38a9eba994501f78dd18349"><td class="memItemLeft" align="right" valign="top"><a id="gaaa4ad18fc38a9eba994501f78dd18349" name="gaaa4ad18fc38a9eba994501f78dd18349"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_add</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:ga65193667c9aaa9a03e1be25b2feb1796" id="r_ga65193667c9aaa9a03e1be25b2feb1796"><td class="memItemLeft" align="right" valign="top"><a id="ga65193667c9aaa9a03e1be25b2feb1796" name="ga65193667c9aaa9a03e1be25b2feb1796"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_sub</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:ga1a506480418e263a790e56e1e9123d11" id="r_ga1a506480418e263a790e56e1e9123d11"><td class="memItemLeft" align="right" valign="top"><a id="ga1a506480418e263a790e56e1e9123d11" name="ga1a506480418e263a790e56e1e9123d11"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_mul</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:ga59de313dd63c1e0e169ef2d5a65643a3" id="r_ga59de313dd63c1e0e169ef2d5a65643a3"><td class="memItemLeft" align="right" valign="top"><a id="ga59de313dd63c1e0e169ef2d5a65643a3" name="ga59de313dd63c1e0e169ef2d5a65643a3"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_div</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:gacb846f69b10913a6d50d3570acee1859" id="r_gacb846f69b10913a6d50d3570acee1859"><td class="memItemLeft" align="right" valign="top"><a id="gacb846f69b10913a6d50d3570acee1859" name="gacb846f69b10913a6d50d3570acee1859"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_int</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:ga50b7852acd031176d2be7fecf6ef7b20" id="r_ga50b7852acd031176d2be7fecf6ef7b20"><td class="memItemLeft" align="right" valign="top"><a id="ga50b7852acd031176d2be7fecf6ef7b20" name="ga50b7852acd031176d2be7fecf6ef7b20"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_lt</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:gaeb8af11938d47bc42823a1ace7fca3f3" id="r_gaeb8af11938d47bc42823a1ace7fca3f3"><td class="memItemLeft" align="right" valign="top"><a id="gaeb8af11938d47bc42823a1ace7fca3f3" name="gaeb8af11938d47bc42823a1ace7fca3f3"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_lte</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:ga708f94965d98c81aa1ef152d8cba99ec" id="r_ga708f94965d98c81aa1ef152d8cba99ec"><td class="memItemLeft" align="right" valign="top"><a id="ga708f94965d98c81aa1ef152d8cba99ec" name="ga708f94965d98c81aa1ef152d8cba99ec"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_gte</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:ga162fd4ad1870773da70752002212fde4" id="r_ga162fd4ad1870773da70752002212fde4"><td class="memItemLeft" align="right" valign="top"><a id="ga162fd4ad1870773da70752002212fde4" name="ga162fd4ad1870773da70752002212fde4"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_gt</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:ga6399be40cc058da36ea1e4d1f0271d24" id="r_ga6399be40cc058da36ea1e4d1f0271d24"><td class="memItemLeft" align="right" valign="top"><a id="ga6399be40cc058da36ea1e4d1f0271d24" name="ga6399be40cc058da36ea1e4d1f0271d24"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_eq</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:gac0a8710ba9c6811a5df3cd07f5f87af3" id="r_gac0a8710ba9c6811a5df3cd07f5f87af3"><td class="memItemLeft" align="right" valign="top"><a id="gac0a8710ba9c6811a5df3cd07f5f87af3" name="gac0a8710ba9c6811a5df3cd07f5f87af3"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_is_list</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:gaf7159c7fcb4f56776419af19c978bacb" id="r_gaf7159c7fcb4f56776419af19c978bacb"><td class="memItemLeft" align="right" valign="top"><a id="gaf7159c7fcb4f56776419af19c978bacb" name="gaf7159c7fcb4f56776419af19c978bacb"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_not</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:ga37f87dd99c0babb1be95bcde0316ffeb" id="r_ga37f87dd99c0babb1be95bcde0316ffeb"><td class="memItemLeft" align="right" valign="top"><a id="ga37f87dd99c0babb1be95bcde0316ffeb" name="ga37f87dd99c0babb1be95bcde0316ffeb"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_display</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:ga18829b37ebf89b698f08d35127f1ef48" id="r_ga18829b37ebf89b698f08d35127f1ef48"><td class="memItemLeft" align="right" valign="top"><a id="ga18829b37ebf89b698f08d35127f1ef48" name="ga18829b37ebf89b698f08d35127f1ef48"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_eq_num</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:ga01a4ccef54292b6cfbb00014ee3f5472" id="r_ga01a4ccef54292b6cfbb00014ee3f5472"><td class="memItemLeft" align="right" valign="top"><a id="ga01a4ccef54292b6cfbb00014ee3f5472" name="ga01a4ccef54292b6cfbb00014ee3f5472"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_tap</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:ga032a2f8bc8b3be7ac99b8505468d3d08" id="r_ga032a2f8bc8b3be7ac99b8505468d3d08"><td class="memItemLeft" align="right" valign="top"><a id="ga032a2f8bc8b3be7ac99b8505468d3d08" name="ga032a2f8bc8b3be7ac99b8505468d3d08"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_clear</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:ga77050f6128f9085d764b664cf30cbdbd" id="r_ga77050f6128f9085d764b664cf30cbdbd"><td class="memItemLeft" align="right" valign="top"><a id="ga77050f6128f9085d764b664cf30cbdbd" name="ga77050f6128f9085d764b664cf30cbdbd"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_exit</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:gad8f16c7509e8bc3343be6526cb090418" id="r_gad8f16c7509e8bc3343be6526cb090418"><td class="memItemLeft" align="right" valign="top"><a id="gad8f16c7509e8bc3343be6526cb090418" name="gad8f16c7509e8bc3343be6526cb090418"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_apply</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:ga2c1ecb60407e3281ce80cde4e391325a" id="r_ga2c1ecb60407e3281ce80cde4e391325a"><td class="memItemLeft" align="right" valign="top"><a id="ga2c1ecb60407e3281ce80cde4e391325a" name="ga2c1ecb60407e3281ce80cde4e391325a"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_eval</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:gae935e84c9443dcf7bdb0cfb80890b127" id="r_gae935e84c9443dcf7bdb0cfb80890b127"><td class="memItemLeft" align="right" valign="top"><a id="gae935e84c9443dcf7bdb0cfb80890b127" name="gae935e84c9443dcf7bdb0cfb80890b127"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_quote</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:gac7a5da6befdbffe1dc59519a609d7fe9" id="r_gac7a5da6befdbffe1dc59519a609d7fe9"><td class="memItemLeft" align="right" valign="top"><a id="gac7a5da6befdbffe1dc59519a609d7fe9" name="gac7a5da6befdbffe1dc59519a609d7fe9"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_backquote</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:ga3788867a429fa44ec19bc31580cf7429" id="r_ga3788867a429fa44ec19bc31580cf7429"><td class="memItemLeft" align="right" valign="top"><a id="ga3788867a429fa44ec19bc31580cf7429" name="ga3788867a429fa44ec19bc31580cf7429"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_or</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:ga372c97dce838262a70c8e5b22d27a87e" id="r_ga372c97dce838262a70c8e5b22d27a87e"><td class="memItemLeft" align="right" valign="top"><a id="ga372c97dce838262a70c8e5b22d27a87e" name="ga372c97dce838262a70c8e5b22d27a87e"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_and</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:ga96aa5a489744eb0cf15d70f882d22790" id="r_ga96aa5a489744eb0cf15d70f882d22790"><td class="memItemLeft" align="right" valign="top"><a id="ga96aa5a489744eb0cf15d70f882d22790" name="ga96aa5a489744eb0cf15d70f882d22790"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_cond</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:ga37b19ad45ed809538b9ddbfee3f796fc" id="r_ga37b19ad45ed809538b9ddbfee3f796fc"><td class="memItemLeft" align="right" valign="top"><a id="ga37b19ad45ed809538b9ddbfee3f796fc" name="ga37b19ad45ed809538b9ddbfee3f796fc"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_if</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:ga6e9fd7c79e45f344c179542b41645302" id="r_ga6e9fd7c79e45f344c179542b41645302"><td class="memItemLeft" align="right" valign="top"><a id="ga6e9fd7c79e45f344c179542b41645302" name="ga6e9fd7c79e45f344c179542b41645302"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_let_star</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:gae60f4b1bd1f2dd6df192fa6578293eae" id="r_gae60f4b1bd1f2dd6df192fa6578293eae"><td class="memItemLeft" align="right" valign="top"><a id="gae60f4b1bd1f2dd6df192fa6578293eae" name="gae60f4b1bd1f2dd6df192fa6578293eae"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_lambda</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
-<tr class="memitem:gaf40d90e9bbcbc32afcb0bc39eff81fcb" id="r_gaf40d90e9bbcbc32afcb0bc39eff81fcb"><td class="memItemLeft" align="right" valign="top"><a id="gaf40d90e9bbcbc32afcb0bc39eff81fcb" name="gaf40d90e9bbcbc32afcb0bc39eff81fcb"></a>
-<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_define</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env)</td></tr>
+<tr class="memitem:ga276ac0432b0648b8b63df82e39f66db0" id="r_ga276ac0432b0648b8b63df82e39f66db0"><td class="memItemLeft" align="right" valign="top"><a id="ga276ac0432b0648b8b63df82e39f66db0" name="ga276ac0432b0648b8b63df82e39f66db0"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_cons</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:gab17b395699819db2f27c82ecfd0dbcd0" id="r_gab17b395699819db2f27c82ecfd0dbcd0"><td class="memItemLeft" align="right" valign="top"><a id="gab17b395699819db2f27c82ecfd0dbcd0" name="gab17b395699819db2f27c82ecfd0dbcd0"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_list</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:gaedb2d74c876a09bdcf82aacce270d1c1" id="r_gaedb2d74c876a09bdcf82aacce270d1c1"><td class="memItemLeft" align="right" valign="top"><a id="gaedb2d74c876a09bdcf82aacce270d1c1" name="gaedb2d74c876a09bdcf82aacce270d1c1"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_car</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:gacfa62983d30f4b81f1fa30c8a9e229f7" id="r_gacfa62983d30f4b81f1fa30c8a9e229f7"><td class="memItemLeft" align="right" valign="top"><a id="gacfa62983d30f4b81f1fa30c8a9e229f7" name="gacfa62983d30f4b81f1fa30c8a9e229f7"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_cdr</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:ga88550adcf9d20c6248b91a2d83599d3c" id="r_ga88550adcf9d20c6248b91a2d83599d3c"><td class="memItemLeft" align="right" valign="top"><a id="ga88550adcf9d20c6248b91a2d83599d3c" name="ga88550adcf9d20c6248b91a2d83599d3c"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_is_pair</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:ga823835cb794318f842b0e147464c4f1a" id="r_ga823835cb794318f842b0e147464c4f1a"><td class="memItemLeft" align="right" valign="top"><a id="ga823835cb794318f842b0e147464c4f1a" name="ga823835cb794318f842b0e147464c4f1a"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_reverse</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:ga8791091d8417d958f2cd6a69133e52c6" id="r_ga8791091d8417d958f2cd6a69133e52c6"><td class="memItemLeft" align="right" valign="top"><a id="ga8791091d8417d958f2cd6a69133e52c6" name="ga8791091d8417d958f2cd6a69133e52c6"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_len</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:ga9456e4fee8891f06d21af970f2e0fb44" id="r_ga9456e4fee8891f06d21af970f2e0fb44"><td class="memItemLeft" align="right" valign="top"><a id="ga9456e4fee8891f06d21af970f2e0fb44" name="ga9456e4fee8891f06d21af970f2e0fb44"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_apply</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:gab7f4b7c6c2efb76c0cd64471ebda6207" id="r_gab7f4b7c6c2efb76c0cd64471ebda6207"><td class="memItemLeft" align="right" valign="top"><a id="gab7f4b7c6c2efb76c0cd64471ebda6207" name="gab7f4b7c6c2efb76c0cd64471ebda6207"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_mapcar</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:ga8d2a0acc9d372af2df85d02ed3d640c8" id="r_ga8d2a0acc9d372af2df85d02ed3d640c8"><td class="memItemLeft" align="right" valign="top"><a id="ga8d2a0acc9d372af2df85d02ed3d640c8" name="ga8d2a0acc9d372af2df85d02ed3d640c8"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_filter</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:ga6d0b9f0eaaaf8a9a8eab1694cc94ba78" id="r_ga6d0b9f0eaaaf8a9a8eab1694cc94ba78"><td class="memItemLeft" align="right" valign="top"><a id="ga6d0b9f0eaaaf8a9a8eab1694cc94ba78" name="ga6d0b9f0eaaaf8a9a8eab1694cc94ba78"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_reduce</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:ga36505c58dd97566873844f48a510ee14" id="r_ga36505c58dd97566873844f48a510ee14"><td class="memItemLeft" align="right" valign="top"><a id="ga36505c58dd97566873844f48a510ee14" name="ga36505c58dd97566873844f48a510ee14"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_is_num</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:ga9cd1ec17d44854f6887542cfbe0508dc" id="r_ga9cd1ec17d44854f6887542cfbe0508dc"><td class="memItemLeft" align="right" valign="top"><a id="ga9cd1ec17d44854f6887542cfbe0508dc" name="ga9cd1ec17d44854f6887542cfbe0508dc"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_add</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:ga410cf063fea903545d64f1abdadc2cbc" id="r_ga410cf063fea903545d64f1abdadc2cbc"><td class="memItemLeft" align="right" valign="top"><a id="ga410cf063fea903545d64f1abdadc2cbc" name="ga410cf063fea903545d64f1abdadc2cbc"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_sub</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:gad0947c40c7df37bc9b494f3d45ca14dd" id="r_gad0947c40c7df37bc9b494f3d45ca14dd"><td class="memItemLeft" align="right" valign="top"><a id="gad0947c40c7df37bc9b494f3d45ca14dd" name="gad0947c40c7df37bc9b494f3d45ca14dd"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_mul</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:ga007c77210444f6e8ce44568a65c10a23" id="r_ga007c77210444f6e8ce44568a65c10a23"><td class="memItemLeft" align="right" valign="top"><a id="ga007c77210444f6e8ce44568a65c10a23" name="ga007c77210444f6e8ce44568a65c10a23"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_div</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:ga62f7d8ca4510e2b8ebbb82fcf8d0e64b" id="r_ga62f7d8ca4510e2b8ebbb82fcf8d0e64b"><td class="memItemLeft" align="right" valign="top"><a id="ga62f7d8ca4510e2b8ebbb82fcf8d0e64b" name="ga62f7d8ca4510e2b8ebbb82fcf8d0e64b"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_modulus</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:gae8ed2c0feec46ef689164a2a8ebc14aa" id="r_gae8ed2c0feec46ef689164a2a8ebc14aa"><td class="memItemLeft" align="right" valign="top"><a id="gae8ed2c0feec46ef689164a2a8ebc14aa" name="gae8ed2c0feec46ef689164a2a8ebc14aa"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_int</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:ga79d219384ecf0531ecfb3a2c822d91a2" id="r_ga79d219384ecf0531ecfb3a2c822d91a2"><td class="memItemLeft" align="right" valign="top"><a id="ga79d219384ecf0531ecfb3a2c822d91a2" name="ga79d219384ecf0531ecfb3a2c822d91a2"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_lt</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:ga7ed280105a113385a3dcdc86e895dabc" id="r_ga7ed280105a113385a3dcdc86e895dabc"><td class="memItemLeft" align="right" valign="top"><a id="ga7ed280105a113385a3dcdc86e895dabc" name="ga7ed280105a113385a3dcdc86e895dabc"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_lte</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:ga41cbe2c1f3ab50f2913bc940fa6e4c47" id="r_ga41cbe2c1f3ab50f2913bc940fa6e4c47"><td class="memItemLeft" align="right" valign="top"><a id="ga41cbe2c1f3ab50f2913bc940fa6e4c47" name="ga41cbe2c1f3ab50f2913bc940fa6e4c47"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_gte</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:ga2230cf5a6222bc2b74336de68bb64f7d" id="r_ga2230cf5a6222bc2b74336de68bb64f7d"><td class="memItemLeft" align="right" valign="top"><a id="ga2230cf5a6222bc2b74336de68bb64f7d" name="ga2230cf5a6222bc2b74336de68bb64f7d"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_gt</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:ga436c25c3aefe407db66536886128d4ae" id="r_ga436c25c3aefe407db66536886128d4ae"><td class="memItemLeft" align="right" valign="top"><a id="ga436c25c3aefe407db66536886128d4ae" name="ga436c25c3aefe407db66536886128d4ae"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_eq</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:ga51585be3a5b492f97ac3ca6cc9124d09" id="r_ga51585be3a5b492f97ac3ca6cc9124d09"><td class="memItemLeft" align="right" valign="top"><a id="ga51585be3a5b492f97ac3ca6cc9124d09" name="ga51585be3a5b492f97ac3ca6cc9124d09"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_is_list</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:gae67743d28f3cb8e681cf7ab65572df72" id="r_gae67743d28f3cb8e681cf7ab65572df72"><td class="memItemLeft" align="right" valign="top"><a id="gae67743d28f3cb8e681cf7ab65572df72" name="gae67743d28f3cb8e681cf7ab65572df72"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_not</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:ga03a0ed004f0a950579ba11bdea5125c2" id="r_ga03a0ed004f0a950579ba11bdea5125c2"><td class="memItemLeft" align="right" valign="top"><a id="ga03a0ed004f0a950579ba11bdea5125c2" name="ga03a0ed004f0a950579ba11bdea5125c2"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_display</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:gafb0f54da5b53eb73b0d1f8cf3375116e" id="r_gafb0f54da5b53eb73b0d1f8cf3375116e"><td class="memItemLeft" align="right" valign="top"><a id="gafb0f54da5b53eb73b0d1f8cf3375116e" name="gafb0f54da5b53eb73b0d1f8cf3375116e"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_eq_num</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:ga99f50ad7f4815d93e911349546d1f4c8" id="r_ga99f50ad7f4815d93e911349546d1f4c8"><td class="memItemLeft" align="right" valign="top"><a id="ga99f50ad7f4815d93e911349546d1f4c8" name="ga99f50ad7f4815d93e911349546d1f4c8"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_tap</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:ga4bb7a65212c7d4c06dcb8433ae690762" id="r_ga4bb7a65212c7d4c06dcb8433ae690762"><td class="memItemLeft" align="right" valign="top"><a id="ga4bb7a65212c7d4c06dcb8433ae690762" name="ga4bb7a65212c7d4c06dcb8433ae690762"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_mem_stats</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:gad28dadcf2dd21ff2b45993f54fe8efae" id="r_gad28dadcf2dd21ff2b45993f54fe8efae"><td class="memItemLeft" align="right" valign="top"><a id="gad28dadcf2dd21ff2b45993f54fe8efae" name="gad28dadcf2dd21ff2b45993f54fe8efae"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_clear</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:ga8b6b5fe2bd7db721db7cba585332657d" id="r_ga8b6b5fe2bd7db721db7cba585332657d"><td class="memItemLeft" align="right" valign="top"><a id="ga8b6b5fe2bd7db721db7cba585332657d" name="ga8b6b5fe2bd7db721db7cba585332657d"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_exit</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:ga2baa3e600f20799f79ea27df0ebfa24d" id="r_ga2baa3e600f20799f79ea27df0ebfa24d"><td class="memItemLeft" align="right" valign="top"><a id="ga2baa3e600f20799f79ea27df0ebfa24d" name="ga2baa3e600f20799f79ea27df0ebfa24d"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_eval</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:gafd7448e5b685073b3cb3e3a3ad6ce100" id="r_gafd7448e5b685073b3cb3e3a3ad6ce100"><td class="memItemLeft" align="right" valign="top"><a id="gafd7448e5b685073b3cb3e3a3ad6ce100" name="gafd7448e5b685073b3cb3e3a3ad6ce100"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_quote</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:ga5e18d9560668dbd43f3b75f88e2c39f9" id="r_ga5e18d9560668dbd43f3b75f88e2c39f9"><td class="memItemLeft" align="right" valign="top"><a id="ga5e18d9560668dbd43f3b75f88e2c39f9" name="ga5e18d9560668dbd43f3b75f88e2c39f9"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_backquote</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:ga22d8e29e2d64a33872790b10332c735c" id="r_ga22d8e29e2d64a33872790b10332c735c"><td class="memItemLeft" align="right" valign="top"><a id="ga22d8e29e2d64a33872790b10332c735c" name="ga22d8e29e2d64a33872790b10332c735c"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_or</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:gadcae7f39ac229f16b0473afb2425ede4" id="r_gadcae7f39ac229f16b0473afb2425ede4"><td class="memItemLeft" align="right" valign="top"><a id="gadcae7f39ac229f16b0473afb2425ede4" name="gadcae7f39ac229f16b0473afb2425ede4"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_and</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:ga79b6c4f9a81739338f47132e273e77e0" id="r_ga79b6c4f9a81739338f47132e273e77e0"><td class="memItemLeft" align="right" valign="top"><a id="ga79b6c4f9a81739338f47132e273e77e0" name="ga79b6c4f9a81739338f47132e273e77e0"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_cond</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:gac33c55d1387ec6c97650ea4526b12818" id="r_gac33c55d1387ec6c97650ea4526b12818"><td class="memItemLeft" align="right" valign="top"><a id="gac33c55d1387ec6c97650ea4526b12818" name="gac33c55d1387ec6c97650ea4526b12818"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_if</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:ga91877c8c45fa496f29d274670f00e090" id="r_ga91877c8c45fa496f29d274670f00e090"><td class="memItemLeft" align="right" valign="top"><a id="ga91877c8c45fa496f29d274670f00e090" name="ga91877c8c45fa496f29d274670f00e090"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_let_star</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:gac096aa90b7999fdbb3713164de791e01" id="r_gac096aa90b7999fdbb3713164de791e01"><td class="memItemLeft" align="right" valign="top"><a id="gac096aa90b7999fdbb3713164de791e01" name="gac096aa90b7999fdbb3713164de791e01"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_lambda</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:ga83335efd91fa535e2fab88079d60d159" id="r_ga83335efd91fa535e2fab88079d60d159"><td class="memItemLeft" align="right" valign="top"><a id="ga83335efd91fa535e2fab88079d60d159" name="ga83335efd91fa535e2fab88079d60d159"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_macro</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:gac8aef60612fdc51be47088b69964974f" id="r_gac8aef60612fdc51be47088b69964974f"><td class="memItemLeft" align="right" valign="top"><a id="gac8aef60612fdc51be47088b69964974f" name="gac8aef60612fdc51be47088b69964974f"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_define</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:gacd90526aee30f2ee91c9b04e6ac4e15d" id="r_gacd90526aee30f2ee91c9b04e6ac4e15d"><td class="memItemLeft" align="right" valign="top"><a id="gacd90526aee30f2ee91c9b04e6ac4e15d" name="gacd90526aee30f2ee91c9b04e6ac4e15d"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_set</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
+<tr class="memitem:ga36bf7eecd2e42dfffae8696a809b1123" id="r_ga36bf7eecd2e42dfffae8696a809b1123"><td class="memItemLeft" align="right" valign="top"><a id="ga36bf7eecd2e42dfffae8696a809b1123" name="ga36bf7eecd2e42dfffae8696a809b1123"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prim_undefine</b> (<a class="el" href="structValue.html">Value</a> args, <a class="el" href="structValue.html">Value</a> env, <a class="el" href="structContext.html">Context</a> *context)</td></tr>
 <tr class="memitem:ga0ddf1224851353fc92bfbff6f499fa97" id="r_ga0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top"><a id="ga0ddf1224851353fc92bfbff6f499fa97" name="ga0ddf1224851353fc92bfbff6f499fa97"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (int argc, char *argv[])</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:gab45dfd167290d4324ba4832abcc4064d" id="r_gab45dfd167290d4324ba4832abcc4064d"><td class="memItemLeft" align="right" valign="top">ValueType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab45dfd167290d4324ba4832abcc4064d">Value::type</a></td></tr>
-<tr class="memitem:gabdc6474785c0d89f14534fe9118ad343" id="r_gabdc6474785c0d89f14534fe9118ad343"><td class="memItemLeft anon">double&#160;&#160;&#160;<a class="el" href="#gae38a14048b4d24af576ef4e3ad133b1b">Value::number</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memitem:gade1504858e65fe0763463ba6582d2667" id="r_gade1504858e65fe0763463ba6582d2667"><td class="memItemLeft anon">const char *&#160;&#160;&#160;<a class="el" href="#ga0501ccd736f6edc6bbee02234b309ffc">Value::atom_name</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memitem:ga3070fa0a1b5ad0425bb0c8b9b0c5a819" id="r_ga3070fa0a1b5ad0425bb0c8b9b0c5a819"><td class="memItemLeft anon">const char *&#160;&#160;&#160;<a class="el" href="#ga336aad105065338ac9cd2d9d6f4e3763">Value::string</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memitem:gad7744d54ee1f128bf9470eb874f656fc" id="r_gad7744d54ee1f128bf9470eb874f656fc"><td class="memItemLeft anon">char *&#160;&#160;&#160;<a class="el" href="#gac09188ea266b9a3672119d2009978dc4">Value::err_msg</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memitem:ga23eafbd6e376b4fd3bd4b819619aac56" id="r_ga23eafbd6e376b4fd3bd4b819619aac56"><td class="memItemLeft anon">unsigned int&#160;&#160;&#160;<a class="el" href="#ga5c8993437f3863f989c69357b75de518">Value::primitive_index</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memitem:ga9aa1534495531190fea578022190f351" id="r_ga9aa1534495531190fea578022190f351"><td class="memItemLeft anon">struct <a class="el" href="structConsCell.html">ConsCell</a> *&#160;&#160;&#160;<a class="el" href="#gab4bfaf2bb9f9440cbde75cd57280099c">Value::cons</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memitem:ga6f49572d14f66f9638bfa763de03f684" id="r_ga6f49572d14f66f9638bfa763de03f684"><td class="memItemLeft anon">struct <a class="el" href="structClosure.html">Closure</a> *&#160;&#160;&#160;<a class="el" href="#ga77c174739fa90d84189c81b9f515a313">Value::closure</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memitem:"><td class="memItemLeft anon">union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memitem:gabdc6474785c0d89f14534fe9118ad343" id="r_gabdc6474785c0d89f14534fe9118ad343"><td class="memItemLeft anon">&#160;&#160;&#160;double&#160;&#160;&#160;<a class="el" href="#gae38a14048b4d24af576ef4e3ad133b1b">Value::number</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memitem:gade1504858e65fe0763463ba6582d2667" id="r_gade1504858e65fe0763463ba6582d2667"><td class="memItemLeft anon">&#160;&#160;&#160;const char *&#160;&#160;&#160;<a class="el" href="#ga0501ccd736f6edc6bbee02234b309ffc">Value::atom_name</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memitem:ga3070fa0a1b5ad0425bb0c8b9b0c5a819" id="r_ga3070fa0a1b5ad0425bb0c8b9b0c5a819"><td class="memItemLeft anon">&#160;&#160;&#160;const char *&#160;&#160;&#160;<a class="el" href="#ga336aad105065338ac9cd2d9d6f4e3763">Value::string</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memitem:gad7744d54ee1f128bf9470eb874f656fc" id="r_gad7744d54ee1f128bf9470eb874f656fc"><td class="memItemLeft anon">&#160;&#160;&#160;char *&#160;&#160;&#160;<a class="el" href="#gac09188ea266b9a3672119d2009978dc4">Value::err_msg</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memitem:ga23eafbd6e376b4fd3bd4b819619aac56" id="r_ga23eafbd6e376b4fd3bd4b819619aac56"><td class="memItemLeft anon">&#160;&#160;&#160;unsigned int&#160;&#160;&#160;<a class="el" href="#ga5c8993437f3863f989c69357b75de518">Value::primitive_index</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memitem:ga9aa1534495531190fea578022190f351" id="r_ga9aa1534495531190fea578022190f351"><td class="memItemLeft anon">&#160;&#160;&#160;struct <a class="el" href="structConsCell.html">ConsCell</a> *&#160;&#160;&#160;<a class="el" href="#gab4bfaf2bb9f9440cbde75cd57280099c">Value::cons</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memitem:ga6f49572d14f66f9638bfa763de03f684" id="r_ga6f49572d14f66f9638bfa763de03f684"><td class="memItemLeft anon">&#160;&#160;&#160;struct <a class="el" href="structClosure.html">Closure</a> *&#160;&#160;&#160;<a class="el" href="#ga77c174739fa90d84189c81b9f515a313">Value::closure</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memitem:ga09b3c773aaaedd0daedae62d594a59eb" id="r_ga09b3c773aaaedd0daedae62d594a59eb"><td class="memItemLeft anonEnd" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga09b3c773aaaedd0daedae62d594a59eb">Value::as</a></td></tr>
+<tr class="memitem:ga1504bb7b787752d10c20ba6fe29612b1" id="r_ga1504bb7b787752d10c20ba6fe29612b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structArena.html">Arena</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1504bb7b787752d10c20ba6fe29612b1">Context::permanent_arena</a></td></tr>
+<tr class="memdesc:ga1504bb7b787752d10c20ba6fe29612b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer to the pointer of the permanent memory arena.  <br /></td></tr>
+<tr class="memitem:gaa3dfd812efdb82e9efb59903149d731c" id="r_gaa3dfd812efdb82e9efb59903149d731c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structArena.html">Arena</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa3dfd812efdb82e9efb59903149d731c">Context::temporary_arena</a></td></tr>
+<tr class="memdesc:gaa3dfd812efdb82e9efb59903149d731c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer to the pointer of the temporary (scratch) memory arena.  <br /></td></tr>
+<tr class="memitem:gab45dfd167290d4324ba4832abcc4064d" id="r_gab45dfd167290d4324ba4832abcc4064d"><td class="memItemLeft" align="right" valign="top"><a id="gab45dfd167290d4324ba4832abcc4064d" name="gab45dfd167290d4324ba4832abcc4064d"></a>
+ValueType&#160;</td><td class="memItemRight" valign="bottom"><b>Value::type</b></td></tr>
+<tr class="memdesc:gab45dfd167290d4324ba4832abcc4064d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The tag indicating the current data type. *&zwj;/. <br /></td></tr>
+<tr class="memitem:gabdc6474785c0d89f14534fe9118ad343" id="r_gabdc6474785c0d89f14534fe9118ad343"><td class="memItemLeft anon">
+double&#160;&#160;&#160;<b>Value::number</b>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:gabdc6474785c0d89f14534fe9118ad343"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid if type is TYPE_NUMBER. <br /></td></tr>
+<tr class="memitem:gade1504858e65fe0763463ba6582d2667" id="r_gade1504858e65fe0763463ba6582d2667"><td class="memItemLeft anon">
+const char *&#160;&#160;&#160;<b>Value::atom_name</b>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:gade1504858e65fe0763463ba6582d2667"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid if type is TYPE_ATOM. <br /></td></tr>
+<tr class="memitem:ga3070fa0a1b5ad0425bb0c8b9b0c5a819" id="r_ga3070fa0a1b5ad0425bb0c8b9b0c5a819"><td class="memItemLeft anon">
+const char *&#160;&#160;&#160;<b>Value::string</b>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:ga3070fa0a1b5ad0425bb0c8b9b0c5a819"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid if type is TYPE_STRING. <br /></td></tr>
+<tr class="memitem:gad7744d54ee1f128bf9470eb874f656fc" id="r_gad7744d54ee1f128bf9470eb874f656fc"><td class="memItemLeft anon">
+char *&#160;&#160;&#160;<b>Value::err_msg</b>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:gad7744d54ee1f128bf9470eb874f656fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid if type is TYPE_ERROR. <br /></td></tr>
+<tr class="memitem:ga23eafbd6e376b4fd3bd4b819619aac56" id="r_ga23eafbd6e376b4fd3bd4b819619aac56"><td class="memItemLeft anon">
+unsigned int&#160;&#160;&#160;<b>Value::primitive_index</b>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:ga23eafbd6e376b4fd3bd4b819619aac56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid if type is TYPE_PRIMITIVE. <br /></td></tr>
+<tr class="memitem:ga9aa1534495531190fea578022190f351" id="r_ga9aa1534495531190fea578022190f351"><td class="memItemLeft anon">
+struct <a class="el" href="structConsCell.html">ConsCell</a> *&#160;&#160;&#160;<b>Value::cons</b>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:ga9aa1534495531190fea578022190f351"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid if type is TYPE_CONS. <br /></td></tr>
+<tr class="memitem:ga6f49572d14f66f9638bfa763de03f684" id="r_ga6f49572d14f66f9638bfa763de03f684"><td class="memItemLeft anon">
+struct <a class="el" href="structClosure.html">Closure</a> *&#160;&#160;&#160;<b>Value::closure</b>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:ga6f49572d14f66f9638bfa763de03f684"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid if type is TYPE_CLOSURE. <br /></td></tr>
+<tr class="memitem:ga5bd51252e95924260b72f838abc30066" id="r_ga5bd51252e95924260b72f838abc30066"><td class="memItemLeft anon">
+struct <a class="el" href="structMacro.html">Macro</a> *&#160;&#160;&#160;<b>Value::macro</b>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:ga5bd51252e95924260b72f838abc30066"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid if type is TYPE_MACRO. <br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft anon"><a id="ga09b3c773aaaedd0daedae62d594a59eb" name="ga09b3c773aaaedd0daedae62d594a59eb"></a>
+union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memitem:gabdc6474785c0d89f14534fe9118ad343" id="r_gabdc6474785c0d89f14534fe9118ad343"><td class="memItemLeft anon">
+&#160;&#160;&#160;double&#160;&#160;&#160;<b>number</b>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:gabdc6474785c0d89f14534fe9118ad343"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid if type is TYPE_NUMBER. <br /></td></tr>
+<tr class="memitem:gade1504858e65fe0763463ba6582d2667" id="r_gade1504858e65fe0763463ba6582d2667"><td class="memItemLeft anon">
+&#160;&#160;&#160;const char *&#160;&#160;&#160;<b>atom_name</b>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:gade1504858e65fe0763463ba6582d2667"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid if type is TYPE_ATOM. <br /></td></tr>
+<tr class="memitem:ga3070fa0a1b5ad0425bb0c8b9b0c5a819" id="r_ga3070fa0a1b5ad0425bb0c8b9b0c5a819"><td class="memItemLeft anon">
+&#160;&#160;&#160;const char *&#160;&#160;&#160;<b>string</b>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:ga3070fa0a1b5ad0425bb0c8b9b0c5a819"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid if type is TYPE_STRING. <br /></td></tr>
+<tr class="memitem:gad7744d54ee1f128bf9470eb874f656fc" id="r_gad7744d54ee1f128bf9470eb874f656fc"><td class="memItemLeft anon">
+&#160;&#160;&#160;char *&#160;&#160;&#160;<b>err_msg</b>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:gad7744d54ee1f128bf9470eb874f656fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid if type is TYPE_ERROR. <br /></td></tr>
+<tr class="memitem:ga23eafbd6e376b4fd3bd4b819619aac56" id="r_ga23eafbd6e376b4fd3bd4b819619aac56"><td class="memItemLeft anon">
+&#160;&#160;&#160;unsigned int&#160;&#160;&#160;<b>primitive_index</b>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:ga23eafbd6e376b4fd3bd4b819619aac56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid if type is TYPE_PRIMITIVE. <br /></td></tr>
+<tr class="memitem:ga9aa1534495531190fea578022190f351" id="r_ga9aa1534495531190fea578022190f351"><td class="memItemLeft anon">
+&#160;&#160;&#160;struct <a class="el" href="structConsCell.html">ConsCell</a> *&#160;&#160;&#160;<b>cons</b>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:ga9aa1534495531190fea578022190f351"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid if type is TYPE_CONS. <br /></td></tr>
+<tr class="memitem:ga6f49572d14f66f9638bfa763de03f684" id="r_ga6f49572d14f66f9638bfa763de03f684"><td class="memItemLeft anon">
+&#160;&#160;&#160;struct <a class="el" href="structClosure.html">Closure</a> *&#160;&#160;&#160;<b>closure</b>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:ga6f49572d14f66f9638bfa763de03f684"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid if type is TYPE_CLOSURE. <br /></td></tr>
+<tr class="memitem:ga5bd51252e95924260b72f838abc30066" id="r_ga5bd51252e95924260b72f838abc30066"><td class="memItemLeft anon">
+&#160;&#160;&#160;struct <a class="el" href="structMacro.html">Macro</a> *&#160;&#160;&#160;<b>macro</b>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:ga5bd51252e95924260b72f838abc30066"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid if type is TYPE_MACRO. <br /></td></tr>
+<tr class="memitem:ga09b3c773aaaedd0daedae62d594a59eb" id="r_ga09b3c773aaaedd0daedae62d594a59eb"><td class="memItemLeft anonEnd" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><b>Value::as</b></td></tr>
+<tr class="memdesc:ga09b3c773aaaedd0daedae62d594a59eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The union holding the actual data. <br /></td></tr>
 <tr class="memitem:ga908a8f68309a4b2af50e6638c927f27f" id="r_ga908a8f68309a4b2af50e6638c927f27f"><td class="memItemLeft" align="right" valign="top"><a id="ga908a8f68309a4b2af50e6638c927f27f" name="ga908a8f68309a4b2af50e6638c927f27f"></a>
 <a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ConsCell::car</b></td></tr>
-<tr class="memdesc:ga908a8f68309a4b2af50e6638c927f27f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The first element of the pair (the "contents"). *&zwj;/. <br /></td></tr>
+<tr class="memdesc:ga908a8f68309a4b2af50e6638c927f27f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The first element of the pair (the "contents"). <br /></td></tr>
 <tr class="memitem:ga9242d8ed6297c62c93150da957b0318e" id="r_ga9242d8ed6297c62c93150da957b0318e"><td class="memItemLeft" align="right" valign="top"><a id="ga9242d8ed6297c62c93150da957b0318e" name="ga9242d8ed6297c62c93150da957b0318e"></a>
 <a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ConsCell::cdr</b></td></tr>
-<tr class="memdesc:ga9242d8ed6297c62c93150da957b0318e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The second element of the pair (the "pointer" to the rest of the list). *&zwj;/. <br /></td></tr>
-<tr class="memitem:ga8865b95b1f7bd867fd9f4df45b439a36" id="r_ga8865b95b1f7bd867fd9f4df45b439a36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8865b95b1f7bd867fd9f4df45b439a36">Closure::params</a></td></tr>
-<tr class="memitem:gac7018e97184802faff8b9e278035245c" id="r_gac7018e97184802faff8b9e278035245c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac7018e97184802faff8b9e278035245c">Closure::body</a></td></tr>
-<tr class="memitem:gae291e02973a8e982e6793d4dfee8e131" id="r_gae291e02973a8e982e6793d4dfee8e131"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae291e02973a8e982e6793d4dfee8e131">Closure::env</a></td></tr>
-<tr class="memitem:ga48c6cd5c6a837bcb1e96a4bd3cfec38e" id="r_ga48c6cd5c6a837bcb1e96a4bd3cfec38e"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga48c6cd5c6a837bcb1e96a4bd3cfec38e">PrimitiveEntry::name</a></td></tr>
-<tr class="memitem:ga287d813d973c3d95f12999c2a4c56d9d" id="r_ga287d813d973c3d95f12999c2a4c56d9d"><td class="memItemLeft" align="right" valign="top">PrimitiveFunc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga287d813d973c3d95f12999c2a4c56d9d">PrimitiveEntry::func</a></td></tr>
-<tr class="memitem:ga01883dd7d6b624750148459013bc6041" id="r_ga01883dd7d6b624750148459013bc6041"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga01883dd7d6b624750148459013bc6041">PrimitiveEntry::arity</a></td></tr>
+<tr class="memdesc:ga9242d8ed6297c62c93150da957b0318e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The second element of the pair (the "pointer" to the rest of the list). <br /></td></tr>
+<tr class="memitem:ga8865b95b1f7bd867fd9f4df45b439a36" id="r_ga8865b95b1f7bd867fd9f4df45b439a36"><td class="memItemLeft" align="right" valign="top"><a id="ga8865b95b1f7bd867fd9f4df45b439a36" name="ga8865b95b1f7bd867fd9f4df45b439a36"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Closure::params</b></td></tr>
+<tr class="memdesc:ga8865b95b1f7bd867fd9f4df45b439a36"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of atoms representing the parameters. <br /></td></tr>
+<tr class="memitem:gac7018e97184802faff8b9e278035245c" id="r_gac7018e97184802faff8b9e278035245c"><td class="memItemLeft" align="right" valign="top"><a id="gac7018e97184802faff8b9e278035245c" name="gac7018e97184802faff8b9e278035245c"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Closure::body</b></td></tr>
+<tr class="memdesc:gac7018e97184802faff8b9e278035245c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of expressions that make up the function body. <br /></td></tr>
+<tr class="memitem:gae291e02973a8e982e6793d4dfee8e131" id="r_gae291e02973a8e982e6793d4dfee8e131"><td class="memItemLeft" align="right" valign="top"><a id="gae291e02973a8e982e6793d4dfee8e131" name="gae291e02973a8e982e6793d4dfee8e131"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Closure::env</b></td></tr>
+<tr class="memdesc:gae291e02973a8e982e6793d4dfee8e131"><td class="mdescLeft">&#160;</td><td class="mdescRight">The environment (a list of frames) captured at definition time. <br /></td></tr>
+<tr class="memitem:gac7222fb1973ef30ee255d891e5730412" id="r_gac7222fb1973ef30ee255d891e5730412"><td class="memItemLeft" align="right" valign="top"><a id="gac7222fb1973ef30ee255d891e5730412" name="gac7222fb1973ef30ee255d891e5730412"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Macro::params</b></td></tr>
+<tr class="memitem:ga6e67ad7feda8515214a0a46cad6f3d56" id="r_ga6e67ad7feda8515214a0a46cad6f3d56"><td class="memItemLeft" align="right" valign="top"><a id="ga6e67ad7feda8515214a0a46cad6f3d56" name="ga6e67ad7feda8515214a0a46cad6f3d56"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Macro::body</b></td></tr>
+<tr class="memitem:ga0b44a20b1bb5fa85c4ccceb1e1a1c559" id="r_ga0b44a20b1bb5fa85c4ccceb1e1a1c559"><td class="memItemLeft" align="right" valign="top"><a id="ga0b44a20b1bb5fa85c4ccceb1e1a1c559" name="ga0b44a20b1bb5fa85c4ccceb1e1a1c559"></a>
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Macro::env</b></td></tr>
+<tr class="memitem:ga48c6cd5c6a837bcb1e96a4bd3cfec38e" id="r_ga48c6cd5c6a837bcb1e96a4bd3cfec38e"><td class="memItemLeft" align="right" valign="top"><a id="ga48c6cd5c6a837bcb1e96a4bd3cfec38e" name="ga48c6cd5c6a837bcb1e96a4bd3cfec38e"></a>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><b>PrimitiveEntry::name</b></td></tr>
+<tr class="memdesc:ga48c6cd5c6a837bcb1e96a4bd3cfec38e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name the function is exposed as in Lisp (e.g., "+", "car"). *&zwj;/. <br /></td></tr>
+<tr class="memitem:ga287d813d973c3d95f12999c2a4c56d9d" id="r_ga287d813d973c3d95f12999c2a4c56d9d"><td class="memItemLeft" align="right" valign="top"><a id="ga287d813d973c3d95f12999c2a4c56d9d" name="ga287d813d973c3d95f12999c2a4c56d9d"></a>
+PrimitiveFunc&#160;</td><td class="memItemRight" valign="bottom"><b>PrimitiveEntry::func</b></td></tr>
+<tr class="memdesc:ga287d813d973c3d95f12999c2a4c56d9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The pointer to the C function that implements it. *&zwj;/. <br /></td></tr>
+<tr class="memitem:ga01883dd7d6b624750148459013bc6041" id="r_ga01883dd7d6b624750148459013bc6041"><td class="memItemLeft" align="right" valign="top"><a id="ga01883dd7d6b624750148459013bc6041" name="ga01883dd7d6b624750148459013bc6041"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>PrimitiveEntry::arity</b></td></tr>
+<tr class="memdesc:ga01883dd7d6b624750148459013bc6041"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of expected arguments (SIZE_MAX for variable arity). *&zwj;/. <br /></td></tr>
 <tr class="memitem:ga26a079e049aeec7685e3bbe4af749593" id="r_ga26a079e049aeec7685e3bbe4af749593"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structPrimitiveEntry.html">PrimitiveEntry</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga26a079e049aeec7685e3bbe4af749593">primitives</a> []</td></tr>
 <tr class="memdesc:ga26a079e049aeec7685e3bbe4af749593"><td class="mdescLeft">&#160;</td><td class="mdescRight">A global array that contains the table of all primitive functions.  <br /></td></tr>
 </table>
@@ -234,288 +310,20 @@ Variables</h2></td></tr>
 </ol>
 <p>All of these functions share the same C signature: <span class="tt"><a class="el" href="structValue.html" title="The universal data structure for every value in the interpreter.">Value</a> func(Value args, Value env)</span>. </p>
 <a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
-<a id="ga01883dd7d6b624750148459013bc6041" name="ga01883dd7d6b624750148459013bc6041"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga01883dd7d6b624750148459013bc6041">&#9670;&#160;</a></span>arity</h2>
+<a id="ga1504bb7b787752d10c20ba6fe29612b1" name="ga1504bb7b787752d10c20ba6fe29612b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1504bb7b787752d10c20ba6fe29612b1">&#9670;&#160;</a></span>permanent_arena</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">size_t PrimitiveEntry::arity</td>
+          <td class="memname"><a class="el" href="structArena.html">Arena</a>** Context::permanent_arena</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The number of expected arguments (SIZE_MAX for variable arity). </p>
 
-</div>
-</div>
-<a id="ga09b3c773aaaedd0daedae62d594a59eb" name="ga09b3c773aaaedd0daedae62d594a59eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga09b3c773aaaedd0daedae62d594a59eb">&#9670;&#160;</a></span>[union]</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">union  { ... }  Value::as</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>The union holding the actual data. </p>
-
-</div>
-</div>
-<a id="gade1504858e65fe0763463ba6582d2667" name="gade1504858e65fe0763463ba6582d2667"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gade1504858e65fe0763463ba6582d2667">&#9670;&#160;</a></span>[] <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char*  { ... } ::atom_name</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Valid if type is TYPE_ATOM. </p>
-
-</div>
-</div>
-<a id="ga0501ccd736f6edc6bbee02234b309ffc" name="ga0501ccd736f6edc6bbee02234b309ffc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0501ccd736f6edc6bbee02234b309ffc">&#9670;&#160;</a></span>atom_name <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char* Value::atom_name</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Valid if type is TYPE_ATOM. </p>
-
-</div>
-</div>
-<a id="gac7018e97184802faff8b9e278035245c" name="gac7018e97184802faff8b9e278035245c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac7018e97184802faff8b9e278035245c">&#9670;&#160;</a></span>body</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structValue.html">Value</a> Closure::body</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>A list of expressions that make up the function body. </p>
-
-</div>
-</div>
-<a id="ga6f49572d14f66f9638bfa763de03f684" name="ga6f49572d14f66f9638bfa763de03f684"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6f49572d14f66f9638bfa763de03f684">&#9670;&#160;</a></span>[] <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct Closure*  { ... } ::closure</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Valid if type is TYPE_CLOSURE. </p>
-
-</div>
-</div>
-<a id="ga77c174739fa90d84189c81b9f515a313" name="ga77c174739fa90d84189c81b9f515a313"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga77c174739fa90d84189c81b9f515a313">&#9670;&#160;</a></span>closure <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct <a class="el" href="structClosure.html">Closure</a>* Value::closure</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Valid if type is TYPE_CLOSURE. </p>
-
-</div>
-</div>
-<a id="ga9aa1534495531190fea578022190f351" name="ga9aa1534495531190fea578022190f351"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9aa1534495531190fea578022190f351">&#9670;&#160;</a></span>[] <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct ConsCell*  { ... } ::cons</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Valid if type is TYPE_CONS. </p>
-
-</div>
-</div>
-<a id="gab4bfaf2bb9f9440cbde75cd57280099c" name="gab4bfaf2bb9f9440cbde75cd57280099c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab4bfaf2bb9f9440cbde75cd57280099c">&#9670;&#160;</a></span>cons <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct <a class="el" href="structConsCell.html">ConsCell</a>* Value::cons</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Valid if type is TYPE_CONS. </p>
-
-</div>
-</div>
-<a id="gae291e02973a8e982e6793d4dfee8e131" name="gae291e02973a8e982e6793d4dfee8e131"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae291e02973a8e982e6793d4dfee8e131">&#9670;&#160;</a></span>env</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structValue.html">Value</a> Closure::env</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>The environment (a list of frames) captured at definition time. </p>
-
-</div>
-</div>
-<a id="gad7744d54ee1f128bf9470eb874f656fc" name="gad7744d54ee1f128bf9470eb874f656fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad7744d54ee1f128bf9470eb874f656fc">&#9670;&#160;</a></span>[] <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char*  { ... } ::err_msg</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Valid if type is TYPE_ERROR. </p>
-
-</div>
-</div>
-<a id="gac09188ea266b9a3672119d2009978dc4" name="gac09188ea266b9a3672119d2009978dc4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac09188ea266b9a3672119d2009978dc4">&#9670;&#160;</a></span>err_msg <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char* Value::err_msg</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Valid if type is TYPE_ERROR. </p>
-
-</div>
-</div>
-<a id="ga287d813d973c3d95f12999c2a4c56d9d" name="ga287d813d973c3d95f12999c2a4c56d9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga287d813d973c3d95f12999c2a4c56d9d">&#9670;&#160;</a></span>func</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">PrimitiveFunc PrimitiveEntry::func</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>The pointer to the C function that implements it. </p>
-
-</div>
-</div>
-<a id="ga48c6cd5c6a837bcb1e96a4bd3cfec38e" name="ga48c6cd5c6a837bcb1e96a4bd3cfec38e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga48c6cd5c6a837bcb1e96a4bd3cfec38e">&#9670;&#160;</a></span>name</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char* PrimitiveEntry::name</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>The name the function is exposed as in Lisp (e.g., "+", "car"). </p>
-
-</div>
-</div>
-<a id="gabdc6474785c0d89f14534fe9118ad343" name="gabdc6474785c0d89f14534fe9118ad343"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabdc6474785c0d89f14534fe9118ad343">&#9670;&#160;</a></span>[] <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double  { ... } ::number</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Valid if type is TYPE_NUMBER. </p>
-
-</div>
-</div>
-<a id="gae38a14048b4d24af576ef4e3ad133b1b" name="gae38a14048b4d24af576ef4e3ad133b1b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae38a14048b4d24af576ef4e3ad133b1b">&#9670;&#160;</a></span>number <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double Value::number</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Valid if type is TYPE_NUMBER. </p>
-
-</div>
-</div>
-<a id="ga8865b95b1f7bd867fd9f4df45b439a36" name="ga8865b95b1f7bd867fd9f4df45b439a36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8865b95b1f7bd867fd9f4df45b439a36">&#9670;&#160;</a></span>params</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structValue.html">Value</a> Closure::params</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>A list of atoms representing the parameters. </p>
-
-</div>
-</div>
-<a id="ga23eafbd6e376b4fd3bd4b819619aac56" name="ga23eafbd6e376b4fd3bd4b819619aac56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga23eafbd6e376b4fd3bd4b819619aac56">&#9670;&#160;</a></span>[] <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned int  { ... } ::primitive_index</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Valid if type is TYPE_PRIMITIVE. </p>
-
-</div>
-</div>
-<a id="ga5c8993437f3863f989c69357b75de518" name="ga5c8993437f3863f989c69357b75de518"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5c8993437f3863f989c69357b75de518">&#9670;&#160;</a></span>primitive_index <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned int Value::primitive_index</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Valid if type is TYPE_PRIMITIVE. </p>
+<p>A pointer to the pointer of the permanent memory arena. </p>
+<p>This arena is used for long-lived allocations that must persist across multiple evaluation cycles, such as function definitions, loaded source code, and global constants. </p>
 
 </div>
 </div>
@@ -536,48 +344,20 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ga3070fa0a1b5ad0425bb0c8b9b0c5a819" name="ga3070fa0a1b5ad0425bb0c8b9b0c5a819"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3070fa0a1b5ad0425bb0c8b9b0c5a819">&#9670;&#160;</a></span>[] <span class="overload">[1/2]</span></h2>
+<a id="gaa3dfd812efdb82e9efb59903149d731c" name="gaa3dfd812efdb82e9efb59903149d731c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa3dfd812efdb82e9efb59903149d731c">&#9670;&#160;</a></span>temporary_arena</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char*  { ... } ::string</td>
+          <td class="memname"><a class="el" href="structArena.html">Arena</a>** Context::temporary_arena</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Valid if type is TYPE_STRING. </p>
 
-</div>
-</div>
-<a id="ga336aad105065338ac9cd2d9d6f4e3763" name="ga336aad105065338ac9cd2d9d6f4e3763"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga336aad105065338ac9cd2d9d6f4e3763">&#9670;&#160;</a></span>string <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char* Value::string</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Valid if type is TYPE_STRING. </p>
-
-</div>
-</div>
-<a id="gab45dfd167290d4324ba4832abcc4064d" name="gab45dfd167290d4324ba4832abcc4064d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab45dfd167290d4324ba4832abcc4064d">&#9670;&#160;</a></span>type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ValueType Value::type</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>The tag indicating the current data type. </p>
+<p>A pointer to the pointer of the temporary (scratch) memory arena. </p>
+<p>This arena is used for short-lived allocations that are only needed during a single evaluation cycle (e.g., for intermediate results). Its contents can be discarded after each top-level expression is evaluated. </p>
 
 </div>
 </div>

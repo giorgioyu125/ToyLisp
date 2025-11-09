@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['type_5fname_0',['type_name',['../group__type__helpers.html#ga40a5eb6cdb7261b4dda5c1fafc79c6f4',1,'toylisp.c']]]
+  ['scan_5ftoken_0',['scan_token',['../group__parser.html#gab638045be5bc3c34f405d4b1dbaed981',1,'toylisp.c']]]
 ];

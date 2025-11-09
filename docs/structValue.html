@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ToyLisp<span id="projectnumber">&#160;0.1.2</span>
+   <div id="projectname">ToyLisp<span id="projectnumber">&#160;0.2.0</span>
    </div>
    <div id="projectbrief">A simple lisp interpreter</div>
   </td>
@@ -100,28 +100,52 @@ Collaboration diagram for Value:</div>
 <div class="dyncontent">
 <div class="center"><img src="structValue__coll__graph.png" border="0" usemap="#aValue_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="aValue_coll__map" id="aValue_coll__map">
-<area shape="rect" title="The universal data structure for every value in the interpreter." alt="" coords="71,5,124,32"/>
+<area shape="rect" title="The universal data structure for every value in the interpreter." alt="" coords="144,5,198,32"/>
 <area shape="rect" href="structConsCell.html" title="Represents a single &quot;cons&quot; pair, the basic building block of lists." alt="" coords="5,147,81,173"/>
-<area shape="poly" title=" " alt="" coords="57,31,35,41,18,58,10,74,9,88,18,122,33,145,28,148,13,124,3,88,5,72,14,54,32,37,55,26"/>
+<area shape="poly" title=" " alt="" coords="129,27,63,38,36,47,19,58,11,73,9,87,19,122,33,145,29,148,15,124,4,88,5,71,15,54,33,42,62,33,128,21"/>
 <area shape="rect" href="structClosure.html" title="Represents a lambda function created at runtime." alt="" coords="119,147,186,173"/>
-<area shape="poly" title=" " alt="" coords="105,47,115,83,129,121,144,145,139,147,124,124,109,85,100,48"/>
-<area shape="poly" title=" " alt="" coords="43,131,49,94,63,55,82,30,86,34,68,57,54,95,48,132"/>
-<area shape="poly" title=" " alt="" coords="174,133,181,122,190,88,189,74,181,58,170,45,155,36,124,26,125,21,158,32,173,41,185,54,194,72,196,88,185,124,179,136"/>
+<area shape="poly" title=" " alt="" coords="139,44,129,57,123,74,121,89,129,122,143,145,138,148,124,124,116,89,117,73,124,55,135,41"/>
+<area shape="rect" href="structMacro.html" title=" " alt="" coords="305,147,362,173"/>
+<area shape="poly" title=" " alt="" coords="213,34,245,54,260,71,270,87,278,103,291,121,318,144,314,148,287,124,273,106,265,90,256,74,241,58,211,38"/>
+<area shape="poly" title=" " alt="" coords="43,130,53,92,63,72,76,54,91,42,109,32,143,22,145,27,111,37,94,46,80,58,67,75,58,94,48,132"/>
+<area shape="poly" title=" " alt="" coords="174,133,180,122,185,98,184,74,173,33,179,32,189,73,190,98,186,124,179,136"/>
+<area shape="poly" title=" " alt="" coords="344,132,353,93,352,74,344,58,320,44,281,34,198,24,199,19,282,29,322,39,348,54,357,73,359,94,349,133"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:gab45dfd167290d4324ba4832abcc4064d" id="r_gab45dfd167290d4324ba4832abcc4064d"><td class="memItemLeft" align="right" valign="top">ValueType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__primitives.html#gab45dfd167290d4324ba4832abcc4064d">type</a></td></tr>
-<tr class="memitem:"><td class="memItemLeft anon">union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memitem:gabdc6474785c0d89f14534fe9118ad343" id="r_gabdc6474785c0d89f14534fe9118ad343"><td class="memItemLeft anon">&#160;&#160;&#160;double&#160;&#160;&#160;<a class="el" href="group__core__primitives.html#gae38a14048b4d24af576ef4e3ad133b1b">Value::number</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memitem:gade1504858e65fe0763463ba6582d2667" id="r_gade1504858e65fe0763463ba6582d2667"><td class="memItemLeft anon">&#160;&#160;&#160;const char *&#160;&#160;&#160;<a class="el" href="group__core__primitives.html#ga0501ccd736f6edc6bbee02234b309ffc">Value::atom_name</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memitem:ga3070fa0a1b5ad0425bb0c8b9b0c5a819" id="r_ga3070fa0a1b5ad0425bb0c8b9b0c5a819"><td class="memItemLeft anon">&#160;&#160;&#160;const char *&#160;&#160;&#160;<a class="el" href="group__core__primitives.html#ga336aad105065338ac9cd2d9d6f4e3763">Value::string</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memitem:gad7744d54ee1f128bf9470eb874f656fc" id="r_gad7744d54ee1f128bf9470eb874f656fc"><td class="memItemLeft anon">&#160;&#160;&#160;char *&#160;&#160;&#160;<a class="el" href="group__core__primitives.html#gac09188ea266b9a3672119d2009978dc4">Value::err_msg</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memitem:ga23eafbd6e376b4fd3bd4b819619aac56" id="r_ga23eafbd6e376b4fd3bd4b819619aac56"><td class="memItemLeft anon">&#160;&#160;&#160;unsigned int&#160;&#160;&#160;<a class="el" href="group__core__primitives.html#ga5c8993437f3863f989c69357b75de518">Value::primitive_index</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memitem:ga9aa1534495531190fea578022190f351" id="r_ga9aa1534495531190fea578022190f351"><td class="memItemLeft anon">&#160;&#160;&#160;struct <a class="el" href="structConsCell.html">ConsCell</a> *&#160;&#160;&#160;<a class="el" href="group__core__primitives.html#gab4bfaf2bb9f9440cbde75cd57280099c">Value::cons</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memitem:ga6f49572d14f66f9638bfa763de03f684" id="r_ga6f49572d14f66f9638bfa763de03f684"><td class="memItemLeft anon">&#160;&#160;&#160;struct <a class="el" href="structClosure.html">Closure</a> *&#160;&#160;&#160;<a class="el" href="group__core__primitives.html#ga77c174739fa90d84189c81b9f515a313">Value::closure</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memitem:ga09b3c773aaaedd0daedae62d594a59eb" id="r_ga09b3c773aaaedd0daedae62d594a59eb"><td class="memItemLeft anonEnd" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__primitives.html#ga09b3c773aaaedd0daedae62d594a59eb">as</a></td></tr>
+<tr class="memitem:gab45dfd167290d4324ba4832abcc4064d" id="r_gab45dfd167290d4324ba4832abcc4064d"><td class="memItemLeft" align="right" valign="top">
+ValueType&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td></tr>
+<tr class="memdesc:gab45dfd167290d4324ba4832abcc4064d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The tag indicating the current data type. *&zwj;/. <br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft anon">
+union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memitem:gabdc6474785c0d89f14534fe9118ad343" id="r_gabdc6474785c0d89f14534fe9118ad343"><td class="memItemLeft anon">
+&#160;&#160;&#160;double&#160;&#160;&#160;<b>number</b>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:gabdc6474785c0d89f14534fe9118ad343"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid if type is TYPE_NUMBER. <br /></td></tr>
+<tr class="memitem:gade1504858e65fe0763463ba6582d2667" id="r_gade1504858e65fe0763463ba6582d2667"><td class="memItemLeft anon">
+&#160;&#160;&#160;const char *&#160;&#160;&#160;<b>atom_name</b>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:gade1504858e65fe0763463ba6582d2667"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid if type is TYPE_ATOM. <br /></td></tr>
+<tr class="memitem:ga3070fa0a1b5ad0425bb0c8b9b0c5a819" id="r_ga3070fa0a1b5ad0425bb0c8b9b0c5a819"><td class="memItemLeft anon">
+&#160;&#160;&#160;const char *&#160;&#160;&#160;<b>string</b>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:ga3070fa0a1b5ad0425bb0c8b9b0c5a819"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid if type is TYPE_STRING. <br /></td></tr>
+<tr class="memitem:gad7744d54ee1f128bf9470eb874f656fc" id="r_gad7744d54ee1f128bf9470eb874f656fc"><td class="memItemLeft anon">
+&#160;&#160;&#160;char *&#160;&#160;&#160;<b>err_msg</b>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:gad7744d54ee1f128bf9470eb874f656fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid if type is TYPE_ERROR. <br /></td></tr>
+<tr class="memitem:ga23eafbd6e376b4fd3bd4b819619aac56" id="r_ga23eafbd6e376b4fd3bd4b819619aac56"><td class="memItemLeft anon">
+&#160;&#160;&#160;unsigned int&#160;&#160;&#160;<b>primitive_index</b>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:ga23eafbd6e376b4fd3bd4b819619aac56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid if type is TYPE_PRIMITIVE. <br /></td></tr>
+<tr class="memitem:ga9aa1534495531190fea578022190f351" id="r_ga9aa1534495531190fea578022190f351"><td class="memItemLeft anon">
+&#160;&#160;&#160;struct <a class="el" href="structConsCell.html">ConsCell</a> *&#160;&#160;&#160;<b>cons</b>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:ga9aa1534495531190fea578022190f351"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid if type is TYPE_CONS. <br /></td></tr>
+<tr class="memitem:ga6f49572d14f66f9638bfa763de03f684" id="r_ga6f49572d14f66f9638bfa763de03f684"><td class="memItemLeft anon">
+&#160;&#160;&#160;struct <a class="el" href="structClosure.html">Closure</a> *&#160;&#160;&#160;<b>closure</b>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:ga6f49572d14f66f9638bfa763de03f684"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid if type is TYPE_CLOSURE. <br /></td></tr>
+<tr class="memitem:ga5bd51252e95924260b72f838abc30066" id="r_ga5bd51252e95924260b72f838abc30066"><td class="memItemLeft anon">
+&#160;&#160;&#160;struct <a class="el" href="structMacro.html">Macro</a> *&#160;&#160;&#160;<b>macro</b>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:ga5bd51252e95924260b72f838abc30066"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid if type is TYPE_MACRO. <br /></td></tr>
+<tr class="memitem:ga09b3c773aaaedd0daedae62d594a59eb" id="r_ga09b3c773aaaedd0daedae62d594a59eb"><td class="memItemLeft anonEnd" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><b>as</b></td></tr>
+<tr class="memdesc:ga09b3c773aaaedd0daedae62d594a59eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The union holding the actual data. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The universal data structure for every value in the interpreter. </p>

@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ToyLisp<span id="projectnumber">&#160;0.1.2</span>
+   <div id="projectname">ToyLisp<span id="projectnumber">&#160;0.2.0</span>
    </div>
    <div id="projectbrief">A simple lisp interpreter</div>
   </td>
@@ -101,22 +101,31 @@ Collaboration diagram for PrimitiveEntry:</div>
 <div class="center"><img src="structPrimitiveEntry__coll__graph.png" border="0" usemap="#aPrimitiveEntry_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="aPrimitiveEntry_coll__map" id="aPrimitiveEntry_coll__map">
 <area shape="rect" title="Describes a single primitive function in the system." alt="" coords="5,147,109,173"/>
-<area shape="rect" href="structValue.html" title="The universal data structure for every value in the interpreter." alt="" coords="152,5,205,32"/>
-<area shape="poly" title=" " alt="" coords="138,34,118,44,101,58,85,79,73,104,62,147,56,146,68,102,80,77,97,54,115,40,136,29"/>
+<area shape="rect" href="structValue.html" title="The universal data structure for every value in the interpreter." alt="" coords="218,5,272,32"/>
+<area shape="poly" title=" " alt="" coords="203,22,147,31,119,42,95,58,79,78,69,103,60,147,55,146,64,101,75,76,92,54,117,37,146,26,202,17"/>
 <area shape="rect" href="structConsCell.html" title="Represents a single &quot;cons&quot; pair, the basic building block of lists." alt="" coords="137,147,212,173"/>
-<area shape="poly" title=" " alt="" coords="154,45,147,57,139,89,147,122,162,145,158,148,142,124,134,89,142,55,149,42"/>
-<area shape="rect" href="structClosure.html" title="Represents a lambda function created at runtime." alt="" coords="264,147,330,173"/>
-<area shape="poly" title=" " alt="" coords="207,41,218,55,227,73,230,89,233,105,243,121,256,134,272,144,269,148,253,138,239,124,228,107,225,91,222,75,213,57,203,45"/>
-<area shape="poly" title=" " alt="" coords="172,131,175,32,181,32,178,131"/>
-<area shape="poly" title=" " alt="" coords="302,131,306,94,303,75,295,58,276,41,253,30,205,22,206,17,255,25,279,36,299,54,308,73,312,93,308,132"/>
+<area shape="poly" title=" " alt="" coords="204,26,170,36,156,45,144,58,135,73,134,88,144,121,161,144,156,148,139,124,129,88,130,72,140,54,152,41,168,31,202,21"/>
+<area shape="rect" href="structClosure.html" title="Represents a lambda function created at runtime." alt="" coords="277,147,344,173"/>
+<area shape="poly" title=" " alt="" coords="239,47,234,84,236,104,243,121,258,137,278,147,275,152,255,141,238,124,231,105,228,84,234,46"/>
+<area shape="rect" href="structMacro.html" title=" " alt="" coords="394,147,451,173"/>
+<area shape="poly" title=" " alt="" coords="288,22,329,32,350,41,370,54,418,145,413,147,366,58,348,46,328,37,287,27"/>
+<area shape="poly" title=" " alt="" coords="170,131,174,93,179,73,188,55,201,40,216,30,219,34,205,44,193,57,184,75,179,94,175,132"/>
+<area shape="poly" title=" " alt="" coords="310,132,308,94,303,75,295,57,284,45,270,35,273,30,287,41,299,55,308,73,313,94,315,131"/>
+<area shape="poly" title=" " alt="" coords="449,134,457,122,469,87,467,73,458,58,446,49,427,41,376,31,272,23,272,18,377,26,428,36,448,44,462,54,472,71,474,88,462,124,454,137"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ga48c6cd5c6a837bcb1e96a4bd3cfec38e" id="r_ga48c6cd5c6a837bcb1e96a4bd3cfec38e"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__primitives.html#ga48c6cd5c6a837bcb1e96a4bd3cfec38e">name</a></td></tr>
-<tr class="memitem:ga287d813d973c3d95f12999c2a4c56d9d" id="r_ga287d813d973c3d95f12999c2a4c56d9d"><td class="memItemLeft" align="right" valign="top">PrimitiveFunc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__primitives.html#ga287d813d973c3d95f12999c2a4c56d9d">func</a></td></tr>
-<tr class="memitem:ga01883dd7d6b624750148459013bc6041" id="r_ga01883dd7d6b624750148459013bc6041"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__primitives.html#ga01883dd7d6b624750148459013bc6041">arity</a></td></tr>
+<tr class="memitem:ga48c6cd5c6a837bcb1e96a4bd3cfec38e" id="r_ga48c6cd5c6a837bcb1e96a4bd3cfec38e"><td class="memItemLeft" align="right" valign="top">
+const char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
+<tr class="memdesc:ga48c6cd5c6a837bcb1e96a4bd3cfec38e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name the function is exposed as in Lisp (e.g., "+", "car"). *&zwj;/. <br /></td></tr>
+<tr class="memitem:ga287d813d973c3d95f12999c2a4c56d9d" id="r_ga287d813d973c3d95f12999c2a4c56d9d"><td class="memItemLeft" align="right" valign="top">
+PrimitiveFunc&#160;</td><td class="memItemRight" valign="bottom"><b>func</b></td></tr>
+<tr class="memdesc:ga287d813d973c3d95f12999c2a4c56d9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The pointer to the C function that implements it. *&zwj;/. <br /></td></tr>
+<tr class="memitem:ga01883dd7d6b624750148459013bc6041" id="r_ga01883dd7d6b624750148459013bc6041"><td class="memItemLeft" align="right" valign="top">
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>arity</b></td></tr>
+<tr class="memdesc:ga01883dd7d6b624750148459013bc6041"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of expected arguments (SIZE_MAX for variable arity). *&zwj;/. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Describes a single primitive function in the system. </p>

@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ToyLisp<span id="projectnumber">&#160;0.1.2</span>
+   <div id="projectname">ToyLisp<span id="projectnumber">&#160;0.2.0</span>
    </div>
    <div id="projectbrief">A simple lisp interpreter</div>
   </td>
@@ -100,25 +100,34 @@ Collaboration diagram for Closure:</div>
 <div class="dyncontent">
 <div class="center"><img src="structClosure__coll__graph.png" border="0" usemap="#aClosure_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="aClosure_coll__map" id="aClosure_coll__map">
-<area shape="rect" title="Represents a lambda function created at runtime." alt="" coords="25,5,91,32"/>
-<area shape="rect" href="structValue.html" title="The universal data structure for every value in the interpreter." alt="" coords="31,147,85,173"/>
-<area shape="poly" title=" " alt="" coords="26,44,17,57,10,75,8,89,10,104,17,121,26,134,38,144,34,148,22,138,12,124,5,105,3,89,5,73,12,55,22,41"/>
-<area shape="poly" title=" " alt="" coords="65,131,67,122,71,89,67,57,61,33,66,32,73,55,76,89,73,123,71,132"/>
-<area shape="rect" href="structConsCell.html" title="Represents a single &quot;cons&quot; pair, the basic building block of lists." alt="" coords="20,267,96,293"/>
-<area shape="poly" title=" " alt="" coords="36,187,29,198,24,220,29,242,45,265,41,268,24,244,19,220,24,196,31,184"/>
-<area shape="poly" title=" " alt="" coords="55,251,55,174,61,174,61,251"/>
+<area shape="rect" title="Represents a lambda function created at runtime." alt="" coords="64,5,131,32"/>
+<area shape="rect" href="structValue.html" title="The universal data structure for every value in the interpreter." alt="" coords="71,147,124,173"/>
+<area shape="poly" title=" " alt="" coords="66,44,56,57,50,75,47,89,50,104,56,121,65,134,77,144,74,148,61,138,52,124,44,105,42,89,44,73,52,55,61,41"/>
+<area shape="poly" title=" " alt="" coords="105,131,107,122,110,89,107,57,100,33,105,32,112,55,116,89,112,123,110,132"/>
+<area shape="rect" href="structConsCell.html" title="Represents a single &quot;cons&quot; pair, the basic building block of lists." alt="" coords="6,288,82,315"/>
+<area shape="poly" title=" " alt="" coords="57,172,35,182,18,199,10,215,8,229,18,263,33,287,29,289,13,265,3,230,5,214,13,196,32,178,55,167"/>
+<area shape="rect" href="structMacro.html" title=" " alt="" coords="122,288,179,315"/>
+<area shape="poly" title=" " alt="" coords="105,188,115,224,129,263,143,287,139,289,124,265,110,226,100,189"/>
+<area shape="poly" title=" " alt="" coords="43,272,49,235,63,196,82,172,86,175,68,199,55,237,49,273"/>
+<area shape="poly" title=" " alt="" coords="174,275,180,263,190,229,189,215,181,199,169,187,155,178,124,167,125,162,157,173,173,183,185,196,194,214,196,230,185,265,178,277"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ga8865b95b1f7bd867fd9f4df45b439a36" id="r_ga8865b95b1f7bd867fd9f4df45b439a36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__primitives.html#ga8865b95b1f7bd867fd9f4df45b439a36">params</a></td></tr>
-<tr class="memitem:gac7018e97184802faff8b9e278035245c" id="r_gac7018e97184802faff8b9e278035245c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__primitives.html#gac7018e97184802faff8b9e278035245c">body</a></td></tr>
-<tr class="memitem:gae291e02973a8e982e6793d4dfee8e131" id="r_gae291e02973a8e982e6793d4dfee8e131"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__core__primitives.html#gae291e02973a8e982e6793d4dfee8e131">env</a></td></tr>
+<tr class="memitem:ga8865b95b1f7bd867fd9f4df45b439a36" id="r_ga8865b95b1f7bd867fd9f4df45b439a36"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>params</b></td></tr>
+<tr class="memdesc:ga8865b95b1f7bd867fd9f4df45b439a36"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of atoms representing the parameters. <br /></td></tr>
+<tr class="memitem:gac7018e97184802faff8b9e278035245c" id="r_gac7018e97184802faff8b9e278035245c"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>body</b></td></tr>
+<tr class="memdesc:gac7018e97184802faff8b9e278035245c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of expressions that make up the function body. <br /></td></tr>
+<tr class="memitem:gae291e02973a8e982e6793d4dfee8e131" id="r_gae291e02973a8e982e6793d4dfee8e131"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="structValue.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><b>env</b></td></tr>
+<tr class="memdesc:gae291e02973a8e982e6793d4dfee8e131"><td class="mdescLeft">&#160;</td><td class="mdescRight">The environment (a list of frames) captured at definition time. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a lambda function created at runtime. </p>
-<p>It contains the formal parameters, the function body, and a reference to the lexical environment in which it was defined (capturing variables). </p>
+<p>It contains the formal parameters, the function body, and a reference to the lexical environment in which it was defined (capturing variables). </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="group__value__constructors.html#ga56b1cea30d98236c9dbbecef01b814fe" title="Creates a Value of type TYPE_CLOSURE.">make_closure</a> </dd></dl>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>src/<b>toylisp.c</b></li>
 </ul>
