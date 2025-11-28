@@ -1510,7 +1510,7 @@ Value eval_expression(Value expr, Value env, Context* context) {
                 if (func.type == TYPE_ERROR) return func;
                 Value args = cdr(expr);
 
-                if (func.type == TYPE_MACRO) { // TODO:Probably this is wrong
+                if (func.type == TYPE_MACRO) {
                     size_t expected = list_length(func.as.macro->params);
                     size_t actual = list_length(args);
                     if (expected != actual) {
@@ -1548,7 +1548,6 @@ Value eval_expression(Value expr, Value env, Context* context) {
                         p = cdr(p);
                     }
                 }
-
 
                 if (func.type == TYPE_CLOSURE) {
                     size_t expected = list_length(func.as.closure->params);

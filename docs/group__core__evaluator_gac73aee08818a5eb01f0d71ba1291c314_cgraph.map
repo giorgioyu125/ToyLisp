@@ -1,19 +1,19 @@
 <map id="eval_list" name="eval_list">
 <area shape="rect" id="Node000001" title="Recursively evaluates every element in a list of expressions." alt="" coords="5,81,75,108"/>
-<area shape="poly" id="edge9_Node000001_Node000001" title=" " alt="" coords="15,82,11,73,14,63,24,57,40,55,57,57,66,64,63,68,55,62,40,60,26,62,18,66,16,72,20,80"/>
+<area shape="poly" id="edge9_Node000001_Node000001" title=" " alt="" coords="15,81,11,73,14,63,24,57,40,55,57,57,67,65,62,67,55,62,40,60,26,62,18,66,16,72,20,80"/>
 <area shape="rect" id="Node000002" href="$group__core__evaluator.html#gac92b6c96045b3975a831d3a5a7be4843" title="Evaluates a single Lisp expression in a given environment." alt="" coords="123,56,238,83"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="75,86,107,80,108,85,75,91"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="74,86,110,81,105,84,76,91"/>
 <area shape="rect" id="Node000004" href="$group__value__constructors.html#gabe632b0fee2d6973f5cea25bfd28def0" title="Creates a Value of type TYPE_CONS (a list pair)." alt="" coords="286,107,374,133"/>
-<area shape="poly" id="edge10_Node000001_Node000004" title=" " alt="" coords="75,95,271,112,270,118,75,100"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="156,57,151,47,154,38,164,32,180,29,198,32,207,39,204,43,196,37,180,35,166,37,159,41,157,47,160,54"/>
+<area shape="poly" id="edge10_Node000001_Node000004" title=" " alt="" coords="75,95,271,112,270,117,75,100"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="155,55,151,47,154,38,164,32,180,29,198,32,208,41,202,41,196,37,180,35,166,37,159,41,157,47,161,56"/>
 <area shape="rect" id="Node000003" href="$group__list__utilities.html#gab487ac56f008d882cce9f233b3b34bd7" title="Calculates the proper length of a Lisp list." alt="" coords="290,56,370,83"/>
-<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="239,67,274,67,274,72,239,72"/>
-<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="223,81,275,99,273,104,221,86"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="238,67,277,69,271,70,239,72"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="223,81,277,101,272,101,222,86"/>
 <area shape="rect" id="Node000006" href="$group__value__constructors.html#ga4bfa92d1baa0a598b48587524e0ab392" title="Creates a Value of type TYPE_ERROR with a formatted message." alt="" coords="287,5,373,32"/>
-<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="221,53,273,35,275,40,223,58"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="221,53,277,37,272,38,223,58"/>
 <area shape="rect" id="Node000005" href="$group__arena.html#ga494c8cea4f0fa116e2559b9dfc080600" title="Allocates a block of memory from the arena." alt="" coords="567,56,654,83"/>
-<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="374,109,551,77,552,82,375,115"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="374,109,549,80,554,80,375,115"/>
 <area shape="rect" id="Node000007" href="$group__arena.html#ga80e56a0ed80fb9e01b0fb7604f5687f9" title="Duplicates a string into the arena." alt="" coords="422,19,519,45"/>
-<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="374,20,407,23,407,29,374,25"/>
-<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="520,42,552,51,551,56,518,47"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="374,20,410,26,404,26,374,25"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="519,42,554,54,549,54,519,48"/>
 </map>

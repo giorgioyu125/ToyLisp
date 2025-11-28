@@ -1,9 +1,9 @@
 <map id="parse_from_current_token" name="parse_from_current_token">
 <area shape="rect" id="Node000001" title="The main recursive parsing function." alt="" coords="177,48,310,91"/>
-<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="271,35,261,29,243,27,227,29,217,33,213,39,214,47,209,48,208,38,214,29,226,23,243,21,263,24,274,30"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="270,32,261,29,243,27,227,29,217,33,213,39,214,49,210,46,208,38,214,29,226,23,243,21,263,24,275,33"/>
 <area shape="rect" id="Node000002" href="$group__parser.html#ga96e89ce14c76411e95f85b3698efbc1c" title="Top&#45;level function to parse a single complete S&#45;expression from the stream." alt="" coords="5,5,129,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,48,115,35,117,30,162,43"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,47,116,35,116,30,164,45"/>
 <area shape="rect" id="Node000003" href="$group__parser.html#ga8a7f8b2d75c03f46abf130c218c4262f" title="Parses a list expression from the token stream." alt="" coords="28,56,106,83"/>
-<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="161,81,106,80,106,74,161,76"/>
-<area shape="poly" id="edge4_Node000003_Node000001" title=" " alt="" coords="121,58,176,58,176,63,121,64"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="158,79,106,80,106,74,164,78"/>
+<area shape="poly" id="edge4_Node000003_Node000001" title=" " alt="" coords="121,58,179,60,174,61,121,64"/>
 </map>

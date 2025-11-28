@@ -1,13 +1,13 @@
 <map id="scan_token" name="scan_token">
 <area shape="rect" id="Node000001" title="Scans the input stream to form the next complete token." alt="" coords="358,72,446,99"/>
 <area shape="rect" id="Node000002" href="$group__parser.html#ga96e89ce14c76411e95f85b3698efbc1c" title="Top&#45;level function to parse a single complete S&#45;expression from the stream." alt="" coords="5,5,129,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="371,65,342,45,309,31,263,20,216,15,129,15,129,10,216,9,264,15,311,25,345,41,374,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="370,62,342,45,309,31,263,20,216,15,129,15,128,10,216,9,264,15,311,25,345,41,376,63"/>
 <area shape="rect" id="Node000003" href="$group__parser.html#ga34b7e5578bd23df76c6c0e8cde2cce56" title="The main recursive parsing function." alt="" coords="177,64,310,107"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="342,88,310,88,310,83,342,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="340,86,311,88,310,83,345,85"/>
 <area shape="rect" id="Node000004" href="$group__parser.html#ga8a7f8b2d75c03f46abf130c218c4262f" title="Parses a list expression from the token stream." alt="" coords="28,72,106,99"/>
-<area shape="poly" id="edge7_Node000001_Node000004" title=" " alt="" coords="358,107,311,121,243,129,176,121,138,113,103,102,105,97,139,108,177,116,243,123,309,116,357,102"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="170,61,104,35,106,30,172,56"/>
-<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="268,51,259,45,243,43,229,44,220,49,216,55,218,63,212,64,211,54,216,45,227,39,243,37,261,40,271,46"/>
-<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="161,97,106,96,106,90,161,92"/>
-<area shape="poly" id="edge6_Node000004_Node000003" title=" " alt="" coords="121,74,176,74,176,79,121,80"/>
+<area shape="poly" id="edge7_Node000001_Node000004" title=" " alt="" coords="360,104,311,121,243,129,176,121,138,113,103,102,104,97,139,108,177,116,243,123,309,116,355,105"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="169,59,104,35,105,30,174,57"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="267,48,259,45,243,43,229,44,220,49,216,55,217,65,213,62,211,54,216,45,227,39,243,37,261,40,272,49"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="159,95,106,96,106,90,164,93"/>
+<area shape="poly" id="edge6_Node000004_Node000003" title=" " alt="" coords="121,74,179,76,174,77,121,80"/>
 </map>

@@ -1,7 +1,7 @@
 <map id="make_string" name="make_string">
 <area shape="rect" id="Node000001" title="Creates a Value of type TYPE_STRING." alt="" coords="5,5,98,32"/>
 <area shape="rect" id="Node000002" href="$group__arena.html#ga80e56a0ed80fb9e01b0fb7604f5687f9" title="Duplicates a string into the arena." alt="" coords="146,5,242,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,16,130,16,130,21,98,21"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,16,133,18,128,19,98,21"/>
 <area shape="rect" id="Node000003" href="$group__arena.html#ga494c8cea4f0fa116e2559b9dfc080600" title="Allocates a block of memory from the arena." alt="" coords="290,5,377,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="242,16,274,16,274,21,242,21"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="242,16,277,19,272,19,242,21"/>
 </map>

@@ -1,12 +1,12 @@
 <map id="ConsCell" name="ConsCell">
 <area shape="rect" id="Node000001" title="Represents a single &quot;cons&quot; pair, the basic building block of lists." alt="" coords="95,5,170,32"/>
 <area shape="rect" id="Node000002" href="$structValue.html" title="The universal data structure for every value in the interpreter." alt="" coords="106,125,159,152"/>
-<area shape="poly" id="edge2_Node000002_Node000001" title=" " alt="" coords="105,45,97,57,92,79,97,100,105,113,116,123,112,127,101,116,93,102,86,79,93,55,101,42"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,109,134,101,134,56,131,33,137,32,139,56,139,101,138,110"/>
+<area shape="poly" id="edge2_Node000002_Node000001" title=" " alt="" coords="102,45,97,57,92,79,97,100,105,113,117,124,111,125,101,116,93,102,86,79,93,55,104,41"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,109,134,101,134,56,134,35,135,30,139,56,139,101,138,110"/>
 <area shape="rect" id="Node000003" href="$structClosure.html" title="Represents a lambda function created at runtime." alt="" coords="38,267,104,293"/>
-<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="91,144,51,154,34,164,19,178,11,194,8,208,12,224,20,241,30,254,44,264,40,268,26,258,15,244,6,225,3,209,5,192,15,174,31,159,50,149,90,139"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="89,143,51,154,34,164,19,178,11,194,8,208,12,224,20,241,30,254,44,265,40,267,26,258,15,244,6,225,3,209,5,192,15,174,31,159,50,149,92,139"/>
 <area shape="rect" id="Node000004" href="$structMacro.html" title=" " alt="" coords="166,267,224,293"/>
-<area shape="poly" id="edge6_Node000004_Node000002" title=" " alt="" coords="144,166,172,241,187,265,183,268,167,244,139,168"/>
-<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="70,251,77,214,92,175,113,151,117,154,97,177,82,215,76,252"/>
-<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="217,253,223,242,233,208,232,194,224,178,211,164,194,155,159,145,160,140,196,150,214,160,228,174,237,192,238,208,228,244,222,256"/>
+<area shape="poly" id="edge6_Node000004_Node000002" title=" " alt="" coords="143,165,172,241,188,267,183,266,167,244,140,169"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="70,250,77,214,92,175,117,151,113,155,97,177,82,215,75,252"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="218,253,223,242,233,208,232,194,224,178,211,164,194,155,160,145,159,140,196,150,214,160,228,174,237,192,238,208,228,244,221,257"/>
 </map>

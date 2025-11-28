@@ -1,5 +1,5 @@
 <map id="arena_strdup" name="arena_strdup">
 <area shape="rect" id="Node000001" title="Duplicates a string into the arena." alt="" coords="5,5,102,32"/>
 <area shape="rect" id="Node000002" href="$group__arena.html#ga494c8cea4f0fa116e2559b9dfc080600" title="Allocates a block of memory from the arena." alt="" coords="150,5,237,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,16,134,16,134,21,102,21"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,16,137,18,131,19,102,21"/>
 </map>
